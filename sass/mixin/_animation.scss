@@ -1,0 +1,148 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../mixin/breakpoint" as *;
+
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+@include keyframes(fadeIn) {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+//点滅
+@include keyframes(blink) {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:0.8;
+    }
+}
+
+//グラデーション01
+@include keyframes(GradietionAnimation-01) {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position:100% 50%
+  }
+  100% {
+    background-position:0% 50%
+  }
+}
+
+//ふわふわ
+@include keyframes(fuwafuwa) {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(rem(-20));
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+//bgの動き
+@include keyframes(bgroop) {
+    0% {
+      background-position: 0  0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+}
+
+//フッターのスライダー
+@include keyframes(slider-to-left) {
+    0% {
+      background-position: 0  0;
+    }
+    100% {
+      background-position: rem(-1466) 0;
+    }
+}
+
+
+//フェイドイン設定
+/* 上からフェードイン */
+.slide-top {
+	opacity: 0;
+	transform: translate(0, rem(-300));
+	transition: all 0.3s ease-out;
+ }
+
+/* 下からフェードイン */
+.slide-bottom {
+	opacity: 0;
+	transform: translate(0, rem(100));
+	transition: all 0.5s ease-out;
+ }
+
+ /* 左からフェードイン */
+.slide-left {
+	opacity: 0;
+	transform: translate(rem(-200), 0);
+	transition: all 0.7s ease-out;
+ }
+
+/* 右からフェードイン */
+.slide-right {
+	opacity: 0;
+	transform: translate(rem(100), 0);
+	transition: all 0.7s ease-out;
+  @include mq(m) {
+    transform: translate(4%, 0);
+  }
+ }
+
+ .slide-bottom-and-rotate-01 {
+  opacity: 0;
+  transform: translate(0, rem(100)) rotate(-30deg);
+  transition: all 0.3s ease-out;
+ }
+ .slide-bottom-and-rotate-02 {
+  opacity: 0;
+  transform: translate(rem(0), rem(120)) rotate(-40deg);
+  transition: all 0.9s ease-out;
+ }
+ .slide-bottom-and-rotate-03 {
+  opacity: 0;
+  transform: translate(rem(-100), rem(100)) rotate(-50deg);
+  transition: all 1.2s ease-out;
+ }
+ .slide-bottom-and-rotate-04 {
+  opacity: 0;
+  transform: translate(rem(-200), rem(160)) rotate(-60deg);
+  transition: all 1.5s ease-out;
+ }
+ .slide-bottom-and-rotate-05 {
+  opacity: 0;
+  transform: translate(rem(-300), rem(180)) rotate(-70deg);
+  transition: all 1.8s ease-out;
+ }

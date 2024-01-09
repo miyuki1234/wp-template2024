@@ -1,0 +1,80 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../mixin/breakpoint" as *;
+/*アコーディオン全体*/
+.accordion-area{
+  list-style: none;
+  width: rem(1100);
+  margin: rem(40) auto 0;
+  @include mq(xl) {
+    width: 90%;
+  }
+  @include mq(m) {
+    width: 96%;
+  }
+  li {
+    margin: rem(10) 0;
+    /*アコーディオンタイトル*/
+    .accordion-title {
+      position: relative;/*+マークの位置基準とするためrelative指定*/
+      cursor: pointer;
+      font-weight: bold;
+      padding: rem(15) rem(10) rem(15) rem(50);
+      transition: all .5s ease;
+      color: $color-black-main;
+      background-color: #fff;
+      border-radius: 10px;
+      @include mq(m) {
+        padding: rem(10) rem(5) rem(10) rem(50);
+      }
+      /*アイコンの＋と×*/
+      &::before,
+      &::after {
+        position: absolute;
+        content:'';
+        width: rem(20);
+        height: rem(4);
+        background-color: $color-black-main;
+        @include mq(m) {
+          width: rem(14);
+        }
+      }
+      &::before {
+        top: 48%;
+        left: rem(20);
+        transform: rotate(0deg);
+        @include mq(m) {
+          top: 47%;
+        }
+      }
+      &::after {
+        top: 48%;
+        left: rem(20);
+        transform: rotate(90deg);
+        @include mq(m) {
+          top: 47%;
+        }
+      }
+      /*　closeというクラスがついたら形状変化　*/
+      &.close {
+        border-radius: rem(10) rem(10) 0 0;
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    /*アコーディオンで現れるエリア*/
+    .box {
+      display: none;/*はじめは非表示*/
+      padding: rem(10);
+      border: solid 1px #fff;
+      border-radius: 0 0 rem(10) rem(10);
+      // margin:0 3% 3% 3%;
+      // padding: 3%;
+    }
+  }
+}

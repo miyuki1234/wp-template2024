@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/section" as *;
+@use "../mixin/breakpoint" as *;
+//コンテンツボックス
+.breadcrumb-area {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+
+  .breadcrumb-area__inner {
+    width: $width-base;
+    height: auto;
+    margin: 0 auto;
+    padding: rem(20) 0 rem(5);
+    @include mq(xl) {
+      width: 90%;
+    }
+    @include mq(m) {
+      padding: rem(10) 0 0;
+    }
+    #breadcrumb {
+      ul {
+        display: flex;
+        list-style-type: none;
+        // flex-wrap: wrap;
+        @include mq(s) {
+          white-space: nowrap; /* 改行（行送り）を禁止させる */
+          overflow-x: scroll;  /* 横スクロールを可能にする */
+        }
+        li {
+          font-size: rem(16);
+          @include mq(xl) {
+            font-size: rem(13);
+          }
+          a {
+            &:hover {
+              border-style: none;
+              opacity: 0.75;
+            }
+          }
+          &:not(:first-child) {
+            &:before {
+              content: ">";
+              display: inline-block;
+              margin-left: rem(10);
+              margin-right: rem(10);
+            }
+          }
+          &:not(:last-child) {
+            a {
+                text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

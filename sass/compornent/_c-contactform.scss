@@ -1,0 +1,177 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../mixin/breakpoint" as *;
+//↓↓フォームスタイル
+.contact-form {
+  width: rem(770);
+  height: auto;
+  margin: 0 auto;
+  padding: 0 rem(60) rem(30);
+  @include mq(xl) {
+    padding: 0 rem(30) rem(15);
+    width: 100%;
+  }
+  @include mq(s) {
+    padding: 0 rem(5) rem(30);
+    width: 100%;
+  }
+  >.text_theme_s {
+    padding-bottom: rem(50);
+    .red {
+      color: $color-red-01;
+    }
+  }
+  .contact7 {
+    @include mq(m) {
+      max-width: 100%;
+    }
+    dd {
+      margin-left: 40%;
+      margin: 0 0 rem(40) 0;
+      input {
+        width: 60%;
+        height: rem(34);
+        border: 1px solid $color-gray;
+        border-radius: 5px;
+        margin-top: rem(10);
+        font-size: rem(14);
+        padding: rem(2) rem(4);
+        background-color: #fff;
+        @include mq(m) {
+          width: 100%;
+        }
+      }
+      textarea {
+        width: 60%;
+        border: 1px solid $color-gray;
+        border-radius: 5px;
+        margin-top: rem(10);
+        font-size: rem(14);
+        height: rem(180);
+        padding: rem(4);
+        background-color: #fff;
+        @include mq(m) {
+          width: 100%;
+        }
+      }
+    }
+    dt {
+      float: left;
+      clear: left;
+      width: 40%;
+      padding: rem(10) rem(10) rem(10) 0;
+      font-weight: bold;
+      @include mq(m) {
+        font-weight: normal;
+        width: 100%;
+      }
+    }
+    .must {
+      color: $color-white;
+      background-color: $color-red-01;
+      border-radius: 6px;
+      font-size: rem(12);
+      margin-left: rem(8);
+      padding: rem(2) rem(5);
+      letter-spacing: rem(2);
+      @include mq(xl) {
+        margin-left: rem(4);
+      }
+      @include mq(m) {
+        margin-left: rem(8);
+      }
+    }
+    .optional {
+      display: none;
+    }
+  }
+  .accept-text {
+    margin: 0 auto !important;
+    width: 100%;
+    text-align: center;
+    input {
+      float: left;
+      margin: rem(8) rem(5) 0 0;
+    }
+    .wpcf7-list-item-label {
+      display: block;
+      overflow: hidden;
+    }
+    a {
+      text-decoration: underline;
+    }
+    @include mq(m) {
+
+    }
+  }
+  .btn_contact7 {
+    padding-top: 40px;
+    margin: 0 auto !important;
+    width: 100%;
+    text-align: center;
+    input {
+      -webkit-appearance: none;
+      width: rem(400);
+      height: rem(80);
+      margin: 0 auto;
+      display: block;
+      line-height: 70px;
+      background-color: $color-turquoise-03;
+      border: solid 1px $color-turquoise-03;
+      color: #fff;
+      font-size: rem(16);
+      font-weight: bold;
+      letter-spacing: rem(2);
+      border-radius: 40px;
+      transition: 0.3s;
+      position: relative;
+      @include mq(m) {
+        width: 90%;
+      }
+      &:hover {
+        background-color: $color-white;
+        color: $color-turquoise-03;
+        @include mq(m) {
+        }
+      }
+      &:not(:disabled) {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .recaptcha-text {
+    font-size: rem(14);
+    color: #bbb;
+    @include mq(m) {
+      font-size: rem(12);
+    }
+  }
+  form {
+    &.invalid {
+      .wpcf7-response-output {
+        background-color: #ffff00;
+        border: none;
+      }
+    }
+    &.unaccepted {
+      .wpcf7-response-output {
+        background-color: #ffff00;
+        border: none;
+      }
+    }
+    &.payment-required {
+      .wpcf7-response-output {
+        background-color: #ffff00;
+        border: none;
+      }
+    }
+    &.sent {
+      .wpcf7-response-output {
+        border-color: $color-turquoise-01;
+      }
+    }
+  }
+}

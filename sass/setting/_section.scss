@@ -1,0 +1,8 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../mixin/breakpoint" as *;
+$width-base: rem(1200);
+$tpad-topsection: rem(60);
+$bpad-topsection: rem(80);
+$tpad-subsection: rem(60);
+$bpad-subsection: rem(80);

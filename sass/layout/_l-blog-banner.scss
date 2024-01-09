@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../setting/section" as *;
+@use "../mixin/breakpoint" as *;
+@use "../mixin/animation" as *;
+//ブログバナー
+.banner-section {
+  .banner-section__inner {
+    @include mq(s) {
+      padding: rem(60) 0 rem(70) !important;
+    }
+    a {
+      display: block;
+      img {
+        width: rem(900);
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        @include mq(l) {
+          width: 90%;
+        }
+        @include mq(s) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

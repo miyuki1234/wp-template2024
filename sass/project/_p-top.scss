@@ -1,0 +1,477 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../setting/section" as *;
+@use "../mixin/breakpoint" as *;
+@use "../mixin/animation" as *;
+
+// ■■■■■■トップページ■■■■■■■
+// ▼▼共通
+.top-section {
+  width: 100%;
+  height: auto;
+  &.section-turquoise-01 {
+    background-color: $bgcolor2;
+  }
+  &.section-turquoise-02 {
+    background-color: $bgcolor3;
+  }
+  &.section-turquoise-03 {
+    background-color: $bgcolor4;
+  }
+  &.round-top-section {
+    position: relative;
+    border-top-left-radius: 50% 10%;
+    border-top-right-radius: 50% 10%;
+    z-index: 0;
+    @include mq(m) {
+      border-top-left-radius: 50% 5%;
+      border-top-right-radius: 50% 5%;
+    }
+    .top-section__inner {
+      padding-top: rem(160) !important;
+    }
+  }
+  &.round-bottom-section {
+    position: relative;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+    z-index: 0;
+    @include mq(m) {
+      border-bottom-left-radius: 50% 5%;
+      border-bottom-right-radius: 50% 5%;
+    }
+    .top-section__inner {
+      padding-bottom: rem(200) !important;
+    }
+  }
+
+  .top-section__inner {
+    width: $width-base;
+    height: auto;
+    margin: 0 auto;
+    padding: rem(120) 0 rem(120);
+    @include mq(xl) {
+      width: 90%;
+    }
+    @include mq(s) {
+      padding: rem(100) 0 rem(100);
+    }
+    &.top-plus-pad {
+      padding-top: rem(40);
+    }
+    &.bottom-plus-pad {
+      padding-bottom: rem(120);
+    }
+    &.section__inner-right-side {
+      width: calc(($width-base + (100vw - $width-base) / 2)  + rem(30));
+      margin-left: auto;
+      margin-right: 0;
+      border-radius: 150px 0 0 50px;
+      padding-left: rem(30);
+      padding-right: calc((100vw - $width-base) / 2);
+      @include mq(xl) {
+        width: calc((90vw + (100vw - 90vw) / 2)  + rem(30));
+        padding-right: calc((100vw - 90vw) / 2);
+      }
+      @include mq(s) {
+        width: 100%;
+        padding: rem(100) 5% rem(100);
+      }
+    }
+    &.section__inner-turquoise-01 {
+      background-color: $color-turquoise-04;
+    }
+    &.last-section__inner {
+      padding-bottom: rem(100);
+      @include mq(s) {
+        padding-bottom: rem(40);
+      }
+    }
+  }
+}
+
+//トップページ固有
+.home {
+  .top-section-01 {
+
+    .top-section-01__inner {
+      padding-top: rem(60);
+      padding-bottom: rem(120);
+      .title_theme_l {
+        @include mq(s) {
+          font-size: rem(22);
+        }
+      }
+      .text_theme_top-section {
+        line-height: 2.4;
+        @include mq(m) {
+          line-height: 2.0;
+        }
+      }
+      .balloons {
+        width: 52.5%;
+        margin: 0 auto;
+        display: flex;
+        row-gap: rem(20);
+        flex-wrap: wrap;
+        @include mq(m) {
+          width: 70%;
+        }
+
+        .balloon{
+          display: inline-block;
+          position: relative;
+          padding: rem(30) rem(20);
+          background-color: $color-turquoise-05;
+          border-radius: 30px;
+          @include mq(m) {
+            padding: rem(20) rem(15);
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            background-color: $color-turquoise-05;
+            width: 30px;
+            height: 30px;
+            @include mq(m) {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            background-color: $color-turquoise-05;
+            width: 15px;
+            height: 15px;
+            @include mq(m) {
+              width: 10px;
+              height: 10px;
+            }
+          }
+
+          &.left {
+            margin-right: auto;
+            &::before {
+              left: -45px;
+              bottom: 15px;
+              @include mq(m) {
+                left: -25px;
+              }
+            }
+            &::after {
+              left: -55px;
+              bottom: 10px;
+              @include mq(m) {
+                left: -40px;
+              }
+            }
+          }
+          &.right {
+            margin-left: auto;
+            &::before {
+              right: -35px;
+              bottom: 15px;
+              @include mq(m) {
+                right: -25px;
+              }
+            }
+            &::after {
+              right: -55px;
+              bottom: 10px;
+              @include mq(m) {
+                right: -40px;
+              }
+            }
+          }
+          // &:nth-of-type(1),
+          // &:nth-of-type(3) {
+          // margin-right: auto;
+          // }
+          // &:nth-of-type(2),
+          // &:nth-of-type(4) {
+          // margin-left: auto;
+          // }
+        }
+      }
+    }
+  }
+
+  .top-section-02 {
+    .top-section-02__inner {
+      .title_theme_l {
+        &:after {
+          content: 'CONCEPT';
+        }
+      }
+      .images-box {
+        margin-top: rem(30);
+      }
+
+    }
+  }
+  .top-section-03 {
+    .top-section-03__inner {
+      .title_theme_l {
+        &:after {
+          content: 'WHAT IS INSOLE?';
+          @include mq(m) {
+            line-height: 1;
+          }
+        }
+      }
+      .title_theme_m {
+        color: $color-white;
+      }
+    }
+  }
+  .top-section-04 {
+    .top-section-04__inner {
+      .title_theme_l {
+        &:after {
+          content: 'FEATURES';
+        }
+      }
+      .title_theme_m {
+        color: $color-turquoise-04;
+      }
+    }
+  }
+  .top-section-05 {
+    .top-section-05__inner {
+      .title_theme_l {
+        &:after {
+          content: 'PICK UP BLOG';
+          @include mq(m) {
+            line-height: 1;
+          }
+        }
+      }
+      .box-container {
+        background-color: transparent;
+      }
+    }
+  }
+  .top-section-06 {
+    .top-section-06__inner {
+      .title_theme_l {
+        &:after {
+          content: 'VOICE';
+        }
+      }
+      >.text_theme_s {
+        @include mq(m) {
+          text-align: left !important;
+        }
+      }
+      .contents-area {
+        .for-pc {
+          @include mq(s) {
+            display: none;
+          }
+        }
+        .for-sp {
+          display: none;
+          @include mq(s) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .top-section-07 {
+    .top-section-07__inner {
+      @include mq(s) {
+        padding-top: rem(40);
+      }
+      .title__outer {
+        @include mq(s) {
+          text-align: center;
+        }
+        .title_theme_l {
+          &:after {
+            content: 'FAQ';
+          }
+        }
+      }
+      .text_theme_s {
+        padding-bottom: rem(40);
+        @include mq(s) {
+          text-align: center;
+        }
+      }
+      .sp-back {
+        @include mq(s) {
+          opacity: 0.08;
+          position: absolute;
+          top: rem(200);
+          z-index: -1;
+        }
+      }
+    }
+  }
+  .top-section-08 {
+    .top-section-08__inner {
+      .title_theme_l {
+        &:after {
+          content: 'お問い合わせ';
+        }
+      }
+      .text_theme_s {
+        @include mq(m) {
+          // text-align: left !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// ▼▼固有▼▼
+.top-view {
+  width: 100%;
+  // height: 100vh;
+
+  .top-view__inner {
+    padding-left: calc((100vw - 1200px) / 2 );
+    height: 100%;
+    position: relative;
+    @include mq(xl) {
+      padding-left: 5vw;
+    }
+    &:after {
+
+    }
+    .title_theme_top-view {
+      padding-top: rem(235);
+      padding-left: rem(20);
+      @include mq(xl) {
+      padding-top: rem(160);
+      }
+      @include mq(s) {
+        padding-right: rem(10);
+      }
+    }
+    .text_theme_top-view {
+      padding-top: rem(20);
+      padding-left: rem(20);
+      @include mq(s) {
+        padding-right: rem(20);
+      }
+    }
+    .frame-top-view {
+      width: 100%;
+      height: rem(470);
+      position: relative;
+      overflow: hidden;
+      background: url("../images/bg_topview-none.jpg") center/cover no-repeat;
+      border-radius: 20px 0 0 20px;
+      margin-top: rem(-160);
+      z-index: -1;
+      @include mq(s) {
+        height: rem(260);
+        margin-top: rem(-180);
+      }
+      img {
+        position: absolute;
+        &.topview-part-01 {
+          width: rem(144);
+          left: 20%;
+          bottom: 0;
+          @include mq(xl) {
+            left: 25%;
+          }
+          @include mq(l) {
+            left: 18%;
+            bottom: -10%;
+          }
+          @include mq(s) {
+            width: rem(58);
+            left: 18%;
+            bottom: 0;
+          }
+        }
+        &.topview-part-02 {
+          width: rem(102);
+          left: 32%;
+          bottom: 25%;
+          @include mq(xl) {
+            left: 37%;
+          }
+          @include mq(l) {
+            left: 34%;
+            bottom: 15%;
+          }
+          @include mq(s) {
+            width: rem(41);
+            left: 34%;
+            bottom: 17%;
+          }
+        }
+        &.topview-part-03 {
+          width: rem(98);
+          left: 42%;
+          bottom: 33%;
+          @include mq(xl) {
+            left: 47%;
+          }
+          @include mq(l) {
+            left: 46%;
+            bottom: 23%;
+          }
+          @include mq(s) {
+            width: rem(39);
+            left: 46%;
+            bottom: 22%;
+          }
+        }
+        &.topview-part-04 {
+          width: rem(92);
+          left: 52%;
+          bottom: 39%;
+          @include mq(xl) {
+            left: 58%;
+          }
+          @include mq(l) {
+            left: 60%;
+            bottom: 29%;
+          }
+          @include mq(s) {
+            width: rem(37);
+            left: 60%;
+            bottom: 26%;
+          }
+        }
+        &.topview-part-05 {
+          width: rem(86);
+          left: 62%;
+          bottom: 43%;
+          @include mq(xl) {
+            left: 69%;
+          }
+          @include mq(l) {
+            left: 75%;
+            bottom: 33%;
+          }
+          @include mq(s) {
+            width: rem(34);
+            left: 75%;
+            bottom: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+.delete {
+  position: absolute;
+  left: -200vw;
+}

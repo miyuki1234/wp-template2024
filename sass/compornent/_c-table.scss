@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../mixin/breakpoint" as *;
+//テーブル
+table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  th,td {
+  font-size: rem(z);
+  border: solid 1px #fff; /* 枠線指定 */
+  padding: rem(10);
+  @include mq(m) {
+    font-size: rem(12);
+    padding: rem(10) rem(5);
+  }
+  }
+  thead {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    tr {
+      width: 100%;
+      height: auto;
+      th {
+
+      }
+    }
+  }
+  tbody {
+    width: 100%;
+    height: auto;
+    tr {
+      width: 100%;
+      height: auto;
+      th {
+        width: 64%;
+        font-weight: normal;
+        text-align: left;
+        @include mq(m) {
+          width: 65%;
+        }
+      }
+      td {
+        width: 36%;
+        text-align: right;
+        @include mq(m) {
+          width: 35%;
+        }
+      }
+    }
+  }
+}

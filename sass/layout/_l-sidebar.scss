@@ -1,0 +1,236 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../setting/section" as *;
+@use "../mixin/breakpoint" as *;
+
+
+// ■■■■■■ブログ用２カラム■■■■■■■
+.postpage-box {
+  width: 100%;
+  height: auto;
+  .postpage-box__inner {
+    display: flex;
+    justify-content: space-between;
+    width: $width-base;
+    margin: 0 auto;
+    padding: rem(70) 0 rem(90);
+    @include mq(xl) {
+      width: 90%;
+    }
+    @include mq(l) {
+      display: block;
+    }
+    .mainbar {
+      width: calc(100% - rem(300) - rem(40));
+      height: auto;
+      @include mq(l) {
+        width: 100%;
+        // padding: rem(50) 0 rem(70);
+      }
+      .page-section {
+        .page-section__inner {
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+    }
+    .sidebar {
+      width: rem(300);
+      height: auto;
+      @include mq(l) {
+        width: 100%;
+        margin: 0 auto;
+        padding: rem(50) 0 rem(70);
+      }
+      .sidebar__inner {
+        // height: rem(300);
+        .sidebar-section {
+          &:not(:first-of-type) {
+            margin-top: rem(40);
+          }
+          .sidebar-section__inner {
+            border-radius: 10px;
+            &.no-border {
+              border: none;
+            }
+            //タイトル
+            .text_theme_s {
+              &.title {
+                background-color: $bgcolor2;
+                padding: rem(10) rem(20);
+                color: $color-white;
+                border-radius: 10px 10px 0 0;
+              }
+            }
+            //検索フォーム
+            .search-form__wrapper {
+              padding: rem(5) rem(15) rem(15);
+              background-color: $color-turquoise-04;
+              border-radius: 0 0 10px 10px;
+              .search-form {
+                position: relative;
+                display: flex;
+                border: 1px solid #ddd;
+                border-radius: 11px;
+                input[type="submit"] {
+                  width: rem(40);
+                  height: rem(40);
+                  background: url("../images/icon_search.svg") no-repeat center/20px;
+                  border: none;
+                  cursor: pointer;
+                  background-color: $color-white;
+                  border-radius: 10px 0 0 10px;
+                }
+                input[type="text"] {
+                  width: 100%;
+                  height: rem(40);
+                  padding: 0 rem(5) 0 0;
+                  background-color: $color-white;
+                  border-radius: 0 10px 10px 0;
+                }
+              }
+            }
+            //カテゴリー一覧
+            .category__list {
+              background-color: $color-white;
+              border-radius: 0 0 10px 10px;
+              li {
+                &:not(:first-of-type) {
+                  border-top: solid 1px $color-gray;
+                }
+                a {
+                  display: block;
+                  position: relative;
+                  padding: rem(16) rem(20);
+                  color: $color-black-main;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 5px);
+                    right: rem(30);
+                    width: rem(10);
+                    height: rem(10);
+                    border-right: 1px solid $color-black-main;
+                    border-top: 1px solid $color-black-main;
+                    transform: translateX(5px) rotate(45deg);
+                  }
+                  &:hover {
+                    color: $color-turquoise-04;
+                    opacity: 1;
+                    &::after {
+                      border-right: 1px solid $color-turquoise-04;
+                      border-top: 1px solid $color-turquoise-04;
+                    }
+                  }
+                }
+              }
+            }
+            //人気記事一覧
+            .article__list {
+              background-color: $color-white;
+              border-radius: 0 0 10px 10px;
+              @include mq(l) {
+                display: flex;
+                justify-content: space-between;
+              }
+              @include mq(s) {
+                display: block;
+              }
+              li {
+                @include mq(l) {
+                width: 32%;
+                }
+                @include mq(s) {
+                width: 100%;
+                }
+                &:not(:first-of-type) {
+                  border-top: solid 1px $color-gray;
+                }
+                a {
+                  display: block;
+                  position: relative;
+                  padding: rem(20) rem(20) rem(30);
+                  color: $color-black-main;
+                  &:hover {
+                    color: $color-turquoise-04;
+                    opacity: 1;
+                    &::after {
+                      border-right: 1px solid $color-turquoise-04;
+                      border-top: 1px solid $color-turquoise-04;
+                    }
+                  }
+                  img {
+                    width: 100%;
+                    height: calc(rem(260) * 0.525);
+                    border-radius: 10px;
+                    object-fit: cover;
+                    @include mq(l) {
+                      height: calc((90vw * 0.32 - rem(40)) * 0.525);
+                    }
+                    @include mq(s) {
+                      height: calc((90vw - rem(40)) * 0.525);
+                    }
+                    &:hover {
+                      opacity: 0.85;
+                    }
+                  }
+                  p {
+                    padding: rem(10) rem(10) 0;
+                  }
+                }
+              }
+            }
+            //リンクバナー
+            .banner__list {
+              li {
+                &:not(:first-of-type) {
+                  border-top: solid 1px #666;
+                }
+                a {
+                  img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                  }
+                }
+              }
+            }
+            //プロフィールボックス
+            &.profile-box {
+              padding: rem(3);
+              .contents-box {
+                background-color: $color-white;
+                border-radius: 0 0 10px 10px;
+                figure {
+                  width: 100%;
+                  &.profile-icon {
+                    margin-top: rem(20);
+                    position: relative;
+                    width: 100%;
+                    height: rem(120);
+                    img {
+                      width: rem(120);
+                      height: rem(120);
+                      border-radius: rem(60);
+                      position: absolute;
+                      left: 0;
+                      right: 0;
+                      margin: auto;
+                    }
+                  }
+                }
+                >.text_theme_2s {
+                  padding-top: rem(20);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

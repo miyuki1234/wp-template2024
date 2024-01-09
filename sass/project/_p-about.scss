@@ -1,0 +1,109 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../mixin/breakpoint" as *;
+@use "../mixin/animation" as *;
+//▼▼▼▼プロフィール▼▼▼▼
+.about {
+  .page-top-view {
+    .page-top-view__inner {
+      .title__outer {
+        .title_theme_l {
+        }
+      }
+    }
+  }
+  .page-section-01 {
+    .page-section-01__inner {
+      position: relative;
+      .title__outer {
+        .title_theme_2s {
+          &.title_subpage {
+            &:after {
+              content: 'メッセージ';
+            }
+          }
+        }
+      }
+      .text_theme_s {
+        width: 78%;
+        margin: 0 auto;
+        line-height: 2.0;
+        @include mq(s) {
+          width: 100%;
+        }
+      }
+      .bg-message {
+        position: absolute;
+        background: url("../images/bg_about-message-01.svg") center/cover no-repeat;
+        opacity: 0.25;
+        width: rem(290);
+        height: rem(206);
+        top: 50%;
+        right: 10%;
+      }
+    }
+  }
+  .page-section-02 {
+    .page-section-02__inner {
+      .title__outer {
+        .title_theme_2s {
+          &.title_subpage {
+            &:after {
+              content: 'プロフィール';
+            }
+          }
+        }
+      }
+      >.column2 {
+        .column2__1 {
+          .column2 {
+            justify-content: flex-start;
+            column-gap: rem(50);
+            padding-bottom: rem(20);
+            @include mq(l) {
+              column-gap: rem(30);
+            }
+            .column2__1 {
+              img {
+                width: rem(120);
+                height: auto;
+                border-radius: 50%;
+                @include mq(l) {
+                  width: rem(100);
+                }
+              }
+            }
+            .column2__2 {
+              ul {
+                display: flex;
+                font-size: rem(16);
+                li {
+                  &:not(:first-of-type) {
+                    margin-left: rem(30);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .column2__2 {
+          padding-top: rem(20);
+          .contents-box {
+            &:not(:first-of-type) {
+              margin-top: rem(30);
+            }
+            ul {
+              li {
+                list-style-type: disc;
+                list-style-position: inside;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

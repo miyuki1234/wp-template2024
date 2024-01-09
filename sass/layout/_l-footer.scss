@@ -1,0 +1,121 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../setting/section" as *;
+@use "../mixin/breakpoint" as *;
+@use "../mixin/animation" as *;
+// ■■■■■■フッター■■■■■■■
+.footer-area {
+  width: 100%;
+  height: auto;
+  background-color: $color-turquoise-03;
+  .footer-top-slider__wrapper {
+    position: relative;
+    height: rem(120);
+    @include mq(s) {
+      height: rem(30);
+    }
+    .footer-top-slider {
+      @include animation(slider-to-left 40s);
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: absolute;
+      width: 100%;
+      height: rem(120);
+      background: url("../images/img_footer-slider.svg")  center top repeat-x;
+      z-index: 5;
+      top: rem(-80);
+      @include mq(xl) {
+        top: rem(-60);
+      }
+      @include mq(l) {
+        background-size: auto rem(120);
+      }
+      @include mq(s) {
+        background-size: auto rem(90);
+      }
+    }
+  }
+  .footer-area__inner {
+    width: $width-base;
+    height: auto;
+    padding-top: rem(10);
+    margin: 0 auto;
+    @include mq(xl) {
+      width: 90%;
+    }
+    @include mq(m) {
+      padding-top: rem(35);
+    }
+    .column2 {
+      .column2__1 {
+
+      }
+      .column2__2 {
+        .footer-nav {
+          width: 100%;
+          padding-top: rem(20);
+          .footer-nav__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            li {
+              a {
+                display: block;
+                padding: rem(10) rem(20);
+                color: #fff;
+                font-size: rem(18);
+                font-weight: 700;
+                @include mq(xl) {
+                  padding: rem(5);
+                  letter-spacing: rem(1);
+                }
+                @include mq(s) {
+                  padding: rem(15) rem(20);
+                  letter-spacing: rem(1);
+                }
+              }
+            }
+            @include mq(s) {
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+        .sns__list {
+          display: flex;
+          a {
+            img {
+              height: rem(22);
+              width: auto;
+              padding: rem(20) rem(10) rem(10) rem(20);
+              box-sizing: content-box;
+            }
+          }
+          @include mq(s) {
+            justify-content: center;
+            column-gap: rem(20);
+            a {
+              img {
+                height: rem(40);
+                width: auto;
+                padding: rem(20);
+                box-sizing: content-box;
+              }
+            }
+          }
+        }
+      }
+    }
+    .copyrights {
+      padding-top: rem(40);
+      color: $color-white;
+    }
+    // .reCAPTCHA {
+    //   color: #666;
+    //   text-align: center;
+    //   text-align: left;
+    // }
+  }
+}

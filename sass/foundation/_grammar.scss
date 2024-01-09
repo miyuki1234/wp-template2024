@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+@use "../mixin/breakpoint" as *;
+span{
+  &.sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
+  &.sp-none {
+    @include mq(m) {
+      display: none;
+    }
+  }
+}
+
+br {
+  &.sp-only {
+    display: none;
+    @include mq(m) {
+      display: inline;
+    }
+  }
+
+  &.tb-only {
+    display: none;
+    @include mq(xl) {
+      display: inline;
+    }
+  }
+  
+  &.stb-only {
+    display: none;
+    @include mq(l) {
+      display: inline;
+    }
+  }
+
+  &.pc-only {
+    display: inline;
+    @include mq(m) {
+      display: none;
+    }
+  }
+}

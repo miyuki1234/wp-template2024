@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../mixin/breakpoint" as *;
+@use "../mixin/animation" as *;
+//▼▼▼▼お問い合わせ▼▼▼▼
+.contact {
+  .page-top-view {
+    .page-top-view__inner {
+      .title__outer {
+        .title_theme_l {
+        }
+      }
+    }
+  }
+  .page-section-01 {
+    .page-section-01__inner {
+
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../setting/section" as *;
+@use "../mixin/breakpoint" as *;
+@use "../mixin/animation" as *;
+//■■■下層ページ//
+//▼▼▼▼共通▼▼▼▼
+//トップ見出し
+.page-top-view {
+  width: 100%;
+  height: rem(260);
+  padding: 0;
+  position: relative;
+  @include mq(m) {
+    height: rem(220);
+  }
+  .page-top-view__inner {
+    position: relative;
+    width: $width-base;
+    height: calc(100% - rem(6));
+    margin: 0 auto;
+    @include mq(xl) {
+      width: 90%;
+    }
+    .title__outer {
+      .title_theme_l {
+        font-size: rem(34);
+        // font-weight: 900;
+        padding: rem(130) 0 0;
+        @include mq(xl) {
+          padding: rem(110) 0 0;
+        }
+        @include mq(m) {
+          padding: rem(100) 0 0;
+        }
+      }
+    }
+  }
+  &.bg-normal {
+  background: url("../images/bg_subpage-topview-01.jpg") center/cover no-repeat;
+  }
+  &.bg-blog {
+  background: url("../images/bg_subpage-topview-02.jpg") center/cover no-repeat;
+  }
+}
+//セクション
+.page-section {
+  width: 100%;
+  height: auto;
+  &.section-darkgray {
+    background-color: $bgcolor2;
+  }
+  .page-section__inner {
+    width: $width-base;
+    height: auto;
+    margin: 0 auto;
+    padding: rem(70) 0 rem(70);
+    @include mq(xl) {
+      width: 90%;
+      padding: rem(50) 0 rem(50);
+    }
+    &.last-section__inner {
+      @include mq(s) {
+        padding-bottom: rem(40);
+      }
+    }
+    &.section__inner-right-side {
+      width: calc(($width-base + (100vw - $width-base) / 2)  + rem(30));
+      margin-left: auto;
+      margin-right: 0;
+      border-radius: 150px 0 0 50px;
+      padding-left: rem(30);
+      padding-right: calc((100vw - $width-base) / 2);
+      @include mq(xl) {
+        width: calc((90vw + (100vw - 90vw) / 2)  + rem(30));
+        padding-right: calc((100vw - 90vw) / 2);
+      }
+      @include mq(s) {
+        width: 100%;
+        padding: rem(100) 5% rem(100);
+      }
+    }
+    &.section__inner-turquoise-02 {
+      background-color: $color-turquoise-05;
+    }
+  }
+  &.last-section {
+    .page-section__inner {
+      padding-bottom: rem(120);
+      @include mq(xl) {
+        padding-bottom: rem(100);
+      }
+    }
+  }
+}

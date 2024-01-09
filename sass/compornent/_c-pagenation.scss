@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../mixin/breakpoint" as *;
+//ページネーション
+.pagination-area {
+  .pagination{
+    margin: rem(40) 0 0;
+    .nav-links{
+      display: flex;
+      justify-content: center;
+      .page-numbers{
+        display: inline-block;
+        margin-right: rem(20);
+        padding: rem(5) rem(15);
+        color: $color-turquoise-01;
+        border-radius: 10px;
+        border: 1px solid $color-turquoise-01;
+        font-size: rem(16);
+        @include mq(m) {
+          font-size: rem(14);
+          padding: rem(3) rem(10);
+          border-radius: 6px;
+          margin-right: rem(12);
+        }
+        &.current{
+          background: $color-white;
+          border: 1px solid $color-white
+        }
+        &.prev,
+        &.next{
+          position: static !important;
+          background: transparent;
+          box-shadow: none;
+        }
+        &.dots{
+          background: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
