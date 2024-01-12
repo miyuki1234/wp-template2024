@@ -1,14 +1,14 @@
 'use strict';
 //フェイドイン部分の記述 -->
 $(window).on('load scroll', function() {
-   $(".show").each(function() {
+  $(".show").each(function() {
       var winScroll = $(window).scrollTop();
       var winHeight = $(window).height();
       var scrollPos = winScroll + (winHeight * 0.9);
       if($(this).offset().top < scrollPos) {
-         $(this).css({opacity: 1, transform: 'translate(0, 0)'});
+        $(this).css({opacity: 1, transform: 'translate(0, 0)'});
       }
-   });
+  });
 });
 
 //★スムーズスクロール部分の記述 -->

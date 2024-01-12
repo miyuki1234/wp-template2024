@@ -13,9 +13,9 @@
         display: inline-block;
         margin-right: rem(20);
         padding: rem(5) rem(15);
-        color: $color-turquoise-01;
+        color: $color-base01;
         border-radius: 10px;
-        border: 1px solid $color-turquoise-01;
+        border: 1px solid $color-base01;
         font-size: rem(16);
         @include mq(m) {
           font-size: rem(14);

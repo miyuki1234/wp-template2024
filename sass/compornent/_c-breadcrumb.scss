@@ -3,13 +3,11 @@
 @use "../setting/color" as *;
 @use "../setting/section" as *;
 @use "../mixin/breakpoint" as *;
-//コンテンツボックス
+
+//パンくず
 .breadcrumb-area {
   width: 100%;
   height: auto;
-  position: absolute;
-  bottom: 0;
-
   .breadcrumb-area__inner {
     width: $width-base;
     height: auto;

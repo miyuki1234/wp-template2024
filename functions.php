@@ -9,7 +9,7 @@ function add_css_js()
     wp_enqueue_script('jquery');
 
     //全てのページにstyle.cssを読み込み
-    wp_enqueue_style('style', get_template_directory_uri().'/css/style.css', '', date('YmdGi', filemtime(get_template_directory().'/css/style.css')), '');
+    wp_enqueue_style('style', get_template_directzory_uri().'/css/style.css', '', date('YmdGi', filemtime(get_template_directory().'/css/style.css')), '');
     wp_enqueue_style('jq_swiper_css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css');
     // wp_enqueue_style('jq_validation_css', get_template_directory_uri() . '/validation/validationEngine.jquery.css');
     wp_enqueue_style( 'validationEngine.jquery.css', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/validationEngine.jquery.min.css', array(), '1.0', 'all');

@@ -145,7 +145,7 @@ const bsReload = (done) => {
 
 function watchTask(done) {
   watch(
-    ["./**", "!./*.css"],           // 監視対象とするパスはお好みで
+    ["./**/*.scss", "!./*.css"],           // 監視対象とするパスはお好みで
     series(development, bsReload)   // 実行するタスク
   );
   done();

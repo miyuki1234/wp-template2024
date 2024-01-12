@@ -134,7 +134,7 @@
                   width: 0;
                   bottom: 0;
                   transition: all 0.6s ease;
-                  border-bottom: 3px solid $color-turquoise-04;
+                  border-bottom: 3px solid $color-base04;
                   position: absolute;
                   display: block;
                 }
@@ -149,7 +149,7 @@
                   &:before,
                   &:after {
                     width: 50%;
-                  	border-bottom: 3px solid $color-turquoise-04;
+                  	border-bottom: 3px solid $color-base04;
                   }
                 }
               }
@@ -157,7 +157,7 @@
             &:last-child {
               margin-left: rem(15);
               a {
-                background-color: $color-orange-01;
+                background-color: $color-second-01;
                 color: #fff;
                 border-radius: 30px;
                 padding: rem(15) rem(40);
@@ -174,7 +174,7 @@
           padding: rem(10);
           &:hover {
             span {
-              background-color: $color-turquoise-04;
+              background-color: $color-base04;
             }
           }
         }
@@ -195,7 +195,7 @@
             position: absolute;
             height: rem(3);
             border-radius: 1px;
-            background: $color-turquoise-01;
+            background: $color-base01;
             width: 100%;
             z-index: 5;
             @include mq(m) {
@@ -255,7 +255,7 @@
             }
             &:hover {
               span {
-                background-color: $color-turquoise-04;
+                background-color: $color-base04;
               }
             }
           }
@@ -273,7 +273,7 @@
         position: fixed;
         z-index: 3;
         /*ナビのスタート位置と形状*/
-        background-color: $color-turquoise-03;
+        background-color: $color-base03;
         top: 0;
         right: -120vw;
         width: fit-content;
@@ -325,7 +325,7 @@
               &:last-child {
                 margin-top: rem(40);
                 a {
-                  background-color: $color-orange-01;
+                  background-color: $color-second-01;
                   color: #fff;
                   border-radius: 30px;
                   padding: rem(15) rem(40);

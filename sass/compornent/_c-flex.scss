@@ -363,7 +363,7 @@
             border-color: transparent transparent transparent $color-white;
           }
           .red-marker {
-            background:linear-gradient(transparent 60%, $color-red-01 50%);
+            background:linear-gradient(transparent 60%, $color-red 50%);
             padding: 0 rem(3);
             display: inline-block;
           }
@@ -382,7 +382,7 @@
       ul {
         li {
           &:nth-of-type(1) {
-            background-color: $color-turquoise-01;
+            background-color: $color-base01;
             &:after {
               content: 'Basic Course';
               font-family: $font-en;
@@ -395,13 +395,13 @@
             }
           }
           &:nth-of-type(2) {
-            background-color: $color-turquoise-02;
+            background-color: $color-base02;
           }
           &:nth-of-type(3) {
-            background-color: $color-turquoise-03;
+            background-color: $color-base03;
           }
           &:nth-of-type(4) {
-            background-color: $color-turquoise-04;
+            background-color: $color-base04;
           }
         }
       }
@@ -413,7 +413,7 @@
       ul {
         li {
           &:nth-of-type(1) {
-            background-color: $color-orange-01;
+            background-color: $color-second-01;
             &:after {
               content: 'Premium Course';
               font-family: $font-en;
@@ -426,13 +426,13 @@
             }
           }
           &:nth-of-type(2) {
-            background-color: $color-orange-02;
+            background-color: #F4A452;
           }
           &:nth-of-type(3) {
-            background-color: $color-orange-03;
+            background-color: #F2B254;
           }
           &:nth-of-type(4) {
-            background-color: $color-orange-04;
+            background-color: #F5C883;
           }
         }
       }
@@ -691,8 +691,8 @@
     font-size: rem(12);
     text-align: center;
     border-radius: 50%;
-    // border: solid 1px #fff;
-    background-color: #fff;
+    // border: solid 1px $color-white;
+    background-color: $color-white;
     color: $color-black-main;
     content: counter(steps);
     @include mq(l) {
@@ -707,7 +707,7 @@
     width: 100%;
     height: rem(2);
     content: '';
-    background-color: #fff;
+    background-color: $color-white;
     }
     &:first-child:after {
       content: none;
@@ -738,7 +738,7 @@
         text-align: center;
         content: "";
         border-radius: 50%;
-        background-color: $color-turquoise-05;
+        background-color: $color-base05;
         >span {
           font-size: rem(14);
           display: block;
@@ -778,7 +778,7 @@
     .stepline {
       width: 2px;
       height: calc(100% - rem(33));
-      background-color: $color-turquoise-05;
+      background-color: $color-base05;
       position: absolute;
       top: rem(66);
       left: calc(rem(30) - 1px);
@@ -841,7 +841,7 @@
         position: relative;
         margin: auto;
         display: block;
-        background-color: #fff;
+        background-color: $color-white;
         width: rem(100);
         height: rem(84);
         content: "";
@@ -882,46 +882,46 @@
       //カラー別
       &.hov-orange {
         &:hover {
-          border: solid 2px $color-turquoise-03;
-          color: $color-turquoise-03;
+          border: solid 2px $color-base03;
+          color: $color-base03;
           &:before {
-            background-color: $color-turquoise-03;
+            background-color: $color-base03;
           }
         }
       }
       &.hov-pink {
         &:hover {
-          border: solid 2px $color-turquoise-02;
-          color: $color-turquoise-02;
+          border: solid 2px $color-base02;
+          color: $color-base02;
           &:before {
-            background-color: $color-turquoise-02;
+            background-color: $color-base02;
           }
         }
       }
       &.hov-purple {
         &:hover {
-          border: solid 2px $color-turquoise-01;
-          color: $color-turquoise-01;
+          border: solid 2px $color-base01;
+          color: $color-base01;
           &:before {
-            background-color: $color-turquoise-01;
+            background-color: $color-base01;
           }
         }
       }
       &.hov-turquoise {
         &:hover {
-          border: solid 2px $color-turquoise-05;
-          color: $color-turquoise-05;
+          border: solid 2px $color-base05;
+          color: $color-base05;
           &:before {
-            background-color: $color-turquoise-05;
+            background-color: $color-base05;
           }
         }
       }
       &.hov-green {
         &:hover {
-          border: solid 2px $color-turquoise-04;
-          color: $color-turquoise-04;
+          border: solid 2px $color-base04;
+          color: $color-base04;
           &:before {
-            background-color: $color-turquoise-04;
+            background-color: $color-base04;
           }
         }
       }
@@ -984,7 +984,7 @@
         width: rem(120);
         height: rem(120);
         padding: rem(20);
-        background-color: #FFF;
+        background-color: $color-white;
         border-radius: 50%;
         position: relative;
         @include mq(s) {
@@ -1013,8 +1013,8 @@
           display: inline-block;
           width: 10px;
           height: 10px;
-          border-right: 2px solid $color-turquoise-01;
-          border-top: 2px solid $color-turquoise-01;
+          border-right: 2px solid $color-base01;
+          border-top: 2px solid $color-base01;
           transform: translateX(5px) rotate(135deg);
           margin-bottom: rem(3);
           @include mq(s) {

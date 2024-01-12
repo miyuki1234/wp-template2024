@@ -1,27 +1,22 @@
 @charset 'UTF-8';
 //main
 $color-black-main: #333333;
-$color-darkgray: #666666;
-$color-gray: #cccccc;
-$color-gray-white: #eeeeee;
-$color-gray-white-02: #f7f7f7;
+$color-gray01: #cccccc;
+$color-gray02: #666666;
+$color-gray03: #eeeeee;
+$color-gray04: #f7f7f7;
 $color-white: #fff;
-$color-turquoise-01: #03638D;
-$color-turquoise-02: #0D83A8;
-$color-turquoise-03: #1289A1;
-$color-turquoise-04: #59BFB9;
-$color-turquoise-05: #C7E9E7;
-$color-turquoise-06: #ECF7F7;
-$color-orange-01: #E99411;
-$color-orange-02: #F4A452;
-$color-orange-03: #F2B254;
-$color-orange-04: #F5C883;
-$color-red-01: #FF7277;
-$color-red-02: #FF8C90;
-//background
-$bgcolor: $color-white;
-$bgcolor2: $color-turquoise-04;
-$bgcolor3: $color-turquoise-05;
-$bgcolor4: $color-turquoise-01;
+
+$color-base01: #03638D;
+$color-base02: #0D83A8;
+$color-base03: #1289A1;
+$color-base04: #59BFB9;
+$color-base05: #C7E9E7;
+$color-base06: #ECF7F7;
+$color-second-01: #E99411;
+$color-second-02: #F4A452;
+
+$color-red: #FF7277;
+
 //link
-$link-color: $color-turquoise-01;
+$link-color: $color-base01;

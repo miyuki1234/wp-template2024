@@ -24,13 +24,13 @@
     }
   }
   &.voice {
-    background-color: $bgcolor2;
+    background-color: $color-white;
     border-radius: 10px;
     border: solid 2px $color-white;
     margin-top: rem(20);
     margin-bottom: rem(30);
-    background-image: linear-gradient(0deg, transparent calc(100% - 1px), $color-darkgray calc(100% - 1px)),
-    linear-gradient(90deg, transparent calc(100% - 1px), $color-darkgray calc(100% - 1px));
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), $color-gray02 calc(100% - 1px)),
+    linear-gradient(90deg, transparent calc(100% - 1px), $color-gray02 calc(100% - 1px));
     background-size: 16px 16px;
     background-repeat: repeat;
     background-position: center center;
@@ -49,10 +49,10 @@
     padding: rem(15);
   }
   &.line-turquoise {
-    border: solid 1px $color-turquoise-03;
+    border: solid 1px $color-base03;
   }
   &.line-red {
-    border: solid 1px $color-red-01;
+    border: solid 1px $color-red;
   }
 }
 .images-box {

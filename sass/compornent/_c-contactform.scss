@@ -19,7 +19,7 @@
   >.text_theme_s {
     padding-bottom: rem(50);
     .red {
-      color: $color-red-01;
+      color: $color-red;
     }
   }
   .contact7 {
@@ -32,7 +32,7 @@
       input {
         width: 60%;
         height: rem(34);
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray01;
         border-radius: 5px;
         margin-top: rem(10);
         font-size: rem(14);
@@ -44,7 +44,7 @@
       }
       textarea {
         width: 60%;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray01;
         border-radius: 5px;
         margin-top: rem(10);
         font-size: rem(14);
@@ -69,7 +69,7 @@
     }
     .must {
       color: $color-white;
-      background-color: $color-red-01;
+      background-color: $color-red;
       border-radius: 6px;
       font-size: rem(12);
       margin-left: rem(8);
@@ -117,8 +117,8 @@
       margin: 0 auto;
       display: block;
       line-height: 70px;
-      background-color: $color-turquoise-03;
-      border: solid 1px $color-turquoise-03;
+      background-color: $color-base03;
+      border: solid 1px $color-base03;
       color: #fff;
       font-size: rem(16);
       font-weight: bold;
@@ -131,7 +131,7 @@
       }
       &:hover {
         background-color: $color-white;
-        color: $color-turquoise-03;
+        color: $color-base03;
         @include mq(m) {
         }
       }
@@ -170,7 +170,7 @@
     }
     &.sent {
       .wpcf7-response-output {
-        border-color: $color-turquoise-01;
+        border-color: $color-base01;
       }
     }
   }

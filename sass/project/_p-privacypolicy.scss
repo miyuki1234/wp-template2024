@@ -19,10 +19,10 @@
       .contents-box {
         padding: rem(40) 0 rem(20);
         .title_theme_m {
-          border-bottom: 1px solid $color-gray;
+          border-bottom: 1px solid $color-gray01;
           margin-bottom: rem(10);
           padding-bottom: rem(10);
-          color: $color-turquoise-03;
+          color: $color-base03;
         }
         .text_theme_s {
 
@@ -48,16 +48,16 @@
             @include mq(s) {
               width: 95%;
             }
-            border-top: solid 1px $color-turquoise-04;
+            border-top: solid 1px $color-base04;
             dt {
               width: 25%;
               padding: rem(15) 0 rem(15) rem(20);
-              border-bottom: solid 1px $color-turquoise-04;
+              border-bottom: solid 1px $color-base04;
             }
             dd {
               width: 75%;
               padding: rem(15) 0 rem(15) rem(20);
-              border-bottom: solid 1px $color-turquoise-04;
+              border-bottom: solid 1px $color-base04;
             }
           }
         }

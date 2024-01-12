@@ -2,99 +2,42 @@
 @use "../foundation/base" as *;
 @use "../setting/color" as *;
 @use "../mixin/breakpoint" as *;
-//グラデーションが流れる
+
+//ボタンエリア
 .btn-area {
   text-align: center;
-  padding-top: rem(60);
-  &.spno-top-pad {
-    @include mq(m) {
-      padding-top: 0;
-    }
-  }
+  margin: rem(60) rem(0);
 }
 
+//ボタン
 .btn {
-  /*ボタンの形状*/
+  color: $color-white;
+  background: $color-base01;
   display: inline-block;
   padding: rem(18) rem(60);
   border-radius: 30px;
   width: rem(300);
+  text-align: center;
   text-decoration: none;
   outline: none;
   font-weight: bold;
   position: relative;
-  /*背景の色と形状*/
-  /*アニメーションの指定*/
   transition: all 0.3s ease-out;
-  &::after {
-    content: "";
-    display: inline-block;
-    -webkit-mask-image: url(images/icon_round-arrow.svg);
-    position: absolute;
-    top: calc(50% - 8px);
-    right: rem(30);
-    width: rem(10);
-    height: rem(16);
-  }
   /*hoverした際の、背景の場所とテキスト色の変更*/
   &:hover {
     opacity: 1;
   }
 }
-.btn-white{
-  color: $color-turquoise-01;
-  background-color: $color-white;
+.btn-arrow{
+  position: relative;
   &::after {
-    background-color: $color-turquoise-01;
-  }
-  /*hoverした際の、背景の場所とテキスト色の変更*/
-  &:hover {
-    color: $color-turquoise-01;
-    background-color: $color-turquoise-05;
-  }
-}
-.btn-turquoise {
-  color: $color-white;
-  background-color: $color-turquoise-01;
-  &::after {
-    background-color: $color-white;
-  }
-  /*hoverした際の、背景の場所とテキスト色の変更*/
-  &:hover {
-    color: $color-white;
-    background-color: $color-turquoise-04;
-    &::after {
-    }
-  }
-}
-.btn-orange {
-  color: $color-white;
-  background-color: $color-orange-01;
-  &::after {
-    background-color: $color-white;
-  }
-  /*hoverした際の、背景の場所とテキスト色の変更*/
-  &:hover {
-    color: $color-white;
-    background-color: $color-orange-03;
-    &::after {
-    }
-  }
-}
-.btn-transparent {
-  color: $color-white;
-  background-color: transparent;
-  border: solid 1px $color-white;
-  &::after {
-    background-color: $color-white;
-  }
-  /*hoverした際の、背景の場所とテキスト色の変更*/
-  &:hover {
-    background-color: $color-turquoise-05;
-    border: solid 1px $color-turquoise-05;
-    color: $color-turquoise-01;
-    &::after {
-      background-color: $color-turquoise-01;
-    }
+    content: "";
+    display: inline-block;
+    background: url("../images/icon_round-arrow.svg") center/contain no-repeat;
+    position: absolute;
+    top: calc(50% - 8px);
+    right: rem(30);
+    width: rem(10);
+    height: rem(16);
   }
 }

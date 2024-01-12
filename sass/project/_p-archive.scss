@@ -18,7 +18,7 @@
     }
   }
   .postpage-box {
-    background-color: $color-turquoise-05;
+    background-color: $color-base05;
   }
   .page-section-01 {
     .page-section-01__inner {
@@ -27,14 +27,14 @@
         width: 100%;
         height: auto;
         padding: rem(20) rem(30);
-        border: solid 2px $color-turquoise-04;
+        border: solid 2px $color-base04;
         background-color: $color-white;
         border-radius: 10px;
         margin-bottom: rem(40);
         .text_theme_2s {
           padding-left: rem(20);
           display: inline-block;
-          color: $color-turquoise-04;
+          color: $color-base04;
         }
       }
       //記事一覧表示
@@ -100,8 +100,8 @@
      li {
        &:first-child {
          a {
-           color: $color-turquoise-02;
-           border-bottom: solid 2px $color-turquoise-02;
+           color: $color-base02;
+           border-bottom: solid 2px $color-base02;
          }
        }
      }
@@ -117,8 +117,8 @@
         li {
           &:nth-child(2) {
             a {
-              color: $color-turquoise-02;
-              border-bottom: solid 2px $color-turquoise-02;
+              color: $color-base02;
+              border-bottom: solid 2px $color-base02;
             }
           }
         }
@@ -132,8 +132,8 @@
         li {
           &:nth-child(3) {
             a {
-              color: $color-turquoise-02;
-              border-bottom: solid 2px $color-turquoise-02;
+              color: $color-base02;
+              border-bottom: solid 2px $color-base02;
             }
           }
         }
@@ -221,10 +221,10 @@
                   &:hover {
                     opacity: 1;
                     .title_theme_s {
-                      color: $color-turquoise-04;
+                      color: $color-base04;
                     }
                     .text_theme_2s {
-                      color: $color-turquoise-04;
+                      color: $color-base04;
                     }
 
                   }
@@ -252,7 +252,7 @@
     .page-section__inner {
       .title_theme_m {
         padding-bottom: rem(10);
-        color: $color-turquoise-03;
+        color: $color-base03;
         &:not(:first-of-type) {
           margin-top: rem(40);
         }
@@ -267,7 +267,7 @@
   width: 100%;
   &__list {
     padding: rem(30) rem(20);
-    border-bottom: solid 1px $color-gray;
+    border-bottom: solid 1px $color-gray01;
     @include mq(s) {
       padding: rem(25) rem(10);
     }
@@ -283,7 +283,7 @@
         font-size: rem(36);
         font-family: $font-en;
         font-weight: 900;
-        color: $color-turquoise-04;
+        color: $color-base04;
         line-height: rem(16);
       }
       &:after {
@@ -296,8 +296,8 @@
         bottom: calc(50% - $arrow-size);
         width: $arrow-size;
         height: $arrow-size;
-        border-right: 2px solid $color-turquoise-04;
-        border-top: 2px solid $color-turquoise-04;
+        border-right: 2px solid $color-base04;
+        border-top: 2px solid $color-base04;
         transform: translateX(5px) rotate(45deg);
       }
       .title__wrapper {

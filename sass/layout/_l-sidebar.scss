@@ -60,7 +60,7 @@
             //タイトル
             .text_theme_s {
               &.title {
-                background-color: $bgcolor2;
+                background-color: $color-base04;
                 padding: rem(10) rem(20);
                 color: $color-white;
                 border-radius: 10px 10px 0 0;
@@ -69,7 +69,7 @@
             //検索フォーム
             .search-form__wrapper {
               padding: rem(5) rem(15) rem(15);
-              background-color: $color-turquoise-04;
+              background-color: $color-base04;
               border-radius: 0 0 10px 10px;
               .search-form {
                 position: relative;
@@ -100,7 +100,7 @@
               border-radius: 0 0 10px 10px;
               li {
                 &:not(:first-of-type) {
-                  border-top: solid 1px $color-gray;
+                  border-top: solid 1px $color-gray01;
                 }
                 a {
                   display: block;
@@ -119,11 +119,11 @@
                     transform: translateX(5px) rotate(45deg);
                   }
                   &:hover {
-                    color: $color-turquoise-04;
+                    color: $color-base04;
                     opacity: 1;
                     &::after {
-                      border-right: 1px solid $color-turquoise-04;
-                      border-top: 1px solid $color-turquoise-04;
+                      border-right: 1px solid $color-base04;
+                      border-top: 1px solid $color-base04;
                     }
                   }
                 }
@@ -148,7 +148,7 @@
                 width: 100%;
                 }
                 &:not(:first-of-type) {
-                  border-top: solid 1px $color-gray;
+                  border-top: solid 1px $color-gray01;
                 }
                 a {
                   display: block;
@@ -156,11 +156,11 @@
                   padding: rem(20) rem(20) rem(30);
                   color: $color-black-main;
                   &:hover {
-                    color: $color-turquoise-04;
+                    color: $color-base04;
                     opacity: 1;
                     &::after {
-                      border-right: 1px solid $color-turquoise-04;
-                      border-top: 1px solid $color-turquoise-04;
+                      border-right: 1px solid $color-base04;
+                      border-top: 1px solid $color-base04;
                     }
                   }
                   img {

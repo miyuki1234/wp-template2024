@@ -50,7 +50,7 @@
   width: 100%;
   height: auto;
   &.section-darkgray {
-    background-color: $bgcolor2;
+    background-color: $color-base04;
   }
   .page-section__inner {
     width: $width-base;
@@ -83,7 +83,7 @@
       }
     }
     &.section__inner-turquoise-02 {
-      background-color: $color-turquoise-05;
+      background-color: $color-base05;
     }
   }
   &.last-section {

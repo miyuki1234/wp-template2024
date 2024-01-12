@@ -1,6 +1,7 @@
 'use strict';
 //★ヘッダーがスクロールすると一部消える
-var headerH = $(".header-area").outerHeight(true);//headerの高さを取得
+var headerH = $(".header-area").outerHeight(true);
+//headerの高さを取得
 //スクロール途中からヘッダーの高さを変化させるための設定を関数でまとめる
 function FixedAnime() {
 	//ヘッダーの高さを取得

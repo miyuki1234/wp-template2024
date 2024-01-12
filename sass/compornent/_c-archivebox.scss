@@ -57,7 +57,7 @@
       &:hover {
         opacity: 1;
         .news-title {
-          color: $color-turquoise-04;
+          color: $color-base04;
         }
       }
     }
@@ -65,7 +65,7 @@
       display: inline-block;
       padding: rem(2) rem(15);
       border-radius: 16px;
-      background-color: $color-turquoise-05;
+      background-color: $color-base05;
       color: $color-black-main;
       font-size: rem(12);
       font-weight: 700;
