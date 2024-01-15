@@ -2,42 +2,39 @@
 @use "../foundation/base" as *;
 @use "../setting/color" as *;
 @use "../mixin/breakpoint" as *;
-//↓↓コンタクトバナー
+
+//コンタクトバナー
 .contact-section {
-  background: url("../images/bg_contact-area.jpg") center/cover no-repeat;
-  width: 100%;
-  height: rem(390);
-  position: relative;
-  @include mq(s) {
-    height: rem(350);
-  }
-  &:after {
-    position: absolute;
-    content:'';
-    background-color: rgba($color-base04, 0.6);
+    background: url("../images/bg_contact-area.jpg") center/cover no-repeat;
     width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  .contact-section__inner {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    z-index: 2;
-    padding: 0;
-    top: 20%;
-    align-items: center;
-    @include mq(xl) {
-      width: 100%;
-      height: auto;
-      padding: 0;
+    height: rem(390);
+    position: relative;
+    @include mq(s) {
+        height: rem(350);
     }
-    .text_theme_s {
-      color: $color-white;
+    &:after {
+        content:'';
+        position: absolute;
+        background-color: rgba($color-base04, 0.6);
+        width: 100%;
+        height: 100%;
+        z-index: 0;
     }
-    .btn-area {
-
+    .contact-section__inner {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+        padding: 0;
+        top: 20%;
+        align-items: center;
+        @include mq(xl) {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
+        .text_theme_s {
+            color: $color-white;
+        }
     }
-  }
 }

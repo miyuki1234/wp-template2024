@@ -3,33 +3,33 @@
 @use "../setting/color" as *;
 
 a {
-  color: $link-color;
-  text-decoration: none;
-  transition: 0.3s;
+    color: $link-color;
+    text-decoration: none;
+    transition: 0.3s;
 
-  &:hover {
-    cursor: pointer;
-    opacity: 0.65;
-  }
+    &:hover {
+        cursor: pointer;
+        opacity: 0.65;
+    }
 }
 .link-inline {
-  text-align: left;
-  margin-top: rem(20);
-  a {
+    text-align: left;
+    margin-top: rem(20);
+    a {
     font-size: rem(14);
     font-weight: 700;
     &:before {
-      content: '';
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-right: 2px solid $color-base01;
-      border-top: 2px solid $color-base01;
-      transform: translateX(5px) rotate(45deg);
-      margin-right: rem(15);
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid $color-base01;
+        border-top: 2px solid $color-base01;
+        transform: translateX(5px) rotate(45deg);
+        margin-right: rem(15);
+        }
     }
-  }
-  &:not(:first-of-type) {
-    margin-top: rem(10);
-  }
+    &:not(:first-of-type) {
+        margin-top: rem(10);
+    }
 }

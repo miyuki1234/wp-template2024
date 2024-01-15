@@ -26,8 +26,11 @@ body {
   letter-spacing: rem(1);
   color: $color-black-main;
   background-color: $color-white;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 img {
-  display: block;
+  // display: block;
+  max-width: 100%;
 }

@@ -9,142 +9,140 @@
 
 //text
 .ta-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 .ta-left {
-  text-align: left !important;
+    text-align: left !important;
 }
 .ta-right {
-  text-align: right !important;
+    text-align: right !important;
 }
 .text_theme_s {
-  font-size: rem(16);
+    font-size: rem(16);
 }
 .text_theme_2s {
-  font-size: rem(14);
+    font-size: rem(14);
 }
 .text_theme_3s {
-  font-size: rem(12);
+    font-size: rem(12);
 }
 strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 .super {
-  vertical-align: super;
-  font-size: 60%;
+    vertical-align: super;
+    font-size: 60%;
 }
 
 
 // top
 .title_theme_top-view {
-  font-size: rem(63);
-  font-weight: 700;
-  line-height: 1.5;
-  @include mq(l) {
-    font-size: rem(40);
-  }
-  @include mq(s) {
-    font-size: rem(24);
-  }
+    font-size: rem(63);
+    font-weight: 700;
+    line-height: 1.5;
+    @include mq(l) {
+        font-size: rem(40);
+    }
+    @include mq(s) {
+        font-size: rem(24);
+    }
 }
 .text_theme_top-view {
-  font-size: rem(24);
-  font-weight: 500;
-  @include mq(m) {
-    font-size: rem(20);
-  }
+    font-size: rem(24);
+    font-weight: 500;
+    @include mq(m) {
+        font-size: rem(20);
+    }
 }
 
 // title
 .title__outer {
-  position: relative;
+    position: relative;
 }
 .title_theme_l {
-  font-size: rem(30);
-  font-weight: 700;
-  padding-bottom: rem(10);
-  @include mq(s) {
-    padding-bottom: rem(40);
-    // font-size: rem(28);
-  }
-  &:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: rem(-50);
-    z-index: -1;
-    font-family: $font-en;
-    font-size: rem(63);
-    color: $color-base05;
+    font-size: rem(30);
+    font-weight: 700;
+    margin: rem(40) 0 rem(20);
     @include mq(s) {
-      // font-size: rem(44);
-      // top: rem(-15);
+        margin: rem(30) 0 rem(10);
     }
-  }
+    &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: rem(-50);
+        z-index: -1;
+        font-family: $font-en;
+        font-size: rem(63);
+        color: $color-base05;
+        @include mq(s) {
+        }
+    }
 }
 .title_theme_m {
-  font-size: rem(24);
-  font-weight: 700;
-  padding-bottom: rem(35);
-  @include mq(s) {
-    padding-bottom: rem(25);
-  }
-  &.ribbon {
-    margin: rem(0) auto rem(15) rem(-30);
-    display: inline-block;
-    position: relative;
-    height: 60px;/*高さ*/
-    line-height: 60px;/*高さ*/
-    text-align: center;
-    padding: 0 40px 0 18px;/*文字の左右の余白*/
-    font-size: 18px;/*文字サイズ*/
-    background: $color-base03;/*背景色*/
-    color: #FFF;/*文字色*/
-    box-sizing: border-box;
-    &:after {
-      position: absolute;
-      content: '';
-      width: 0px;
-      height: 0px;
-      z-index: 1;
-      top: 0;
-      right: 0;
-      border-width: 30px 15px 30px 0px;
-      border-color: transparent #fff transparent transparent;
-      border-style: solid;
+    font-size: rem(24);
+    font-weight: 700;
+    margin: rem(40) 0 rem(20);
+    @include mq(s) {
+        margin: rem(30) 0 rem(10);
     }
-    @include mq(m) {
-      margin: rem(-5) auto rem(15) rem(-20);
+    &.ribbon {
+        margin-bottom: rem(10);
+        display: inline-block;
+        position: relative;
+        height: 60px;/*高さ*/
+        line-height: 60px;/*高さ*/
+        text-align: center;
+        padding: 0 40px 0 18px;/*文字の左右の余白*/
+        font-size: 18px;/*文字サイズ*/
+        background: $color-base03;/*背景色*/
+        color: #FFF;/*文字色*/
+        box-sizing: border-box;
+        &:after {
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 0px;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        border-width: 30px 15px 30px 0px;
+        border-color: transparent #fff transparent transparent;
+        border-style: solid;
+        }
+        @include mq(m) {
+        margin: rem(-5) auto rem(15) rem(-20);
+        }
     }
-  }
-  &.faq {
-    &:before {
-      content: "Q";
-      font-size: rem(36);
-      font-family: $font-en;
-      font-weight: 900;
-      color: $color-base04;
-      line-height: rem(16);
+    &.faq {
+        &:before {
+            content: "Q";
+            font-size: rem(36);
+            font-family: $font-en;
+            font-weight: 900;
+            color: $color-base04;
+            line-height: rem(16);
+        }
     }
-  }
 }
 .title_theme_s {
-  font-size: rem(16);
-  font-weight: 700;
-  padding-bottom: rem(10);
+    font-size: rem(16);
+    font-weight: 700;
+    margin-bottom: rem(10);
 }
 .title_theme_menu {
-  font-size: rem(18);
-  font-weight: 700;
-  &.red {
-    color: $color-red;
-  }
+    font-size: rem(18);
+    font-weight: 700;
+    margin-bottom: rem(10);
+    &.red {
+        color: $color-red;
+    }
 }
 
 // bg
 .bg-gray{
-  background-color: $color-gray01;
+    background-color: $color-gray01;
 }
 .bg-white{
-  background-color: $color-white;
+    background-color: $color-white;
 }

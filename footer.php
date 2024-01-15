@@ -19,7 +19,7 @@
           </a>
 
           <div class="btn-area">
-            <a href="<?php echo home_url('/contact'); ?>" class="btn btn-orange">お問い合わせ</a>
+            <a href="<?php echo home_url('/contact'); ?>" class="btn">お問い合わせ</a>
           </div><!-- .btn-area -->
 
 

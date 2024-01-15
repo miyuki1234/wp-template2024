@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+
+//リスト
+//list_num
+ol.list_num {
+    margin: rem(10) 0;
+    > li {
+        text-indent: rem(-25);
+        padding-left: rem(25);
+        list-style-type: none;
+        counter-increment: cnt;
+        margin-bottom: rem(10);
+        &::before {
+            content: "(" counter(cnt)")";
+            margin-right: rem(5);
+        }
+    }
+}
+
+//list_circle
+.list_circle {
+    margin: rem(10) 0;
+    > li {
+        list-style: disc;
+        margin-left: rem(20);
+        margin-bottom: rem(10);
+    }
+    a{
+        text-decoration: underline;
+    }
+}

@@ -101,7 +101,7 @@ jQuery(function($){
 
               <div class="btn-area">
                 <p class="text_theme_s slash-message ta-center">＼インソールや痛み等、ご相談はお気軽に／</p><!-- .text_theme_s -->
-                <a href="<?php echo home_url('/contact'); ?>" class="btn btn-orange">お問い合わせ</a>
+                <a href="<?php echo home_url('/contact'); ?>" class="btn">お問い合わせ</a>
               </div><!-- .btn-area -->
 
             </div><!-- .article-contents-area -->

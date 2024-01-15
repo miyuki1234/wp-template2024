@@ -1,16 +1,5 @@
 @charset 'UTF-8';
 @use "../mixin/breakpoint" as *;
-span{
-  &.sup {
-    vertical-align: super;
-    font-size: smaller;
-  }
-  &.sp-none {
-    @include mq(m) {
-      display: none;
-    }
-  }
-}
 
 br {
   &.sp-only {

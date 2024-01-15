@@ -2,53 +2,84 @@
 @use "../foundation/base" as *;
 @use "../setting/color" as *;
 @use "../mixin/breakpoint" as *;
-//テーブル
-table {
-  width: 100%;
-  height: auto;
-  border-collapse: collapse;
-  th,td {
-  font-size: rem(z);
-  border: solid 1px #fff; /* 枠線指定 */
-  padding: rem(10);
-  @include mq(m) {
-    font-size: rem(12);
-    padding: rem(10) rem(5);
-  }
-  }
-  thead {
-    width: 100%;
-    height: auto;
-    text-align: left;
-    tr {
-      width: 100%;
-      height: auto;
-      th {
 
-      }
+//テーブル
+.table-data {
+    border-collapse: collapse;
+    border: 1px solid $color-black-main;
+    &.active {
+        white-space: inherit;
     }
-  }
-  tbody {
-    width: 100%;
-    height: auto;
+    caption {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: rem(10);
+    }
     tr {
-      width: 100%;
-      height: auto;
-      th {
-        width: 64%;
-        font-weight: normal;
-        text-align: left;
-        @include mq(m) {
-          width: 65%;
+        th {
+            color: $color-black-main;
+            background: $color-gray03;
+            border: 1px solid $color-black-main;
+            font-weight: bold;
+            padding: 0.8rem;
         }
-      }
-      td {
-        width: 36%;
-        text-align: right;
-        @include mq(m) {
-          width: 35%;
+
+        td {
+            background: #FFF;
+            border: 1px solid $color-black-main;
+            padding: 0.8rem;
         }
-      }
     }
-  }
+    }
+
+    //テーブル スマホ時横スクロール
+    .table-scroll {
+    margin-bottom: rem(30);
+    .table-data {
+        @include mq(m) {
+            width: auto;
+            white-space: nowrap;
+        }
+    }
+    .scroll-bar {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        .scroll-in {
+            height: 10px;
+        }
+    }
+    .scroll-table {
+        overflow: auto;
+        position: relative;
+    }
+    .pct-scrollhint {
+        display: none;
+        font-size: rem(11);
+        padding: rem(10);
+        background: rgba($color: #000000, $alpha: 0.6);
+        text-align: center;
+        border-radius: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        span {
+            color: $color-white;
+            margin-top: rem(0.5);
+            display: block;
+            white-space: nowrap;
+            &:before{
+                content: "";
+                display: block;
+                background: url("../images/icon_scrollhint.svg") center/contain no-repeat;
+                width: rem(25);
+                height: rem(32);
+                margin: 0 auto;
+            }
+        }
+        &.active {
+            display: block;
+        }
+    }
 }

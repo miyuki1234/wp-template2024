@@ -5,35 +5,35 @@
 @use "../setting/section" as *;
 @use "../mixin/breakpoint" as *;
 @use "../mixin/animation" as *;
+
 //無料相談・見積ボタン
 .btn_theme_contact {
-  display: none;
-  z-index: 4;
-  right: rem(25);
-  bottom: rem(25);
-  width: rem(96);
-  height: rem(78);
-  content: '';
-  background: url(images/icon_contact-btn.svg) center/cover no-repeat;
-  @include mq(xl) {
-    position: fixed;
-    display: block;
-  }
-  @include mq(xl) {
-    right: rem(15);
-    bottom: rem(15);
-  }
-  a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    span {
-      color: $color-white;
-      font-weight: 700;
-      display: block;
-      padding-bottom: rem(20);
+    display: none;
+    z-index: 10;
+    right: rem(25);
+    bottom: rem(25);
+    width: rem(96);
+    height: rem(78);
+    background: url("../images/icon_contact-btn.svg") center/cover no-repeat;
+    @include mq(xl) {
+        position: fixed;
+        display: block;
     }
-  }
+    @include mq(xl) {
+        right: rem(15);
+        bottom: rem(15);
+    }
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        span {
+        color: $color-white;
+        font-weight: 700;
+        display: block;
+        padding-bottom: rem(20);
+        }
+    }
 }

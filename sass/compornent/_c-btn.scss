@@ -5,39 +5,39 @@
 
 //ボタンエリア
 .btn-area {
-  text-align: center;
-  margin: rem(60) rem(0);
+    text-align: center;
+    margin: rem(60) rem(0);
 }
 
 //ボタン
 .btn {
-  color: $color-white;
-  background: $color-base01;
-  display: inline-block;
-  padding: rem(18) rem(60);
-  border-radius: 30px;
-  width: rem(300);
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  font-weight: bold;
-  position: relative;
-  transition: all 0.3s ease-out;
-  /*hoverした際の、背景の場所とテキスト色の変更*/
-  &:hover {
-    opacity: 1;
-  }
+    color: $color-white;
+    background: $color-base01;
+    display: inline-block;
+    padding: rem(18) rem(60);
+    border-radius: 30px;
+    width: rem(300);
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease-out;
+    /*hoverした際の、背景の場所とテキスト色の変更*/
+    &:hover {
+        opacity: 1;
+    }
 }
 .btn-arrow{
-  position: relative;
-  &::after {
-    content: "";
-    display: inline-block;
-    background: url("../images/icon_round-arrow.svg") center/contain no-repeat;
-    position: absolute;
-    top: calc(50% - 8px);
-    right: rem(30);
-    width: rem(10);
-    height: rem(16);
-  }
-}
+    position: relative;
+    &::after {
+        content: "";
+        display: inline-block;
+        background: url("../images/icon_round-arrow.svg") center/contain no-repeat;
+        position: absolute;
+        top: calc(50% - 8px);
+        right: rem(30);
+        width: rem(10);
+        height: rem(16);
+    }
+    }

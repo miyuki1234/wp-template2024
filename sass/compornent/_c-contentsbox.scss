@@ -2,224 +2,29 @@
 @use "../foundation/base" as *;
 @use "../setting/color" as *;
 @use "../mixin/breakpoint" as *;
+
 //コンテンツボックス
 .contents-box {
-  padding: rem(30);
-  border-radius: rem(20);
-  @include mq(m) {
-    padding: rem(20);
-  }
-  &.no-pad  {
-    padding: 0;
-  }
-  &.top-mar-50 {
-    margin-top: rem(50);
-  }
-  &.w60 {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    @include mq(m) {
-      width: 80%;
-    }
-  }
-  &.voice {
-    background-color: $color-white;
-    border-radius: 10px;
-    border: solid 2px $color-white;
-    margin-top: rem(20);
+    padding: rem(30);
     margin-bottom: rem(30);
-    background-image: linear-gradient(0deg, transparent calc(100% - 1px), $color-gray02 calc(100% - 1px)),
-    linear-gradient(90deg, transparent calc(100% - 1px), $color-gray02 calc(100% - 1px));
-    background-size: 16px 16px;
-    background-repeat: repeat;
-    background-position: center center;
-    h2 {
-      margin-top: 0;
-      padding-left: 0;
-      border-left: none;
-      display: inline-block;
-      margin-bottom: rem(20);
+    @include mq(m) {
+        padding: rem(20);
     }
-  }
-  &.middle {
-    padding: rem(20);
-  }
-  &.small {
-    padding: rem(15);
-  }
-  &.line-turquoise {
-    border: solid 1px $color-base03;
-  }
-  &.line-red {
-    border: solid 1px $color-red;
-  }
+    &.radius{
+        border-radius: rem(20);
+    }
+    &.middle {
+        padding: rem(20);
+    }
+    &.small {
+        padding: rem(15);
+    }
+    &.box-line {
+        border: solid 1px $color-base03;
+    }
 }
 .images-box {
-  position: relative;
-  width: fit-content;
-  margin: 0 auto;
-  &>img {
-    position: absolute;
-    &.chart {
-      width: rem(154);
-      height: auto;
-      left: rem(-60);
-      top: rem(-10);
-      @include mq(xl) {
-        left: rem(-10);
-      }
-    }
-    &.insoles {
-      width: rem(152);
-      height: auto;
-      right: rem(-60);
-      bottom: rem(-10);
-      @include mq(xl) {
-        width: rem(114);
-        right: rem(-10);
-      }
-    }
-    &.sprout {
-      width: rem(118);
-      height: auto;
-      left: rem(-60);
-      bottom: rem(-10);
-      @include mq(xl) {
-        width: rem(88);
-        left: rem(-10);
-      }
-    }
-    &.sun {
-      width: rem(108);
-      height: auto;
-      right: rem(-60);
-      top: rem(-40);
-      @include mq(xl) {
-        width: rem(81);
-        right: rem(-10);
-      }
-    }
-    &.communication {
-      width: rem(172);
-      height: auto;
-      left: rem(-20);
-      bottom: rem(-40);
-      @include mq(xl) {
-        width: rem(129);
-        left: rem(-10);
-      }
-      @include mq(l) {
-        width: rem(90);
-        bottom: rem(10);
-      }
-      @include mq(s) {
-        width: rem(140);
-        bottom: rem(-10);
-      }
-    }
-    &.glass {
-      width: rem(113);
-      height: auto;
-      left: rem(-30);
-      bottom: rem(-20);
-      @include mq(xl) {
-        width: rem(85);
-        left: rem(-10);
-      }
-      @include mq(l) {
-        width: rem(50);
-        bottom: rem(30);
-      }
-      @include mq(s) {
-        width: rem(100);
-        bottom: 0;
-      }
-    }
-    &.tools {
-      width: rem(133);
-      height: auto;
-      right: rem(-30);
-      bottom: rem(-20);
-      @include mq(xl) {
-        width: rem(100);
-        bottom: rem(-10);
-      }
-      @include mq(l) {
-        width: rem(60);
-        bottom: rem(30);
-      }
-      @include mq(s) {
-        width: rem(100);
-        right: rem(-20);
-        bottom: 0;
-      }
-    }
-    &.menu {
-      width: rem(67);
-      height: auto;
-      left: rem(-10);
-      bottom: rem(-20);
-      @include mq(xl) {
-        width: rem(50);
-        left: rem(-10);
-        bottom: 0;
-      }
-      @include mq(l) {
-        bottom: rem(30);
-      }
-      @include mq(s) {
-        width: rem(70);
-        bottom: 0;
-      }
-    }
-    &.dumbbell {
-      width: rem(62);
-      height: auto;
-      right: rem(-10);
-      bottom: rem(-20);
-      @include mq(xl) {
-        width: rem(47);
-        right: rem(-10);
-        bottom: 0;
-      }
-      @include mq(l) {
-        bottom: rem(30);
-      }
-      @include mq(s) {
-        width: rem(60);
-        bottom: 0;
-      }
-    }
-    &.tools-02 {
-      width: rem(133);
-      height: auto;
-      right: rem(-30);
-      bottom: rem(-20);
-      @include mq(xl) {
-        width: rem(100);
-        bottom: rem(10);
-        right: rem(-10);
-      }
-      @include mq(l) {
-        width: rem(80);
-        bottom: rem(40);
-      }
-      @include mq(s) {
-        width: rem(100);
-        right: rem(-8);
-        bottom: 0;
-      }
-    }
-  }
-  svg {
-    display: block;
+    width: fit-content;
     margin: 0 auto;
-    @include mq(xl) {
-      width: 100%;
-    }
-    image {
-      object-fit: cover;
-    }
-  }
+    position: relative;
 }

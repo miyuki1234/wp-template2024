@@ -95,3 +95,31 @@ jQuery(function($){
         $(this).parents('.toc-container').slideUp();
     });
 });
+
+//テーブル
+
+$(window).on('load resize', function () {
+    $('.table-scroll').each(function (i) {
+        $(this).addClass("table-block" + (i + 1));
+        // テーブルの幅を取得し、#scrollbar .scroll_innerにwidthを指定
+        var widthTable = $(this).find(".scroll-table table.table-data").outerWidth();
+        var widthScrollTable = $(this).find(".scroll-table").outerWidth();
+        $(this).find(".scroll-bar .scroll-in").width(widthTable);
+        // 上下のスクロールバーが連動するよう調整
+        $(this).find(".scroll-bar, .scroll-table").on("scroll", function () {
+            $(this).find(".pct-scrollhint").fadeOut();
+            if ($(this).attr("class") === "scroll-bar") {
+                $(this).next(".scroll-table").scrollLeft($(this).scrollLeft());
+            } else {
+                $(this).scrollLeft($(this).scrollLeft());
+                $(this).parents(".table-scroll").children(".scroll-bar").scrollLeft($(this).scrollLeft());
+            }
+        });
+        // スクロールバーが出るときだけ、scrollhintを表示
+        if (widthScrollTable < widthTable - 1) {
+            $(this).find(".pct-scrollhint").addClass("active");
+        } else {
+            $(this).find(".pct-scrollhint").removeClass("active");
+        }
+    });
+});
