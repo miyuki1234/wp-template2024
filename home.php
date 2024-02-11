@@ -10,7 +10,7 @@
         <div class="page-top-view__inner">
 
           <div class="title__outer">
-            <h2 class="title_theme_l font-en ta-center show slide-bottom">
+            <h2 class="title_theme_l show slide-bottom">
               ブログ
             </h2><!-- .title_theme_l-ja -->
           </div><!-- .title__outer -->
