@@ -18,7 +18,7 @@
     }
   }
   .postpage-box {
-    background-color: $color-base05;
+    background-color: $color-base02;
   }
   .page-section-01 {
     .page-section-01__inner {
@@ -27,14 +27,14 @@
         width: 100%;
         height: auto;
         padding: rem(20) rem(30);
-        border: solid 2px $color-base04;
+        border: solid 2px $color-base01;
         background-color: $color-white;
         border-radius: 10px;
         margin-bottom: rem(40);
         .text_theme_2s {
           padding-left: rem(20);
           display: inline-block;
-          color: $color-base04;
+          color: $color-base01;
         }
       }
       //記事一覧表示
@@ -218,10 +218,10 @@
                   &:hover {
                     opacity: 1;
                     .title_theme_s {
-                      color: $color-base04;
+                      color: $color-base01;
                     }
                     .text_theme_2s {
-                      color: $color-base04;
+                      color: $color-base01;
                     }
 
                   }
@@ -280,7 +280,7 @@
         font-size: rem(36);
         font-family: $font-en;
         font-weight: 900;
-        color: $color-base04;
+        color: $color-base01;
         line-height: rem(16);
       }
       &:after {
@@ -293,8 +293,8 @@
         bottom: calc(50% - $arrow-size);
         width: $arrow-size;
         height: $arrow-size;
-        border-right: 2px solid $color-base04;
-        border-top: 2px solid $color-base04;
+        border-right: 2px solid $color-base01;
+        border-top: 2px solid $color-base01;
         transform: translateX(5px) rotate(45deg);
       }
       .title__wrapper {

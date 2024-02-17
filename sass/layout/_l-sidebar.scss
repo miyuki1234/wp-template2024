@@ -60,22 +60,24 @@
             //タイトル
             .text_theme_s {
               &.title {
-                background-color: $color-base04;
-                padding: rem(10) rem(20);
+                background-color: $color-base02;
+                padding: rem(15) rem(20);
                 color: $color-white;
                 border-radius: 10px 10px 0 0;
               }
             }
             //検索フォーム
             .search-form__wrapper {
-              padding: rem(5) rem(15) rem(15);
-              background-color: $color-base04;
+              padding: rem(0) rem(20) rem(20);
+              margin-top: rem(-10);
+              background-color: $color-base02;
               border-radius: 0 0 10px 10px;
               .search-form {
                 position: relative;
                 display: flex;
-                border: 1px solid #ddd;
-                border-radius: 11px;
+                border-radius:5px;
+                overflow: hidden;
+                border: 1px solid $color-gray05;
                 input[type="submit"] {
                   width: rem(40);
                   height: rem(40);
@@ -83,148 +85,110 @@
                   border: none;
                   cursor: pointer;
                   background-color: $color-white;
-                  border-radius: 10px 0 0 10px;
                 }
                 input[type="text"] {
                   width: 100%;
                   height: rem(40);
                   padding: 0 rem(5) 0 0;
                   background-color: $color-white;
-                  border-radius: 0 10px 10px 0;
                 }
               }
             }
             //カテゴリー一覧
             .category__list {
-              background-color: $color-white;
               border-radius: 0 0 10px 10px;
+              overflow: hidden;
               li {
                 &:not(:first-of-type) {
-                  border-top: solid 1px $color-gray01;
+                  border-top: solid 1px $color-gray02;
                 }
                 a {
+                  background: $color-gray04;
                   display: block;
                   position: relative;
-                  padding: rem(16) rem(20);
+                  padding: rem(15) rem(50) rem(15) rem(20);
                   color: $color-black-main;
+                  text-decoration: none;
+                  &::before,
                   &::after {
                     content: "";
+                    width: 8px;
+                    height: 2px;
+                    display: inline-block;
+                    border-radius: 10px;
+                    background-color: $color-black-main;
                     position: absolute;
-                    top: calc(50% - 5px);
-                    right: rem(30);
-                    width: rem(10);
-                    height: rem(10);
-                    border-right: 1px solid $color-black-main;
-                    border-top: 1px solid $color-black-main;
-                    transform: translateX(5px) rotate(45deg);
+                    right: rem(25);
                   }
-                  &:hover {
-                    color: $color-base04;
-                    opacity: 1;
-                    &::after {
-                      border-right: 1px solid $color-base04;
-                      border-top: 1px solid $color-base04;
-                    }
+                  &::before {
+                    top: calc(50% - 3.5px);
+                    transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                  }
+                  &::after {
+                    bottom: calc(50% - 3.5px);
+                    transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
                   }
                 }
               }
             }
             //人気記事一覧
             .article__list {
-              background-color: $color-white;
+              background-color: $color-gray04;
               border-radius: 0 0 10px 10px;
               @include mq(l) {
                 display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap;
               }
               @include mq(s) {
                 display: block;
               }
               li {
                 @include mq(l) {
-                width: 32%;
+                  width: calc(100% / 3);
                 }
                 @include mq(s) {
-                width: 100%;
+                  width: 100%;
                 }
                 &:not(:first-of-type) {
-                  border-top: solid 1px $color-gray01;
+                  border-top: solid 1px $color-gray02;
                 }
                 a {
                   display: block;
                   position: relative;
                   padding: rem(20) rem(20) rem(30);
                   color: $color-black-main;
-                  &:hover {
-                    color: $color-base04;
-                    opacity: 1;
-                    &::after {
-                      border-right: 1px solid $color-base04;
-                      border-top: 1px solid $color-base04;
-                    }
-                  }
-                  img {
-                    width: 100%;
-                    height: calc(rem(260) * 0.525);
+                  text-decoration: none;
+                  .mask {
+                    background-color: $color-gray03;
                     border-radius: 10px;
-                    object-fit: cover;
-                    @include mq(l) {
-                      height: calc((90vw * 0.32 - rem(40)) * 0.525);
-                    }
-                    @include mq(s) {
-                      height: calc((90vw - rem(40)) * 0.525);
-                    }
-                    &:hover {
-                      opacity: 0.85;
-                    }
-                  }
-                  p {
-                    padding: rem(10) rem(10) 0;
-                  }
-                }
-              }
-            }
-            //リンクバナー
-            .banner__list {
-              li {
-                &:not(:first-of-type) {
-                  border-top: solid 1px #666;
-                }
-                a {
-                  img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 10px;
-                  }
-                }
-              }
-            }
-            //プロフィールボックス
-            &.profile-box {
-              padding: rem(3);
-              .contents-box {
-                background-color: $color-white;
-                border-radius: 0 0 10px 10px;
-                figure {
-                  width: 100%;
-                  &.profile-icon {
-                    margin-top: rem(20);
+                    padding-top: 75%;
+                    object-fit: contain;
+                    margin-bottom: rem(10);
                     position: relative;
-                    width: 100%;
-                    height: rem(120);
-                    img {
-                      width: rem(120);
-                      height: rem(120);
-                      border-radius: rem(60);
+                    overflow: hidden;
+                    >img {
+                      width: 100%;
+                      height: 100%;
+                      max-width: none;
                       position: absolute;
-                      left: 0;
-                      right: 0;
-                      margin: auto;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%) scale(1);
+                      transition: all 0.3s;
+                      object-fit: contain;
                     }
                   }
-                }
-                >.text_theme_2s {
-                  padding-top: rem(20);
+                  // &:hover {
+                  //   .mask{
+                  //     img{
+                  //       transform: translate(-50%, -50%) scale(1.1);
+                  //     }
+                  //   }
+                  // }
                 }
               }
             }

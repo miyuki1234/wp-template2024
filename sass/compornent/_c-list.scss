@@ -1,33 +1,60 @@
 @charset 'UTF-8';
 @use "../foundation/base" as *;
+@use "../mixin/breakpoint" as *;
 @use "../setting/color" as *;
+@use "../setting/font" as *;
 
 //リスト
 //list_num
 ol.list_num {
-    margin: rem(10) 0;
-    > li {
-        text-indent: rem(-25);
-        padding-left: rem(25);
-        list-style-type: none;
-        counter-increment: cnt;
-        margin-bottom: rem(10);
-        &::before {
-            content: "(" counter(cnt)")";
-            margin-right: rem(5);
-        }
+  margin: rem(10) 0;
+  > li {
+    text-indent: rem(-25);
+    padding-left: rem(25);
+    list-style-type: none;
+    counter-increment: cnt;
+    margin-bottom: rem(10);
+    &::before {
+      content: counter(cnt)".";
+      margin-right: rem(10);
     }
+  }
+}
+
+//list_toc
+ol.list_toc {
+  > li {
+    font-size: rem(16);
+    text-indent: rem(-25);
+    padding: rem(10);
+    padding-left: rem(30);
+    list-style-type: none;
+    counter-increment: cnt_tox;
+    margin-bottom: rem(10);
+    &::before {
+      content: counter(cnt_tox)".";
+      color: $color-base02;
+      margin-right: rem(10);
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    a{
+      text-decoration: none;
+      &:hover,
+      &:visited{
+        color: $color-base04;
+      }
+    }
+  }
 }
 
 //list_circle
 .list_circle {
     margin: rem(10) 0;
     > li {
-        list-style: disc;
-        margin-left: rem(20);
-        margin-bottom: rem(10);
-    }
-    a{
-        text-decoration: underline;
+      list-style: disc;
+      margin-left: rem(20);
+      margin-bottom: rem(10);
     }
 }

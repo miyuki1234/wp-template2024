@@ -3,54 +3,55 @@
 @use "../setting/color" as *;
 @use "../mixin/breakpoint" as *;
 
-//ブログ、お客様の声の基本的表示設定
+//ブログサムネイルリストの基本表示
 .box-container {
-    width: auto;
-    height: 100%;
-    background-color: $color-white;
-    border-radius: 10px;
-    a {
-        .mask {
-            background: $color-gray03;
-            border-radius: 20px;
-            padding-top: 75%;
-            object-fit: contain;
-            margin-bottom:  1em;
-            position: relative;
-            overflow: hidden;
-            >img {
-                width: 100%;
-                height: 100%;
-                max-width: none;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(1);
-                transition: all 0.3s;
-                object-fit: contain;
-            }
-        }
-        .contents-area {
-            padding-top: rem(10);
-            .news-title {
-            color: $color-black-main;
-            font-weight: 700;
-            padding-bottom: rem(10);
-            transition: 0.3s;
-            }
-        }
-        &:hover {
-            opacity: 1;
-            .mask{
-                img{
-                    transform: translate(-50%, -50%) scale(1.1);
-                }
-            }
-            .contents-area{
-                .news-title {
-                color: $color-base04;
-                }
-            }
-        }
+  width: auto;
+  height: 100%;
+  background-color: $color-white;
+  a {
+    display: block;
+    text-decoration: none;
+    .mask {
+      background-color: $color-gray03;
+      border-radius: 10px;
+      padding-top: 75%;
+      object-fit: contain;
+      margin-bottom: rem(20);
+      position: relative;
+      overflow: hidden;
+      >img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: all 0.3s;
+        object-fit: contain;
+      }
     }
+    .contents-area {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: rem(10);
+      .news-date{
+        font-weight: 700;
+        margin-right: rem(12);
+      }
+    }
+    .news-title {
+      color: $color-black-main;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+    &:hover {
+      .mask{
+        img{
+          // transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+    }
+  }
 }

@@ -14,7 +14,7 @@
   <!-- googlefont -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Titillium+Web:wght@700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
 
   <title>スタイルガイド</title>
 
@@ -34,24 +34,23 @@
           </h2><!-- .title_theme_l-ja -->
         </div><!-- .title__outer -->
 
-        <!-- ーーーパンくずリストーーー -->
-        <div class="breadcrumb-area">
-          <div class="breadcrumb-area__inner">
-
-            <div id="breadcrumb">
-              <ul>
-                <li><a href=""><span>HOME</span></a></li>
-                <li><span>compornent</span></li>
-              </ul>
-            </div><!-- #breadcrumb -->
-          </div><!-- .breadcrumb-area__inner -->
-
-        </div><!-- .breadcrumb-area -->
-
-
       </div><!-- .page-top-view__inner -->
 
     </div><!-- .page-top-view -->
+
+    <!-- ーーーパンくずリストーーー -->
+    <div class="breadcrumb-area">
+      <div class="breadcrumb-area__inner">
+
+        <div id="breadcrumb">
+          <ul>
+            <li><a href=""><span>HOME</span></a></li>
+            <li><span>compornent</span></li>
+          </ul>
+        </div><!-- #breadcrumb -->
+      </div><!-- .breadcrumb-area__inner -->
+
+    </div><!-- .breadcrumb-area -->
 
     <!-- ーーーコンテンツーーー -->
 
@@ -81,6 +80,7 @@
 
         <p>
           <a href="">リンクテキスト（aタグ）</a>
+          <a class="text_link" href="">リンクテキスト（aタグ）</a>
         </p>
 
         <h2 class="title_theme_l">
@@ -100,7 +100,7 @@
 
         <ul class="list_circle">
           <li>テキストが入ります</li>
-          <li><a href="">テキストが入ります</a></li>
+          <li><a class="text_link" href="">テキストが入ります</a></li>
         </ul><!-- .list_circle -->
 
         <h2 class="title_theme_l">
@@ -142,10 +142,10 @@
         <div class="pagination-area">
           <nav class="navigation pagination" aria-label=" ">
             <div class="nav-links">
-              <a class="prev page-numbers" href="">&lt;</a>
+              <a class="prev page-numbers" href="">前のページ</a>
               <span aria-current="page" class="page-numbers current">1</span>
               <a class="page-numbers" href="">2</a>
-              <a class="next page-numbers" href="">&gt;</a>
+              <a class="next page-numbers" href="">次のページ</a>
             </div>
           </nav>
         </div><!-- .pagination-area -->
@@ -163,25 +163,55 @@
           </p><!-- .text_theme_s -->
         </div><!-- .contents-box -->
 
-        <div class="toc_box">
-          <div class="toc_box_inner">
-            <ol class="list_num list_toc">
-              <li><a href="">テキストが入ります</a></li>
-              <li><a href="">テキストが入ります</a></li>
-              <li><a href="">テキストが入ります</a></li>
-            </ol><!-- .list_num -->
-          </div><!-- toc_box_inner -->
-        </div><!-- toc_box -->
+        <div class="toc-box">
+          <ol class="list_num list_toc">
+            <li><a href="">テキストが入ります</a></li>
+            <li><a href="">テキストが入ります</a></li>
+            <li><a href="">テキストが入ります</a></li>
+          </ol><!-- .list_num -->
+        </div><!-- toc-box -->
 
         <div class="bg_box">
-          <div class="bg_box_inner">
-            <ul class="list_circle">
-              <li>テキストが入ります</li>
-              <li><a href="">テキストが入ります</a></li>
-            </ul><!-- .list_circle -->
-            <p>普通のテキストも入ります</p>
-          </div><!-- bg_box_inner -->
+          <ul class="list_circle">
+            <li>テキストが入ります</li>
+            <li><a href="">テキストが入ります</a></li>
+          </ul><!-- .list_circle -->
+          <p>普通のテキストも入ります</p>
         </div><!-- .bg-box -->
+
+        <h3 class="title_theme_m ">
+          カラムボックス
+        </h3>
+       
+        <div class="column-box">
+          <div class="column__pht">
+            <div class="mask">
+              <img src="https://placehold.jp/600x480.png" alt="">
+            </div>
+          </div><!-- .column__pht -->
+          <div class="column__txt">
+            <p class="title_theme_m">タイトルタイトルタイトル</p>
+            <p class="text_theme_s">
+              ここに<a class="text_link" href="">テキスト</a>が入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+            <p class="text_theme_s">
+              ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+          </div><!-- .column__txt -->
+        </div><!-- .column -->
+
+        <div class="column-box order-change">
+          <div class="column__pht">
+            <div class="mask">
+              <img src="https://placehold.jp/600x480.png" alt="">
+            </div>
+          </div><!-- .column__pht -->
+          <div class="column__txt">
+            <p class="title_theme_m">タイトルタイトルタイトル</p>
+            <p class="text_theme_s">
+              ここに<a class="text_link" href="">テキスト</a>が入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+            <p class="text_theme_s">
+              ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+          </div><!-- .column__txt -->
+        </div><!-- .column -->
 
 
         <h2 class="title_theme_l">
@@ -200,8 +230,8 @@
             <div class="contents-area">
               <time class="news-date text_theme_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
               <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-              <p class="news-title title_theme_2s">タイトルが入ります</p>
             </div>
+            <p class="news-title title_theme_2s">タイトルが入ります</p>
           </a>
         </div><!-- .box-container -->
 
@@ -219,8 +249,8 @@
               <div class="contents-area">
                 <time class="news-date text_theme_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
                 <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-                <p class="news-title title_theme_2s">タイトルが入ります</p>
               </div>
+              <p class="news-title title_theme_2s">タイトルが入ります</p>
             </a>
           </div><!-- .box-container -->
 
@@ -232,8 +262,8 @@
               <div class="contents-area">
                 <time class="news-date text_theme_2s" datetime="2022-08-24T01:41:16+09:00">2022.08.24</time>
                 <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-                <p class="news-title title_theme_2s">タイトルが入ります</p>
               </div><!-- .contents-area -->
+              <p class="news-title title_theme_2s">タイトルが入ります</p>
             </a>
           </div><!-- .box-container -->
 
@@ -269,7 +299,6 @@
               <img src="https://placehold.jp/400x400.png" alt="">
             </div>
           </div><!-- .column__inner -->
-
         </div><!-- .column -->
 
         <div class="column col3 sp-col1">
@@ -288,7 +317,6 @@
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
           </div><!-- .column__inner -->
-
         </div><!-- .column -->
 
         <div class="column col4 sp-col2">
@@ -312,7 +340,6 @@
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
           </div><!-- .column__inner -->
-
         </div><!-- .column -->
 
         <div class="column col5 sp-col2">
@@ -341,33 +368,32 @@
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
           </div><!-- .column__inner -->
-
         </div><!-- .column -->
-
+        
         <h3 class="title_theme_m ">
           フロー図
         </h3>
 
-        <ul class="flow-step-list step-vertical">
+        <ol class="flow-step-list step-vertical">
 
           <!-- STEP1 -->
           <li class="flow-step__item">
             <div class="steptitle">
-              <div class="stepcircle"><span>STEP<br><span class="stepcircle_num">1</span></span></div>
-              <p class="title_theme_m">タイトルタイトルタイトル</p>
+              <div class="stepcircle"><span>step<span class="stepcircle_num">01</span></span></div>
             </div>
             <div class="steptxt">
+              <p class="title_theme_2s">タイトルタイトルタイトル</p>
               <p class="text_theme_s">
-                ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                ここに<a href="">テキスト</a>が入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
             </div>
           </li>
           <!-- STEP2 -->
           <li class="flow-step__item">
             <div class="steptitle">
-              <div class="stepcircle"><span>STEP<br><span class="stepcircle_num">2</span></span></div>
-              <p class="title_theme_m">タイトルタイトルタイトル</p>
+              <div class="stepcircle"><span>step<span class="stepcircle_num">02</span></span></div>
             </div>
             <div class="steptxt">
+              <p class="title_theme_2s">タイトルタイトルタイトル</p>
               <p class="text_theme_s">
                 ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
             </div>
@@ -375,26 +401,26 @@
           <!-- STEP3 -->
           <li class="flow-step__item">
             <div class="steptitle">
-              <div class="stepcircle"><span>STEP<br><span class="stepcircle_num">3</span></span></div>
-              <p class="title_theme_m">タイトルタイトルタイトル</p>
+              <div class="stepcircle"><span>step<span class="stepcircle_num">03</span></span></div>
             </div>
             <div class="steptxt">
+              <p class="title_theme_2s">タイトルタイトルタイトル</p>
               <p class="text_theme_s">
                 ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
             </div>
           </li>
 
-        </ul><!-- .flow-step-list -->
+        </ol><!-- .flow-step-list -->
 
-        <ul class="flow-step-list step-side col3 sp-col2">
+        <ol class="flow-step-list step-side col3 sp-col3">
 
           <!-- STEP1 -->
           <li class="flow-step__item">
             <div class="steptitle">
-              <div class="stepcircle"><span>STEP<br><span class="stepcircle_num">1</span></span></div>
-              <p class="title_theme_m">タイトルタイトルタイトル</p>
+              <div class="stepcircle"><span>step<span class="stepcircle_num">01</span></span></div>
             </div>
             <div class="steptxt">
+              <p class="title_theme_2s">タイトルタイトルタイトル</p>
               <p class="text_theme_s">
                 ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
             </div>
@@ -402,10 +428,10 @@
           <!-- STEP2 -->
           <li class="flow-step__item">
             <div class="steptitle">
-              <div class="stepcircle"><span>STEP<br><span class="stepcircle_num">2</span></span></div>
-              <p class="title_theme_m">タイトルタイトルタイトル</p>
+              <div class="stepcircle"><span>step<span class="stepcircle_num">02</span></span></div>
             </div>
             <div class="steptxt">
+              <p class="title_theme_2s">タイトルタイトルタイトル</p>
               <p class="text_theme_s">
                 ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
             </div>
@@ -413,68 +439,67 @@
           <!-- STEP3 -->
           <li class="flow-step__item">
             <div class="steptitle">
-              <div class="stepcircle"><span>STEP<br><span class="stepcircle_num">3</span></span></div>
-              <p class="title_theme_m">タイトルタイトルタイトル</p>
+              <div class="stepcircle"><span>step<span class="stepcircle_num">03</span></span></div>
             </div>
             <div class="steptxt">
+              <p class="title_theme_2s">タイトルタイトルタイトル</p>
               <p class="text_theme_s">
                 ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
             </div>
           </li>
 
-        </ul><!-- .flow-step-list -->
-
-        <h3 class="title_theme_m ">
-          チェックリスト
-        </h3>
-
-        <ul class="check__list check-turquoise">
-          <li class="check__item">中敷きが外れる靴</li><!-- .check__item -->
-          <li class="check__item">動きやすく膝が見える、または膝までまくれる服装</li><!-- .check__item -->
-          <li class="check__item">お飲み物・タオル</li><!-- .check__item -->
-        </ul><!-- .check__list -->
+        </ol><!-- .flow-step-list -->
 
         <h3 class="title_theme_m ">
           サービスページ
         </h3>
 
-        <div class="box-container bg-gray">
+        <ul class="service-menu__list">
+          <li class="service-menu__item">
+            <a href="#">選ばれる理由</a>
+          </li><!-- .service-menu__item -->
+          <li class="service-menu__item">
+            <a href="#">人事コンサルティング</a>
+          </li><!-- .service-menu__item -->
+          <li class="service-menu__item">
+            <a href="#">教育・研修サービス</a>
+          </li><!-- .service-menu__item -->
+          <li class="service-menu__item">
+            <a href="#">ご契約の流れ</a>
+          </li><!-- .service-menu__item -->
+        </ul><!-- .service-menu__list -->
 
-          <ul class="service-menu__list">
-            <li class="service-menu__item">
-              <a href="#">
-                <div>
-                  <img src="../images/icon_service-scroll-01.svg" alt="つくれるもの">
-                </div>
-                <span>
-                  つくれるもの
-                </span>
-              </a>
-            </li><!-- .service-menu__item -->
-            <li class="service-menu__item">
-              <a href="#">
-                <div>
-                  <img src="../images/icon_service-scroll-02.svg" alt="ご依頼の流れ">
-                </div>
-                <span>
-                  ご依頼の流れ
-                </span>
-              </a>
-            </li><!-- .service-menu__item -->
+        <ul class="service-reason__list">
+          <li class="service-reason__item">
+            <div class="service-reason__pht">
+              <img src="../images/icon_service_reason-01.svg" alt="専門性とカスタマイズ">
+            </div>
+            <div class="service-reason__txt">
+              <p class="title_theme_2s ta-center">専門性とカスタマイズ</p>
+              <p class="text_theme_s">私たちのコンサルティングサービスは、深い専門知識と豊富な経験に基づいています。<br>
+                クライアントの特定のニーズに合わせてカスタマイズされたソリューションを提供することで、各企業の固有の課題を解決し、目標達成を実現します。</p>
+            </div>
+          </li><!-- .service-reason__item -->
+          <li class="service-reason__item">
+            <div class="service-reason__pht">
+              <img src="../images/icon_service_reason-02.svg" alt="全面的なサポート体制">
+            </div>
+            <div class="service-reason__txt">
+              <p class="title_theme_2s ta-center">全面的なサポート体制</p>
+              <p class="text_theme_s">人材アセスメントから教育・研修に至るまで、徹底したサポート体制を整えています。私たちは、クライアントの人材開発のあらゆる段階において、専門的な支援を提供し、組織の成長を促進します。</p>
+            </div>
+          </li><!-- .service-reason__item -->
+          <li class="service-reason__item">
+            <div class="service-reason__pht">
+              <img src="../images/icon_service_reason-03.svg" alt="実績と信頼">
+            </div>
+            <div class="service-reason__txt">
+              <p class="title_theme_2s ta-center">実績と信頼</p>
+              <p class="text_theme_s">数多くの成功事例と高い顧客満足度が、私たちのサービスの品質と効果を証明しています。長年にわたる実績と業界内での信頼は、私たちを選ぶ最も確かな理由です。</p>
+            </div>
+          </li><!-- .service-reason__item -->
+        </ul><!-- .service-reason__list -->
 
-            <li class="service-menu__item">
-              <a href="#">
-                <div>
-                  <img src="../images/icon_service-scroll-03.svg" alt="メニュー">
-                </div>
-                <span>
-                  メニュー
-                </span>
-              </a>
-            </li><!-- .service-menu__item -->
-          </ul><!-- .service-menu__list -->
-
-        </div>
 
         <h2 class="title_theme_l">
           テーブル - compornent/table.scss
@@ -557,8 +582,7 @@
                 onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><i
                   class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
 
-            <li><a class="flowbtn2 fl_hb1" href="//b.hatena.ne.jp/entry/<?php echo $url_encode ?>"
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=510');return false;"><span>Hatena</span></a>
+            <li><a class="flowbtn2 fl_hb1" href="//b.hatena.ne.jp/entry/<?php echo $url_encode ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=510');return false;"><span>Hatena</span></a>
             </li>
 
             <li><a class="flowbtn2 fl_li1" href="//social-plugins.line.me/lineit/share?url=<?php echo $url_encode;?>"
@@ -591,28 +615,12 @@
         </div><!-- .sns-btn-absolute -->
 
         <h2 class="title_theme_l">
-          コンタクトバナー - compornent/contact-banner.scss
-        </h2><!-- .title_theme_l -->
-
-        <section class="contact-section top-section">
-          <div class="contact-section__inner section__inner">
-            <p class="text_theme_s ta-center">
-              ご依頼や作製について、その他ご質問も<br class="sp-only">お気軽にお問い合わせください。
-            </p><!-- .text_theme_s -->
-            <div class="btn-area">
-              <a href="" class="btn btn-transparent">お問合わせ</a>
-            </div><!-- .btn-area -->
-          </div><!-- .top-section-reservation__inner -->
-        </section><!-- .top-section-reservation -->
-
-        <h2 class="title_theme_l">
           コンタクトフォーム - compornent/contactform.scss
         </h2><!-- .title_theme_l -->
 
         <div class="contact-form">
-          <p class="text_theme_s">インソールと痛みの治療院では、インソールや痛みについてのご質問やご相談、作製依頼等何でもお気軽にお問い合わせいただいております。<br>
-            下記の問い合わせフォームより必要事項をご入力の上、ご送信をお願いいたします。<br><br>
-            <span class="red">※営業目的のメールについては一切対応しませんので迷惑行為はおやめください。</span>
+          <p class="text_theme_s ta-center">
+            まずはお気軽にお問い合わせください。<br class="sp-only">3営業日以内に返信させていただきます。<br>営業・宣伝はお断りしております。
           </p><!-- .text_theme_s -->
 
           <div class="wpcf7 no-js" id="wpcf7-f36-o1" lang="ja" dir="ltr">
@@ -668,16 +676,12 @@
                   </p>
                 </dt>
                 <dd>
-                  <p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10"
-                        class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true"
-                        aria-invalid="false" name="your-message"></textarea></span>
+                  <p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="your-message"></textarea></span>
                   </p>
                 </dd>
               </dl>
               <p class="accept-text"><span class="wpcf7-form-control-wrap" data-name="accept-this"><span
-                    class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox"
-                        name="accept-this" value="1" aria-invalid="false" /></span></span></span><a target="_blank"
-                  href="/privacypolicy">プライバシーポリシー</a>をご確認の上、<br />
+                    class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox" name="accept-this" value="1" aria-invalid="false" /></span></span></span><a target="_blank" href="/privacypolicy">プライバシーポリシー</a>をご確認の上、<br class="sp-only">
                 よろしければ「送信する」をクリックしてください。
               </p>
               <p class="btn_contact7"><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit"
@@ -691,9 +695,27 @@
             </form>
           </div>
         </div><!-- .contact-form -->
+        <h2 class="title_theme_l">
+          コンタクトバナー - compornent/contact-banner.scss
+        </h2><!-- .title_theme_l -->
 
       </div><!-- .section-01__inner -->
     </section><!-- .section-01 -->
+    
+    <section class="contact-section page-section">
+      <div class="contact-section__inner page-section__inner">
+        <div class="contact-section__txt">
+          <p class="title_theme_m fontsize_l">CONTACT<span>お問い合わせ</span></p>
+          <p class="text_theme_s">
+            経営や人事において<br class="sp-only">お悩みを抱えている企業様は<br class="sp-only">お気軽にご相談ください
+          </p><!-- .text_theme_s -->
+        </div>
+        <div class="btn-area">
+          <a href="" class="btn btn-arrow btn-white">お問合わせ</a>
+        </div><!-- .btn-area -->
+      </div><!-- .contact-section__inner -->
+    </section><!-- .contact-section -->
+
 
   </main><!-- .main-area-->
 

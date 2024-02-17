@@ -1,7 +1,9 @@
 @charset 'UTF-8';
+
 @use "../foundation/base" as *;
-@use "../setting/color" as *;
 @use "../mixin/breakpoint" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
 
 //コンテンツボックス
 .contents-box {
@@ -10,21 +12,112 @@
     @include mq(m) {
         padding: rem(20);
     }
-    &.radius{
-        border-radius: rem(20);
-    }
-    &.middle {
-        padding: rem(20);
-    }
-    &.small {
-        padding: rem(15);
-    }
     &.box-line {
-        border: solid 1px $color-base03;
+        border: solid 1px $color-base02;
     }
 }
-.images-box {
-    width: fit-content;
-    margin: 0 auto;
+
+// toc-box
+.toc-box{
+  width: fit-content;
+  border: 1px solid $color-base02;
+  border-radius: 10px;
+  padding: rem(30);
+  margin: rem(50) 0;
+  @include mq(s) {
+    display: block;
+  }
+}
+
+//bg_box
+.bg_box{
+  width: fit-content;
+  background-color: $color-base03;
+  border-radius: 10px;
+  padding: rem(30) rem(50) rem(30) rem(30);
+  margin-bottom: rem(25);
+  @include mq(s) {
+    display: block;
+  }
+}
+
+//column-box
+.column-box{
+  position: relative;
+  padding-top: rem(60);
+  margin: rem(30) calc(50% - 50vw - 10px) rem(100);
+	width: 100vw;
+  @include mq(m) {
+    padding-top: rem(0);
+  }
+  > .column__pht {
+    width: 40%;
+    max-width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include mq(m) {
+      position: relative;
+      width: 80%;
+    }
+  }
+  > .column__txt {
+    width: 70%;
+    background: rgba($color: $color-gray04, $alpha: 0.7);
+    border-radius: 10px;
+    padding: rem(60) rem(130) rem(60) rem(70);
+    margin-left: auto;
     position: relative;
+    z-index: 2;
+    @include mq(m) {
+      width: 90%;
+      padding: rem(60) rem(70);
+      margin-top: rem(-100);
+    }
+    @include mq(s) {
+      padding: rem(40);
+    }
+    p{
+      margin-bottom: rem(20);
+    }
+  }
+  &.order-change {
+    >.column__pht {
+      left: auto;
+      right: 0;
+      @include mq(m) {
+        margin-left: auto;
+      }
+    }
+    > .column__txt {
+      margin-left: 0;
+      padding: rem(60) rem(70) rem(60) rem(130);
+      @include mq(m) {
+        padding: rem(60) rem(70);
+      }
+      @include mq(s) {
+        padding: rem(40);
+      }
+    }
+  }
+  .mask {
+    background-color: $color-gray03;
+    padding-top: 80%;
+    object-fit: contain;
+    margin-bottom:  rem(10);
+    position: relative;
+    overflow: hidden;
+    >img {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      transition: all 0.7s;
+      object-fit: contain;
+    }
+  }
 }

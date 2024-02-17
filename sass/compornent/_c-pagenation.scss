@@ -1,45 +1,87 @@
 @charset 'UTF-8';
+
 @use "../foundation/base" as *;
-@use "../setting/color" as *;
 @use "../mixin/breakpoint" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+
 
 //ページネーション
 .pagination-area {
-    .pagination{
-        margin: rem(40) 0 0;
-        .nav-links{
-            display: flex;
-            justify-content: center;
-            .page-numbers{
-                display: inline-block;
-                margin-right: rem(20);
-                padding: rem(5) rem(15);
-                color: $color-base01;
-                border-radius: 10px;
-                border: 1px solid $color-base01;
-                font-size: rem(16);
-                @include mq(m) {
-                    font-size: rem(14);
-                    padding: rem(3) rem(10);
-                    border-radius: 6px;
-                    margin-right: rem(12);
-                }
-                &.current{
-                    color: $color-white;
-                    background: $color-base01;
-                    border: 1px solid $color-base01;
-                }
-                &.prev,
-                &.next{
-                    position: static !important;
-                    background: transparent;
-                    box-shadow: none;
-                }
-                &.dots{
-                    background: transparent;
-                    box-shadow: none;
-                }
-            }
+  .pagination{
+    margin: rem(40) 0 0;
+    .nav-links{
+      display: flex;
+      justify-content: center;
+      .page-numbers{
+        font-family: $font-en;
+        display: inline-block;
+        margin-right: rem(20);
+        padding: rem(5) rem(15);
+        color: $color-base05;
+        border-radius: 10px;
+        border: 1px solid $color-base05;
+        font-size: rem(16);
+        font-weight: 700;
+        text-decoration: none;
+        @include mq(m) {
+          font-size: rem(14);
+          padding: rem(3) rem(10);
+          border-radius: 6px;
+          margin-right: rem(12);
         }
+        &.current{
+          color: $color-base05;
+          border: none;
+        }
+        &.prev,
+        &.next{
+          position: relative;
+          box-shadow: none;
+          text-indent: -10em;
+          overflow: hidden;
+          width: rem(40);
+          &::before,
+          &::after {
+            content: "";
+            width: 8px;
+            height: 2px;
+            display: inline-block;
+            border-radius: 10px;
+            background-color: $color-base05;
+            position: absolute;
+            left: calc(50% - 3px);
+          }
+        }
+        &.prev{
+          &::before {
+            top: calc(50% - 3.5px);
+            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+          &::after {
+            bottom: calc(50% - 3.5px);
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+        }
+        &.next{
+          &::before {
+            top: calc(50% - 3.5px);
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+          &::after {
+            bottom: calc(50% - 3.5px);
+            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+        }
+      }
     }
+  }
 }

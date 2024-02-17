@@ -5,39 +5,75 @@
 
 //ボタンエリア
 .btn-area {
-    text-align: center;
-    margin: rem(60) rem(0);
+  text-align: center;
+  margin: rem(60) rem(0);
+  @include mq(s) {
+    padding: 0 rem(20);
+  }
 }
 
 //ボタン
 .btn {
-    color: $color-white;
-    background: $color-base01;
-    display: inline-block;
-    padding: rem(18) rem(60);
-    border-radius: 30px;
-    width: rem(300);
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    font-weight: bold;
-    position: relative;
-    transition: all 0.3s ease-out;
-    /*hoverした際の、背景の場所とテキスト色の変更*/
-    &:hover {
-        opacity: 1;
-    }
-}
-.btn-arrow{
-    position: relative;
+  color: $color-white;
+  background-color: $color-base01;
+  display: inline-block;
+  padding: rem(25) rem(100);
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.8s ease-out;
+  @include mq(s) {
+    width: 100%;
+  }
+  &:hover {
+    opacity: 1;
+    background-color: $color-second-01;
+  }
+  &.btn-arrow{
+    &::before,
     &::after {
+      content: "";
+      width: 12px;
+      height: 3px;
+      display: inline-block;
+      border-radius: 10px;
+      background-color: $color-white;
+      position: absolute;
+      right: rem(25);
+    }
+    &::before {
+      top: calc(50% - 5px);
+      transform: rotate(45deg);
+      -ms-transform:rotate(45deg);
+      -webkit-transform:rotate(45deg);
+    }
+    &::after {
+      bottom: calc(50% - 5px);
+      transform: rotate(-45deg);
+      -ms-transform:rotate(-45deg);
+      -webkit-transform:rotate(-45deg);
+    }
+  }
+  &.btn-white{
+    color: $color-base01;
+    background-color: $color-white;
+    &::before,
+    &::after {
+      content: "";
+      background-color: $color-base01;
+    }
+    &:hover {
+      opacity: 1;
+      color: $color-white;
+      background-color: $color-second-01;
+      &::before,
+      &::after {
         content: "";
-        display: inline-block;
-        background: url("../images/icon_round-arrow.svg") center/contain no-repeat;
-        position: absolute;
-        top: calc(50% - 8px);
-        right: rem(30);
-        width: rem(10);
-        height: rem(16);
+        background-color: $color-white;
+      }
     }
-    }
+  }
+}

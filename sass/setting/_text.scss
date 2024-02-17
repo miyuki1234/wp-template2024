@@ -9,140 +9,147 @@
 
 //text
 .ta-center {
-    text-align: center !important;
+  text-align: center !important;
 }
 .ta-left {
-    text-align: left !important;
+  text-align: left !important;
 }
 .ta-right {
-    text-align: right !important;
+  text-align: right !important;
+}
+.text_theme_m {
+  font-size: rem(19);
 }
 .text_theme_s {
-    font-size: rem(16);
+  font-size: rem(16);
 }
 .text_theme_2s {
-    font-size: rem(14);
+  font-size: rem(13);
 }
 .text_theme_3s {
-    font-size: rem(12);
+  font-size: rem(11);
 }
 strong {
-    font-weight: 700;
+  font-weight: 700;
 }
 .super {
-    vertical-align: super;
-    font-size: 60%;
+  vertical-align: super;
+  font-size: 60%;
 }
-
 
 // top
 .title_theme_top-view {
-    font-size: rem(63);
-    font-weight: 700;
-    line-height: 1.5;
-    @include mq(l) {
-        font-size: rem(40);
-    }
-    @include mq(s) {
-        font-size: rem(24);
-    }
+  color: $color-white;
+  font-family: $font-en;
+  font-size: rem(72);
+  font-weight: 500;
+  line-height: 1.8;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
+  @include mq(l) {
+    font-size: rem(50);
+  }
+  @include mq(s) {
+    font-size: rem(33);
+  }
 }
 .text_theme_top-view {
-    font-size: rem(24);
-    font-weight: 500;
-    @include mq(m) {
-        font-size: rem(20);
-    }
+  color: $color-white;
+  font-size: rem(27);
+  font-weight: 500;
+  line-height: 1.8;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
+  @include mq(m) {
+    font-size: rem(19);
+  }
 }
 
 // title
 .title__outer {
-    position: relative;
+  position: relative;
 }
 .title_theme_l {
-    font-size: rem(30);
-    font-weight: 700;
-    margin: rem(40) 0 rem(20);
-    @include mq(s) {
-        margin: rem(30) 0 rem(10);
-    }
-    &:after {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: rem(-50);
-        z-index: -1;
-        font-family: $font-en;
-        font-size: rem(63);
-        color: $color-base05;
-        @include mq(s) {
-        }
-    }
-}
-.title_theme_m {
-    font-size: rem(24);
-    font-weight: 700;
-    margin: rem(40) 0 rem(20);
-    @include mq(s) {
-        margin: rem(30) 0 rem(10);
-    }
-    &.ribbon {
-        margin-bottom: rem(10);
-        display: inline-block;
-        position: relative;
-        height: 60px;/*高さ*/
-        line-height: 60px;/*高さ*/
-        text-align: center;
-        padding: 0 40px 0 18px;/*文字の左右の余白*/
-        font-size: 18px;/*文字サイズ*/
-        background: $color-base03;/*背景色*/
-        color: #FFF;/*文字色*/
-        box-sizing: border-box;
-        &:after {
-        position: absolute;
-        content: '';
-        width: 0px;
-        height: 0px;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        border-width: 30px 15px 30px 0px;
-        border-color: transparent #fff transparent transparent;
-        border-style: solid;
-        }
-        @include mq(m) {
-        margin: rem(-5) auto rem(15) rem(-20);
-        }
-    }
-    &.faq {
-        &:before {
-            content: "Q";
-            font-size: rem(36);
-            font-family: $font-en;
-            font-weight: 900;
-            color: $color-base04;
-            line-height: rem(16);
-        }
-    }
-}
-.title_theme_s {
+  color: $color-black-main;
+  font-family: $font-en;
+  font-size: rem(54);
+  font-weight: 500;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
+  position: relative;
+  @include mq(l) {
+    font-size: rem(50);
+  }
+  @include mq(s) {
+    font-size: rem(33);
+  }
+  span{
+    display: block;
     font-size: rem(16);
     font-weight: 700;
-    margin-bottom: rem(10);
+  }
 }
-.title_theme_menu {
-    font-size: rem(18);
-    font-weight: 700;
-    margin-bottom: rem(10);
-    &.red {
-        color: $color-red;
+.title_theme_m {
+  font-size: rem(33);
+  font-weight: 700;
+  margin: rem(30) 0 rem(20);
+  position: relative;
+  @include mq(s) {
+    font-size: rem(24);
+    margin: rem(30) 0 rem(10);
+  }
+  &.fontsize_l{
+    font-size: rem(72);
+    @include mq(l) {
+      font-size: rem(50);
     }
+    @include mq(s) {
+      font-size: rem(33);
+    }
+  }
+  &::before,
+  &::after{
+    content: "";
+    border-bottom: 3px solid $color-second-01;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 36px;
+  }
+  &::after {
+    border-bottom: 3px solid $color-gray02;
+    left: 18px;
+    width: 18px;
+  }
+  &.ta-center{
+    &::before,
+    &::after{
+      right: 0;
+    }
+  }
+  span{
+    display: block;
+    font-size: rem(13);
+    font-weight: 400;
+  }
+}
+.title_theme_s {
+  font-size: rem(23);
+  font-weight: 700;
+  margin-bottom: rem(10);
+}
+
+.title_theme_2s {
+  font-size: rem(19);
+  font-weight: 700;
+  margin-bottom: rem(10);
 }
 
 // bg
-.bg-gray{
-    background-color: $color-gray01;
-}
 .bg-white{
-    background-color: $color-white;
+  background-color: $color-white;
+}
+.bg-gray{
+  background-color: $color-gray03;
+}
+.bg-skyblue{
+  background-color: $color-base03;
 }

@@ -8,114 +8,114 @@
 
 // ■■■■■■フッター■■■■■■■
 .footer-area {
-    width: 100%;
+  width: 100%;
+  height: auto;
+  background-color: $color-base01;
+  .footer-area__inner {
+    width: $width-base;
     height: auto;
-    background-color: $color-base03;
-    // アニメーション
-    .footer-top-slider__wrapper {
-        position: relative;
-        height: rem(120);
-        @include mq(s) {
-            height: rem(30);
+    padding: rem(90) 0 rem(30);
+    margin: 0 auto;
+    @include mq(xl) {
+      width: 90%;
+    }
+    .footer-column {
+      color: $color-white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: rem(90);
+      @include mq(l) {
+        display: block;
+        text-align: center;
+        margin-bottom: rem(50);
+      }
+      .column__inner {
+        width: 40%;
+        @include mq(l) {
+          width: 100%;
+          margin-bottom: rem(50);
         }
-        .footer-top-slider {
-            @include animation(slider-to-left 40s);
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
+        &:last-child{
+          flex: 1;
+          margin-right: calc(50% - 50vw + 8px);
+          margin-left: auto;
+          @include mq(m) {
+            margin: 0 auto;
+          }
+        }
+        .footer-logo{
+          max-width: 160px;
+          margin-bottom: rem(50);
+          @include mq(l) {
+            margin: 0 auto rem(50);
+          }
+          a{
+            display: block;
+          }
+        }
+        .footer-info{
+          font-size: rem(16);
+        }
+        .footer-map{
+          position: relative;
+          width: 100%;
+          padding-top: 35%;
+          @include mq(xl) {
+            padding-top: 55%;
+          }
+          @include mq(m) {
+            padding-top: 80% !important;
+          }
+          iframe{
             position: absolute;
-            width: 100%;
-            height: rem(120);
-            background: url("../images/img_footer-slider.svg")  center top repeat-x;
-            z-index: 2;
-            top: rem(-80);
-            @include mq(xl) {
-                top: rem(-60);
-            }
-            @include mq(l) {
-                background-size: auto rem(120);
-            }
-            @include mq(s) {
-                background-size: auto rem(90);
-            }
+            top: 0;
+            right: 0;
+            width: 100% !important;
+            height: 100% !important;
+          }
         }
+      }
     }
-    .footer-area__inner {
-        width: $width-base;
-        height: auto;
-        padding-top: rem(10);
-        margin: 0 auto;
-        @include mq(xl) {
-            width: 90%;
+    .footer-nav {
+      width: 100%;
+      margin-bottom: rem(90);
+      @include mq(s) {
+        margin-bottom: rem(50);
+      }
+      @include mq(s) {
+        display: block;
+        text-align: center;
+      }
+      .footer-nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        @include mq(s) {
+          display: block;
+          text-align: center;
         }
-        @include mq(m) {
-            padding-top: rem(35);
-        }
-        .footer-column {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .column__inner {
-                width: 43%;
-                @include mq(m) {
-                    width: 100%;
-                }
-                .footer-nav {
-                    width: 100%;
-                    .footer-nav__list {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: flex-start;
-                        li {
-                            a {
-                                display: block;
-                                padding: rem(10) rem(20);
-                                color: $color-white;
-                                font-size: rem(18);
-                                font-weight: 700;
-                                @include mq(xl) {
-                                padding: rem(5);
-                                letter-spacing: rem(1);
-                                }
-                                @include mq(s) {
-                                padding: rem(15) rem(20);
-                                letter-spacing: rem(1);
-                                }
-                            }
-                        }
-                        @include mq(s) {
-                            display: block;
-                            text-align: center;
-                        }
-                    }
-                }
-                .sns__list {
-                    display: flex;
-                    a {
-                        img {
-                            height: rem(22);
-                            width: auto;
-                            padding: rem(20) rem(10) rem(10) rem(20);
-                            box-sizing: content-box;
-                        }
-                    }
-                    @include mq(s) {
-                        justify-content: center;
-                        column-gap: rem(20);
-                        a {
-                            img {
-                                height: rem(40);
-                                width: auto;
-                                padding: rem(20);
-                                box-sizing: content-box;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .copyrights {
+        li {
+          a {
+            display: block;
+            padding: rem(10) rem(20);
+            border-bottom: 2px solid $color-base01;
             color: $color-white;
-            padding: rem(10) 0;
+            font-size: rem(16);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.8s ease-out;
+            &:hover{
+              border-color: $color-white;
+            }
+          }
         }
+      }
     }
+    .copyrights {
+      font-family: $font-en;
+      color: $color-white;
+      font-size: rem(13);
+    }
+  }
 }

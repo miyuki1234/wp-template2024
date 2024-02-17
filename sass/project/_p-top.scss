@@ -12,10 +12,10 @@
   width: 100%;
   height: auto;
   &.section-turquoise-01 {
-    background-color: $color-base04;
+    background-color: $color-base01;
   }
   &.section-turquoise-02 {
-    background-color: $color-base05;
+    background-color: $color-base02;
   }
   &.section-turquoise-03 {
     background-color: $color-base01;
@@ -81,7 +81,7 @@
       }
     }
     &.section__inner-turquoise-01 {
-      background-color: $color-base04;
+      background-color: $color-base01;
     }
     &.last-section__inner {
       padding-bottom: rem(100);
@@ -124,7 +124,7 @@
           display: inline-block;
           position: relative;
           padding: rem(30) rem(20);
-          background-color: $color-base05;
+          background-color: $color-base02;
           border-radius: 30px;
           @include mq(m) {
             padding: rem(20) rem(15);
@@ -134,7 +134,7 @@
             position: absolute;
             display: block;
             border-radius: 50%;
-            background-color: $color-base05;
+            background-color: $color-base02;
             width: 30px;
             height: 30px;
             @include mq(m) {
@@ -147,7 +147,7 @@
             position: absolute;
             display: block;
             border-radius: 50%;
-            background-color: $color-base05;
+            background-color: $color-base02;
             width: 15px;
             height: 15px;
             @include mq(m) {
@@ -239,7 +239,7 @@
         }
       }
       .title_theme_m {
-        color: $color-base04;
+        color: $color-base01;
       }
     }
   }

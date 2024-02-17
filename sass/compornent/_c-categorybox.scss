@@ -5,35 +5,53 @@
 
 //カテゴリー
 .post-category {
-    display: inline-block;
-    padding: rem(2) rem(15);
-    border-radius: 16px;
-    background-color: $color-base05;
-    color: $color-black-main;
-    font-size: rem(12);
-    font-weight: 700;
+  color: $color-white;
+  background-color: $color-base01;
+  display: inline-block;
+  padding: rem(2) rem(8);
+  border-radius: 5px;
+  font-size: rem(11);
+  font-weight: 700;
+  &.news{
+    color: $color-white;
+    background-color: $color-gray01;
+  }
 }
 
 .category-box {
-    text-align: center;
-    padding-bottom: rem(40);
-    .category-box__list {
-        display: inline-flex;
-        justify-content: center;
-        list-style-type: none;
-        padding: rem(20) rem(30) rem(16);
-        border: solid 3px $color-black-main;
-        border-radius: 10px;
-        li {
-            a {
-                display: inline-block;
-                padding: 0 rem(10) rem(10) rem(10);
-                color: $color-black-main;
-                @include mq(s) {
-                    font-size: rem(12);
-                    padding: 0 rem(6) rem(10) rem(6);
-                }
-            }
-        }
+  text-align: center;
+  margin: rem(50) 0;
+  .category-box__list {
+    display: inline-flex;
+    justify-content: center;
+    list-style-type: none;
+    border: solid 3px $color-base02;
+    border-radius: 10px;
+    padding: rem(10) rem(30);
+    @include mq(s) {
+      padding: rem(10);
     }
+    li {
+      margin-right: rem(20);
+      @include mq(s) {
+        margin-right: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      a {
+        display: inline-block;
+        .post-category {
+          color: $color-base02;
+          background-color: transparent;
+          padding: rem(10);
+          font-size: rem(16);
+          font-weight: 400;
+          @include mq(s) {
+            font-size: rem(13);
+          }
+        }
+      }
+    }
+  }
 }

@@ -48,16 +48,16 @@
             @include mq(s) {
               width: 95%;
             }
-            border-top: solid 1px $color-base04;
+            border-top: solid 1px $color-base01;
             dt {
               width: 25%;
               padding: rem(15) 0 rem(15) rem(20);
-              border-bottom: solid 1px $color-base04;
+              border-bottom: solid 1px $color-base01;
             }
             dd {
               width: 75%;
               padding: rem(15) 0 rem(15) rem(20);
-              border-bottom: solid 1px $color-base04;
+              border-bottom: solid 1px $color-base01;
             }
           }
         }
