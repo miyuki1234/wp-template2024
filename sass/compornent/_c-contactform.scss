@@ -19,7 +19,7 @@
   >.text_theme_s {
     padding-bottom: rem(50);
     .red {
-      color: $color-red;
+      color: $color-red-01;
     }
   }
   .contact7 {
@@ -32,7 +32,7 @@
       input {
         width: 60%;
         background-color: $color-white;
-        border: 1px solid $color-gray05;
+        border: 1px solid $color-gray-04;
         border-radius: 5px;
         font-size: rem(16);
         padding: rem(3) rem(10);
@@ -43,7 +43,7 @@
       textarea {
         width: 60%;
         background-color: $color-white;
-        border: 1px solid $color-gray05;
+        border: 1px solid $color-gray-04;
         border-radius: 5px;
         font-size: rem(16);
         height: rem(180);
@@ -71,7 +71,7 @@
     // 必須
     .must {
       color: $color-white;
-      background-color: $color-red;
+      background-color: $color-red-01;
       border-radius: 3px;
       font-size: rem(11);
       margin-left: rem(8);
@@ -110,8 +110,8 @@
     input {
       -webkit-appearance: none;
       color: $color-white;
-      background-color: $color-base01;
-      border: solid 1px $color-base01;
+      background-color: $color-blue-01;
+      border: solid 1px $color-blue-01;
       display: inline-block;
       padding: rem(25) rem(100);
       border-radius: 10px;
@@ -127,8 +127,8 @@
       }
       &:hover {
         opacity: 1;
-        background-color: $color-second-01;
-        border-color: $color-second-01;
+        background-color: $color-orange-01;
+        border-color: $color-orange-01;
       }
       &:not(:disabled) {
         &:hover {

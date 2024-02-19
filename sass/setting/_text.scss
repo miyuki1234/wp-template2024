@@ -107,7 +107,7 @@ strong {
   &::before,
   &::after{
     content: "";
-    border-bottom: 3px solid $color-second-01;
+    border-bottom: 3px solid $color-orange-01;
     margin: auto;
     position: absolute;
     left: 0;
@@ -115,7 +115,7 @@ strong {
     width: 36px;
   }
   &::after {
-    border-bottom: 3px solid $color-gray02;
+    border-bottom: 3px solid $color-gray-01;
     left: 18px;
     width: 18px;
   }
@@ -142,14 +142,18 @@ strong {
   font-weight: 700;
   margin-bottom: rem(10);
 }
+.title_border{
+  padding: rem(10);
+  border-bottom: 1px solid $color-blue-02;
+}
 
 // bg
 .bg-white{
   background-color: $color-white;
 }
 .bg-gray{
-  background-color: $color-gray03;
+  background-color: $color-gray-02;
 }
 .bg-skyblue{
-  background-color: $color-base03;
+  background-color: $color-blue-03;
 }

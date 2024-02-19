@@ -1,22 +1,22 @@
 @charset 'UTF-8';
 //main
 $color-black-main: #333333;
-$color-gray01: #777777;
-$color-gray02: #DDDDDD;
-$color-gray03: #EFEFEF;
-$color-gray04: #F8F8F8;
-$color-gray05: #CCCCCC;
+$color-darkgray: #777777;
+$color-gray-01: #DDDDDD;
+$color-gray-02: #EFEFEF;
+$color-gray-03: #F8F8F8;
+$color-gray-04: #CCCCCC;
 $color-white: #fff;
 
-$color-base01: #0159B0;
-$color-base02: #026FD6;
-$color-base03: #E5F2FE;
-$color-base04:#0159b5;
-$color-base05:#03638D;
-$color-second-01: #FE9123;
-$color-second-02: #FFDDBC;
+$color-blue-01: #0159B0;
+$color-blue-02: #026FD6;
+$color-blue-03: #E5F2FE;
+$color-turquoise-01:#03638D;
 
-$color-red: #FE4647;
+$color-orange-01: #FE9123;
+$color-orange-02: #FFDDBC;
+
+$color-red-01: #FE4647;
 
 //link
-$link-color: $color-base02;
+$link-color: $color-blue-02;

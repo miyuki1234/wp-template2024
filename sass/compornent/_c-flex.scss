@@ -74,7 +74,7 @@
     }
   }
   .mask {
-    background-color: $color-gray03;
+    background-color: $color-gray-02;
     border-radius: 10px;
     padding-top: 75%;
     object-fit: contain;
@@ -112,7 +112,7 @@
         text-align: center;
         border-radius: 50%;
         color: $color-white;
-        background-color: $color-base01;
+        background-color: $color-blue-01;
         padding: rem(10);
         position: relative;
         z-index: 2;
@@ -135,7 +135,7 @@
           border-style: solid;
           border-right: 8px solid transparent;
           border-left: 8px solid transparent;
-          border-top: 16px solid $color-base01;
+          border-top: 16px solid $color-blue-01;
           border-bottom: 0;
           position: absolute;
           top: 95%;
@@ -260,7 +260,6 @@
       margin: 0 0 rem(10) !important;
     }
     a {
-      font-size: rem(16);
       font-weight: 700;
       letter-spacing: 0;
       text-align: center;
@@ -268,12 +267,12 @@
       display: block;
       position: relative;
       padding: rem(25) rem(40) rem(25) rem(30);
-      border: 1px solid $color-base01;
+      border: 1px solid $color-blue-01;
       border-radius: 10px;
       transition: all 0.8s ease-out;
       &:hover{
         opacity: 1;
-        background-color: $color-base03;
+        background-color: $color-blue-03;
       }
       &::before,
       &::after {
@@ -282,7 +281,7 @@
         height: 3px;
         display: inline-block;
         border-radius: 10px;
-        background-color: $color-base01;
+        background-color: $color-blue-01;
         position: absolute;
         top: 50%;
       }

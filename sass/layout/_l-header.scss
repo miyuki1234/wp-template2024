@@ -52,7 +52,6 @@
         &.panelactive {
           top: rem(70);
           transition: all 0.6s;
-          // animation: fadeIn 0.3s ease-in 0s forwards;
 
           @include mq(m) {
             overflow-y: scroll;
@@ -71,8 +70,7 @@
             a {
               margin: 0 auto;
               padding: rem(10) rem(20);
-              color: $color-base01;
-              font-size: rem(16);
+              color: $color-blue-01;
               font-weight: 700;
               display: flex;
               align-items: center;
@@ -97,7 +95,7 @@
                 border-bottom: 2px solid $color-white;
                 &:hover {
                   opacity: 1;
-                  border-color: $color-base03;
+                  border-color: $color-blue-02;
                 }
               }
             }
@@ -105,7 +103,7 @@
               margin: 0 0 0 rem(30);
               a {
                 color: $color-white;
-                background-color: $color-base01;
+                background-color: $color-blue-01;
                 text-decoration: none;
                 border-radius: 0;
                 padding: rem(10) rem(40);
@@ -113,14 +111,19 @@
                 &:before{
                   content: "";
                   display: inline-block;
-                  background: url("../images/icon_contact-btn.svg") center/contain no-repeat;
+                  background: url("../icon_contact.svg") center/contain no-repeat;
                   vertical-align: middle;
                   width: rem(26);
                   height: rem(20);
                   margin-right: rem(10);
+
+                  content: "\f0e0";
+                  font-family: fontawesome;
+                  font-size: rem(26);
+                  line-height: 1;
                 }
                 &:hover{
-                  background: $color-second-01;
+                  background: $color-orange-01;
                   opacity: 1;
                 }
               }
@@ -139,7 +142,7 @@
           padding: rem(10) rem(18);
           &:hover {
             span {
-              background-color: $color-base01;
+              background-color: $color-blue-01;
             }
           }
         }
@@ -156,7 +159,7 @@
             position: absolute;
             height: rem(3);
             border-radius: 1px;
-            background: $color-base01;
+            background: $color-blue-01;
             width: 100%;
             z-index: 15;
             @include mq(m) {
@@ -209,7 +212,7 @@
             }
             &:hover {
               span {
-                background-color: $color-base01;
+                background-color: $color-white;
               }
             }
           }
@@ -221,7 +224,7 @@
         position: fixed;
         z-index: 3;
         /*ナビのスタート位置と形状*/
-        background-color: $color-base03;
+        background-color: $color-blue-01;
         top: 0;
         right: -120vw;
         width: fit-content;
@@ -232,6 +235,9 @@
         @include mq(l) {
           display: block;
         }
+        @include mq(m) {
+          width: 100%;
+        }
         &.panelactive {
           transition: all 0.6s;
           right: 0;
@@ -240,42 +246,16 @@
           }
         }
         .header-sp-nav {
-          width: fit-content;
+          width: 100%;
           .header-sp-nav__list {
             li {
-              margin-top: rem(20);
-              @include mq(m) {
-                margin-top: rem(30);
-              }
               a {
+                display: block;
                 color: $color-white;
                 font-weight: 700;
-              }
-              &:not(:last-child) {
-                a {
-                  position: relative;
-                  &:before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    display: inline-block;
-                    width: rem(35);
-                    height: 1px;
-                    background-color: $color-white;
-                  }
-                  &:before {
-                    left: rem(-50);
-                  }
-                }
-              }
-              &:last-child {
-                margin-top: rem(40);
-                a {
-                  background-color: $color-second-01;
-                  color: #fff;
-                  border-radius: 30px;
-                  padding: rem(15) rem(40);
-                }
+                text-align: center;
+                padding: rem(20);
+                border-bottom: 1px solid $color-white;
               }
             }
           }

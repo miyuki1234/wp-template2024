@@ -15,7 +15,7 @@
 //ボタン
 .btn {
   color: $color-white;
-  background-color: $color-base01;
+  background-color: $color-blue-01;
   display: inline-block;
   padding: rem(25) rem(100);
   border-radius: 10px;
@@ -30,7 +30,7 @@
   }
   &:hover {
     opacity: 1;
-    background-color: $color-second-01;
+    background-color: $color-orange-01;
   }
   &.btn-arrow{
     &::before,
@@ -58,17 +58,17 @@
     }
   }
   &.btn-white{
-    color: $color-base01;
+    color: $color-blue-01;
     background-color: $color-white;
     &::before,
     &::after {
       content: "";
-      background-color: $color-base01;
+      background-color: $color-blue-01;
     }
     &:hover {
       opacity: 1;
       color: $color-white;
-      background-color: $color-second-01;
+      background-color: $color-orange-01;
       &::before,
       &::after {
         content: "";

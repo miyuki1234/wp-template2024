@@ -13,14 +13,14 @@
         padding: rem(20);
     }
     &.box-line {
-        border: solid 1px $color-base02;
+        border: solid 1px $color-blue-02;
     }
 }
 
 // toc-box
 .toc-box{
   width: fit-content;
-  border: 1px solid $color-base02;
+  border: 1px solid $color-blue-02;
   border-radius: 10px;
   padding: rem(30);
   margin: rem(50) 0;
@@ -32,7 +32,7 @@
 //bg_box
 .bg_box{
   width: fit-content;
-  background-color: $color-base03;
+  background-color: $color-blue-03;
   border-radius: 10px;
   padding: rem(30) rem(50) rem(30) rem(30);
   margin-bottom: rem(25);
@@ -64,7 +64,7 @@
   }
   > .column__txt {
     width: 70%;
-    background: rgba($color: $color-gray04, $alpha: 0.7);
+    background: rgba($color: $color-gray-03, $alpha: 0.7);
     border-radius: 10px;
     padding: rem(60) rem(130) rem(60) rem(70);
     margin-left: auto;
@@ -102,7 +102,7 @@
     }
   }
   .mask {
-    background-color: $color-gray03;
+    background-color: $color-gray-02;
     padding-top: 80%;
     object-fit: contain;
     margin-bottom:  rem(10);

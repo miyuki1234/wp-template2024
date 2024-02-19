@@ -18,10 +18,9 @@
         display: inline-block;
         margin-right: rem(20);
         padding: rem(5) rem(15);
-        color: $color-base05;
+        color: $color-turquoise-01;
         border-radius: 10px;
-        border: 1px solid $color-base05;
-        font-size: rem(16);
+        border: 1px solid $color-turquoise-01;
         font-weight: 700;
         text-decoration: none;
         @include mq(m) {
@@ -31,7 +30,7 @@
           margin-right: rem(12);
         }
         &.current{
-          color: $color-base05;
+          color: $color-turquoise-01;
           border: none;
         }
         &.prev,
@@ -48,7 +47,7 @@
             height: 2px;
             display: inline-block;
             border-radius: 10px;
-            background-color: $color-base05;
+            background-color: $color-turquoise-01;
             position: absolute;
             left: calc(50% - 3px);
           }

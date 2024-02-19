@@ -69,7 +69,7 @@
       border-radius: 5px;
     }
     .bg_turquoise {
-      background-color: $color-base03;
+      background-color: $color-blue-03;
       padding: rem(30);
       border-radius: 10px;
       margin-bottom: rem(20);
@@ -85,7 +85,7 @@
       }
     }
     .bg_gray {
-      background-color: $color-gray04;
+      background-color: $color-gray-03;
       padding: rem(20) !important;
       border-radius: 10px;
       margin-bottom: rem(20);
@@ -142,7 +142,7 @@
                 .column2__2 {
                   padding-left: rem(30);
                   .text_theme_s {
-                    color: $color-base03;
+                    color: $color-blue-03;
                   }
                 }
               }
@@ -171,7 +171,7 @@
       }
     }
     .postpage-box {
-      background-color: $color-base02;
+      background-color: $color-blue-02;
       .mainbar {
         .page-section {
           background-color: $color-white;
@@ -203,7 +203,7 @@
                   a {
                     padding: rem(2) rem(15);
                     border-radius: 16px;
-                    background-color: $color-base02;
+                    background-color: $color-blue-02;
                     color: $color-black-main;
                     font-size: rem(12);
                     font-weight: 700;
@@ -233,7 +233,7 @@
 
                   &.wp-block-heading {
                     margin-top: rem(80);
-                    background-color: $color-base03;
+                    background-color: $color-blue-03;
                     color: $color-white;
                     padding: rem(20) rem(20) rem(20) rem(52);
                     border-radius: 5px;
@@ -279,11 +279,11 @@
                   margin: rem(25) 0 rem(40);
                   .liquid-speech-balloon-avatar {
                     border-radius: 50%;
-                    border: solid 1px $color-gray01;
+                    border: solid 1px $color-darkgray;
                   }
                   .liquid-speech-balloon-text {
-                    background-color: $color-gray03;
-                    border: $color-gray03;
+                    background-color: $color-gray-02;
+                    border: $color-gray-02;
                     width: auto;
                     max-width: 70%;
                     @include mq(s) {
@@ -295,7 +295,7 @@
                     .liquid-speech-balloon-arrow {
                       border-top: 7px solid transparent;
                       border-bottom: 7px solid transparent;
-                      border-right: 10px solid $color-gray03;
+                      border-right: 10px solid $color-gray-02;
                       margin-left: rem(1);
                     }
                   }
@@ -309,7 +309,7 @@
                         border-top: 7px solid transparent;
                         border-bottom: 7px solid transparent;
                         border-right: transparent;
-                        border-left: 10px solid $color-gray03;
+                        border-left: 10px solid $color-gray-02;
                         margin-left: 0;
                         margin-right: rem(9);
                       }
@@ -387,7 +387,7 @@
                     display: inline-block;
                     padding: rem(2) rem(15);
                     border-radius: 16px;
-                    background-color: $color-base02;
+                    background-color: $color-blue-02;
                     color: $color-black-main;
                     font-size: rem(12);
                     font-weight: 700;
@@ -420,14 +420,14 @@
           .faq-type {
             display: inline-block;
             padding: 0 rem(6);
-            color: $color-base01;
-            border: solid 1px $color-base01;
+            color: $color-blue-01;
+            border: solid 1px $color-blue-01;
             border-radius: 4px;
             margin: rem(10) auto;
           }
 
           >.title_theme_m {
-            border-bottom: 1px solid $color-gray01;
+            border-bottom: 1px solid $color-darkgray;
             padding-bottom: rem(10);
           }
 
@@ -451,7 +451,7 @@
               font-size: rem(36);
               font-family: $font-en;
               font-weight: 900;
-              color: $color-red;
+              color: $color-red-01;
               line-height: rem(60);
               border-bottom: solid 1px $color-white;
             }

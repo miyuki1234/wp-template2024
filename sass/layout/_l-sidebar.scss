@@ -60,7 +60,7 @@
             //タイトル
             .text_theme_s {
               &.title {
-                background-color: $color-base02;
+                background-color: $color-blue-02;
                 padding: rem(15) rem(20);
                 color: $color-white;
                 border-radius: 10px 10px 0 0;
@@ -70,14 +70,28 @@
             .search-form__wrapper {
               padding: rem(0) rem(20) rem(20);
               margin-top: rem(-10);
-              background-color: $color-base02;
+              background-color: $color-blue-02;
               border-radius: 0 0 10px 10px;
               .search-form {
                 position: relative;
                 display: flex;
                 border-radius:5px;
                 overflow: hidden;
-                border: 1px solid $color-gray05;
+                border: 1px solid $color-gray-04;
+                position: relative;
+                &:before{
+                  content: "\f002";
+                  font-family: fontawesome;
+                  font-size: rem(15);
+                  color: #666;
+                  line-height: 1;
+                  position: absolute;
+                  top: 50%;
+                  left: rem(10);
+                  transform: translateY(-50%);
+                  -ms-transform:translateY(-50%);
+                  -webkit-transform:translateY(-50%);
+                }
                 input[type="submit"] {
                   width: rem(40);
                   height: rem(40);
@@ -85,6 +99,7 @@
                   border: none;
                   cursor: pointer;
                   background-color: $color-white;
+                  
                 }
                 input[type="text"] {
                   width: 100%;
@@ -100,10 +115,10 @@
               overflow: hidden;
               li {
                 &:not(:first-of-type) {
-                  border-top: solid 1px $color-gray02;
+                  border-top: solid 1px $color-gray-01;
                 }
                 a {
-                  background: $color-gray04;
+                  background: $color-gray-03;
                   display: block;
                   position: relative;
                   padding: rem(15) rem(50) rem(15) rem(20);
@@ -137,7 +152,7 @@
             }
             //人気記事一覧
             .article__list {
-              background-color: $color-gray04;
+              background-color: $color-gray-03;
               border-radius: 0 0 10px 10px;
               @include mq(l) {
                 display: flex;
@@ -154,7 +169,7 @@
                   width: 100%;
                 }
                 &:not(:first-of-type) {
-                  border-top: solid 1px $color-gray02;
+                  border-top: solid 1px $color-gray-01;
                 }
                 a {
                   display: block;
@@ -163,7 +178,7 @@
                   color: $color-black-main;
                   text-decoration: none;
                   .mask {
-                    background-color: $color-gray03;
+                    background-color: $color-gray-02;
                     border-radius: 10px;
                     padding-top: 75%;
                     object-fit: contain;

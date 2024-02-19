@@ -6,7 +6,7 @@
 //カテゴリー
 .post-category {
   color: $color-white;
-  background-color: $color-base01;
+  background-color: $color-blue-01;
   display: inline-block;
   padding: rem(2) rem(8);
   border-radius: 5px;
@@ -14,7 +14,7 @@
   font-weight: 700;
   &.news{
     color: $color-white;
-    background-color: $color-gray01;
+    background-color: $color-darkgray;
   }
 }
 
@@ -25,7 +25,7 @@
     display: inline-flex;
     justify-content: center;
     list-style-type: none;
-    border: solid 3px $color-base02;
+    border: solid 3px $color-blue-02;
     border-radius: 10px;
     padding: rem(10) rem(30);
     @include mq(s) {
@@ -42,7 +42,7 @@
       a {
         display: inline-block;
         .post-category {
-          color: $color-base02;
+          color: $color-blue-02;
           background-color: transparent;
           padding: rem(10);
           font-size: rem(16);
