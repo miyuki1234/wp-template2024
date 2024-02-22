@@ -55,35 +55,14 @@
   .page-section__inner {
     width: $width-base;
     height: auto;
-    margin: 0 auto;
-    padding: rem(70) 0 rem(70);
+    margin: rem(50) auto rem(150);
     @include mq(xl) {
       width: 90%;
-      padding: rem(50) 0 rem(50);
     }
     &.last-section__inner {
       @include mq(s) {
         padding-bottom: rem(40);
       }
-    }
-    &.section__inner-right-side {
-      width: calc(($width-base + (100vw - $width-base) / 2)  + rem(30));
-      margin-left: auto;
-      margin-right: 0;
-      border-radius: 150px 0 0 50px;
-      padding-left: rem(30);
-      padding-right: calc((100vw - $width-base) / 2);
-      @include mq(xl) {
-        width: calc((90vw + (100vw - 90vw) / 2)  + rem(30));
-        padding-right: calc((100vw - 90vw) / 2);
-      }
-      @include mq(s) {
-        width: 100%;
-        padding: rem(100) 5% rem(100);
-      }
-    }
-    &.section__inner-turquoise-02 {
-      background-color: $color-blue-02;
     }
   }
   &.last-section {

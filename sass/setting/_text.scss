@@ -89,7 +89,8 @@ strong {
 .title_theme_m {
   font-size: rem(33);
   font-weight: 700;
-  margin: rem(30) 0 rem(20);
+  padding-top: rem(10);
+  margin-bottom: rem(50);
   position: relative;
   @include mq(s) {
     font-size: rem(24);
@@ -111,7 +112,7 @@ strong {
     margin: auto;
     position: absolute;
     left: 0;
-    top: -10px;
+    top: 0;
     width: 36px;
   }
   &::after {
@@ -134,13 +135,13 @@ strong {
 .title_theme_s {
   font-size: rem(23);
   font-weight: 700;
-  margin-bottom: rem(10);
+  margin-bottom: rem(20);
 }
 
 .title_theme_2s {
   font-size: rem(19);
   font-weight: 700;
-  margin-bottom: rem(10);
+  margin-bottom: rem(20);
 }
 .title_border{
   padding: rem(10);

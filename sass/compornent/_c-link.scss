@@ -5,14 +5,11 @@
 a {
   color: $link-color;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.8s ease-out;
   &:hover {
     cursor: pointer;
     opacity: 0.85;
-  }
-  &.text_link{
-    text-decoration: underline;
   }
 }
 

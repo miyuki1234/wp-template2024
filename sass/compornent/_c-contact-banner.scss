@@ -5,58 +5,58 @@
 
 //コンタクトバナー
 .contact-section {
-    background: url("../images/img_cta-01.webp") center/cover no-repeat;
+  background: url("../images/img_cta-01.webp") center/cover no-repeat;
+  width: 100%;
+  padding: rem(90) 0 rem(120);
+  position: relative;
+  @include mq(m) {
+    padding: rem(60) 0 rem(30);
+  }
+  &:after {
+    content:'';
+    background-color: rgba(#000, 0.3);
     width: 100%;
-    padding: rem(50) 0 rem(120);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .contact-section__inner {
+    color: $color-white;
     position: relative;
-    @include mq(m) {
-      padding: rem(60) 0 rem(30);
-    }
-    &:after {
-      content:'';
-      background-color: rgba(#000, 0.3);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-    .contact-section__inner {
-      color: $color-white;
-      position: relative;
-      height: auto;
-      z-index: 2;
+    z-index: 1;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    @include mq(xl) {
       padding: 0;
-      z-index: 1;
-      display: flex;
-      align-items: flex-end;
-      @include mq(xl) {
-        padding: 0;
-      }
+    }
+    @include mq(m) {
+      display: block;
+      text-align: center;
+    }
+    >div{
+      flex: 1;
+    }
+    .title_theme_m{
+      text-align: left;
+      margin-bottom: rem(50);
       @include mq(m) {
-        display: block;
+        text-align: center;
+        &::before,
+        &::after{
+          right: 0;
+        }
+      }
+    }
+    .btn-area{
+      text-align: right;
+      margin: 0;
+      @include mq(m) {
         text-align: center;
       }
-      >div{
-        flex: 1;
-      }
-      .title_theme_m{
-        text-align: left;
-        margin-bottom: rem(50);
-        @include mq(m) {
-          text-align: center;
-          &::before,
-          &::after{
-            right: 0;
-          }
-        }
-      }
-      .btn-area{
-        text-align: right;
-        @include mq(m) {
-          text-align: center;
-        }
-      }
     }
+  }
 }

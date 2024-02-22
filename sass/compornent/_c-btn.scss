@@ -24,7 +24,6 @@
   outline: none;
   font-weight: 700;
   position: relative;
-  transition: all 0.8s ease-out;
   @include mq(s) {
     width: 100%;
   }
@@ -33,46 +32,34 @@
     background-color: $color-orange-01;
   }
   &.btn-arrow{
-    &::before,
-    &::after {
-      content: "";
-      width: 12px;
-      height: 3px;
+    &:before{
+      content: "\f105";
+      font-family: fontawesome;
+      font-size: rem(26);
       display: inline-block;
-      border-radius: 10px;
-      background-color: $color-white;
+      vertical-align: middle;
+      margin-right: rem(10);
       position: absolute;
-      right: rem(25);
-    }
-    &::before {
-      top: calc(50% - 5px);
-      transform: rotate(45deg);
-      -ms-transform:rotate(45deg);
-      -webkit-transform:rotate(45deg);
-    }
-    &::after {
-      bottom: calc(50% - 5px);
-      transform: rotate(-45deg);
-      -ms-transform:rotate(-45deg);
-      -webkit-transform:rotate(-45deg);
+      right: rem(20);
+      top: calc(50%);
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transition: all 0.8s ease-out;
     }
   }
   &.btn-white{
     color: $color-blue-01;
     background-color: $color-white;
-    &::before,
-    &::after {
-      content: "";
-      background-color: $color-blue-01;
+    &::before{
+      color: $color-blue-01;
     }
     &:hover {
       opacity: 1;
       color: $color-white;
       background-color: $color-orange-01;
-      &::before,
-      &::after {
-        content: "";
-        background-color: $color-white;
+      &::before{
+        color: $color-white;
       }
     }
   }

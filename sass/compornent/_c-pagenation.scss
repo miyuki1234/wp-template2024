@@ -33,53 +33,6 @@
           color: $color-turquoise-01;
           border: none;
         }
-        &.prev,
-        &.next{
-          position: relative;
-          box-shadow: none;
-          text-indent: -10em;
-          overflow: hidden;
-          width: rem(40);
-          &::before,
-          &::after {
-            content: "";
-            width: 8px;
-            height: 2px;
-            display: inline-block;
-            border-radius: 10px;
-            background-color: $color-turquoise-01;
-            position: absolute;
-            left: calc(50% - 3px);
-          }
-        }
-        &.prev{
-          &::before {
-            top: calc(50% - 3.5px);
-            transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-          }
-          &::after {
-            bottom: calc(50% - 3.5px);
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-          }
-        }
-        &.next{
-          &::before {
-            top: calc(50% - 3.5px);
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-          }
-          &::after {
-            bottom: calc(50% - 3.5px);
-            transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-          }
-        }
       }
     }
   }

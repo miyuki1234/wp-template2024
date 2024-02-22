@@ -7,13 +7,9 @@
 
 //コンテンツボックス
 .contents-box {
-    padding: rem(30);
-    margin-bottom: rem(30);
+    margin: rem(30) 0;
     @include mq(m) {
-        padding: rem(20);
-    }
-    &.box-line {
-        border: solid 1px $color-blue-02;
+        margin: rem(20) 0;
     }
 }
 
@@ -51,8 +47,10 @@
     padding-top: rem(0);
   }
   > .column__pht {
-    width: 40%;
+    width: 50%;
     max-width: 600px;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -78,14 +76,12 @@
     @include mq(s) {
       padding: rem(40);
     }
-    p{
-      margin-bottom: rem(20);
-    }
   }
   &.order-change {
     >.column__pht {
       left: auto;
       right: 0;
+      border-radius: 10px 0 0 10px;
       @include mq(m) {
         margin-left: auto;
       }
@@ -103,7 +99,7 @@
   }
   .mask {
     background-color: $color-gray-02;
-    padding-top: 80%;
+    padding-top: 67%;
     object-fit: contain;
     margin-bottom:  rem(10);
     position: relative;
@@ -117,7 +113,7 @@
       left: 50%;
       transform: translate(-50%, -50%) scale(1);
       transition: all 0.7s;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 }
