@@ -17,16 +17,76 @@
 .ta-right {
   text-align: right !important;
 }
-.text_theme_m {
+.text-j_5l {
+  font-family: $font-family;
+  font-size: rem(48);
+}
+.text-j_4l {
+  font-family: $font-family;
+  font-size: rem(39);
+}
+.text-j_3l {
+  font-family: $font-family;
+  font-size: rem(33);
+}
+.text-j_2l {
+  font-family: $font-family;
+  font-size: rem(27);
+}
+.text-j_l {
+  font-family: $font-family;
+  font-size: rem(23);
+}
+.text-j_m {
+  font-family: $font-family;
   font-size: rem(19);
 }
-.text_theme_s {
+.text-j_s {
+  font-family: $font-family;
   font-size: rem(16);
 }
-.text_theme_2s {
+.text-j_2s {
+  font-family: $font-family;
   font-size: rem(13);
 }
-.text_theme_3s {
+.text-j_3s {
+  font-family: $font-family;
+  font-size: rem(11);
+}
+.text-e_5l {
+  font-family: $font-en;
+  font-size: rem(56);
+}
+.text-e_4l {
+  font-family: $font-en;
+  font-size: rem(54);
+}
+.text-e_3l {
+  font-family: $font-en;
+  font-size: rem(33);
+}
+.text-e_2l {
+  font-family: $font-en;
+  font-size: rem(27);
+}
+.text-e_l {
+  font-family: $font-en;
+  font-size: rem(23);
+}
+.text-e_m {
+  font-family: $font-en;
+  font-size: rem(19);
+}
+.text-e_s {
+  font-family: $font-en;
+  font-size: rem(16);
+}
+.text-e_2s {
+  font-family: $font-en;
+  font-size: rem(13);
+}
+.text-e_3s {
+  font-family: $font-en;
   font-size: rem(11);
 }
 strong {
@@ -38,7 +98,7 @@ strong {
 }
 
 // top
-.title_theme_top-view {
+.title-top-view {
   color: $color-white;
   font-family: $font-en;
   font-size: rem(72);
@@ -52,59 +112,116 @@ strong {
     font-size: rem(33);
   }
 }
-.text_theme_top-view {
-  color: $color-white;
-  font-size: rem(27);
-  font-weight: 500;
-  line-height: 1.8;
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
-  @include mq(m) {
-    font-size: rem(19);
-  }
-}
 
 // title
-.title__outer {
-  position: relative;
+.title-j_5l {
+  font-family: $font-family;
+  font-size: rem(48);
+  font-weight: 700;
+  margin-bottom: rem(20);
 }
-.title_theme_l {
-  color: $color-black-main;
+.title-j_4l {
+  font-family: $font-family;
+  font-size: rem(39);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-j_3l {
+  font-family: $font-family;
+  font-size: rem(33);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-j_2l {
+  font-family: $font-family;
+  font-size: rem(27);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-j_l {
+  font-family: $font-family;
+  font-size: rem(23);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-j_m {
+  font-family: $font-family;
+  font-size: rem(19);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-j_s {
+  font-family: $font-family;
+  font-size: rem(16);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-j_2s {
+  font-family: $font-family;
+  font-size: rem(13);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-j_3s {
+  font-family: $font-family;
+  font-size: rem(11);
+  font-weight: 700;
+  margin-bottom: rem(20);
+}
+.title-e_5l {
+  font-family: $font-en;
+  font-size: rem(72);
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+.title-e_4l {
   font-family: $font-en;
   font-size: rem(54);
   font-weight: 500;
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
-  position: relative;
-  @include mq(l) {
-    font-size: rem(50);
-  }
-  @include mq(s) {
-    font-size: rem(33);
-  }
-  span{
-    display: block;
-    font-size: rem(16);
-    font-weight: 700;
-  }
+  margin-bottom: rem(20);
 }
-.title_theme_m {
+.title-e_3l {
+  font-family: $font-en;
   font-size: rem(33);
-  font-weight: 700;
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+.title-e_2l {
+  font-family: $font-en;
+  font-size: rem(27);
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+.title-e_l {
+  font-family: $font-en;
+  font-size: rem(23);
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+.title-e_m {
+  font-family: $font-en;
+  font-size: rem(19);
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+.title-e_s {
+  font-family: $font-en;
+  font-size: rem(16);
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+.title-e_2s {
+  font-family: $font-en;
+  font-size: rem(13);
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+
+// タイトル装飾
+.title_twotone{
   padding-top: rem(10);
   margin-bottom: rem(50);
   position: relative;
-  @include mq(s) {
-    font-size: rem(24);
-    margin: rem(30) 0 rem(10);
-  }
-  &.fontsize_l{
-    font-size: rem(72);
-    @include mq(l) {
-      font-size: rem(50);
-    }
-    @include mq(s) {
-      font-size: rem(33);
-    }
-  }
   &::before,
   &::after{
     content: "";
@@ -132,20 +249,12 @@ strong {
     font-weight: 400;
   }
 }
-.title_theme_s {
-  font-size: rem(23);
-  font-weight: 700;
-  margin-bottom: rem(20);
-}
-
-.title_theme_2s {
-  font-size: rem(19);
-  font-weight: 700;
-  margin-bottom: rem(20);
-}
-.title_border{
+.title_line{
   padding: rem(10);
   border-bottom: 1px solid $color-blue-02;
+}
+.title__outer {
+  position: relative;
 }
 
 // bg

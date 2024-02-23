@@ -145,7 +145,7 @@
           -webkit-transform: translateX(-50%);
         }
       }
-      .title_theme_2s {
+      .title-j_2s {
         margin-bottom: rem(15);
       }
     }
@@ -238,6 +238,9 @@
   justify-content: center;
   max-width: rem(1000);
   margin: rem(50) auto;
+  @include mq(xl) {
+    width: 90%;
+  }
   @include mq(s) {
     column-gap: normal;
     justify-content: space-between;
@@ -260,6 +263,7 @@
       margin: 0 0 rem(10) !important;
     }
     a {
+      font-size: rem(16);
       font-weight: 700;
       letter-spacing: 0;
       text-align: center;
@@ -270,6 +274,10 @@
       border: 1px solid $color-blue-01;
       border-radius: 10px;
       transition: all 0.8s ease-out;
+      @include mq(xl) {
+        font-size: rem(15);
+        padding: rem(25) rem(35) rem(25) rem(15);
+      }
       &:hover{
         opacity: 1;
         background-color: $color-blue-03;

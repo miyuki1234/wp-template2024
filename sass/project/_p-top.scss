@@ -99,12 +99,12 @@
     .top-section-01__inner {
       padding-top: rem(60);
       padding-bottom: rem(120);
-      .title_theme_l {
+      .title-j_l {
         @include mq(s) {
           font-size: rem(22);
         }
       }
-      .text_theme_top-section {
+      .text-j_top-section {
         line-height: 2.4;
         @include mq(m) {
           line-height: 2.0;
@@ -205,7 +205,7 @@
 
   .top-section-02 {
     .top-section-02__inner {
-      .title_theme_l {
+      .title-j_l {
         &:after {
           content: 'CONCEPT';
         }
@@ -218,7 +218,7 @@
   }
   .top-section-03 {
     .top-section-03__inner {
-      .title_theme_l {
+      .title-j_l {
         &:after {
           content: 'WHAT IS INSOLE?';
           @include mq(m) {
@@ -226,26 +226,26 @@
           }
         }
       }
-      .title_theme_m {
+      .title-j_m {
         color: $color-white;
       }
     }
   }
   .top-section-04 {
     .top-section-04__inner {
-      .title_theme_l {
+      .title-j_l {
         &:after {
           content: 'FEATURES';
         }
       }
-      .title_theme_m {
+      .title-j_m {
         color: $color-blue-01;
       }
     }
   }
   .top-section-05 {
     .top-section-05__inner {
-      .title_theme_l {
+      .title-j_l {
         &:after {
           content: 'PICK UP BLOG';
           @include mq(m) {
@@ -260,12 +260,12 @@
   }
   .top-section-06 {
     .top-section-06__inner {
-      .title_theme_l {
+      .title-j_l {
         &:after {
           content: 'VOICE';
         }
       }
-      >.text_theme_s {
+      >.text-j_s {
         @include mq(m) {
           text-align: left !important;
         }
@@ -294,13 +294,13 @@
         @include mq(s) {
           text-align: center;
         }
-        .title_theme_l {
+        .title-j_l {
           &:after {
             content: 'FAQ';
           }
         }
       }
-      .text_theme_s {
+      .text-j_s {
         padding-bottom: rem(40);
         @include mq(s) {
           text-align: center;
@@ -318,12 +318,12 @@
   }
   .top-section-08 {
     .top-section-08__inner {
-      .title_theme_l {
+      .title-j_l {
         &:after {
           content: 'お問い合わせ';
         }
       }
-      .text_theme_s {
+      .text-j_s {
         @include mq(m) {
           // text-align: left !important;
         }
@@ -350,7 +350,7 @@
     &:after {
 
     }
-    .title_theme_top-view {
+    .title-top-view {
       padding-top: rem(235);
       padding-left: rem(20);
       @include mq(xl) {
@@ -360,7 +360,7 @@
         padding-right: rem(10);
       }
     }
-    .text_theme_top-view {
+    .text-j_top-view {
       padding-top: rem(20);
       padding-left: rem(20);
       @include mq(s) {

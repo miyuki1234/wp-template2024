@@ -41,8 +41,9 @@
 .column-box{
   position: relative;
   padding-top: rem(60);
-  margin: rem(30) calc(50% - 50vw - 10px) rem(100);
-	width: 100vw;
+  @include mq(l) {
+    padding-top: rem(150);
+  }
   @include mq(m) {
     padding-top: rem(0);
   }
@@ -55,26 +56,31 @@
     top: 0;
     left: 0;
     z-index: 1;
+    @include mq(l) {
+      width: 100%;
+    }
     @include mq(m) {
-      position: relative;
       width: 80%;
+      position: relative;
     }
   }
   > .column__txt {
     width: 70%;
     background: rgba($color: $color-gray-03, $alpha: 0.7);
     border-radius: 10px;
-    padding: rem(60) rem(130) rem(60) rem(70);
+    padding: rem(70);
     margin-left: auto;
     position: relative;
     z-index: 2;
     @include mq(m) {
       width: 90%;
-      padding: rem(60) rem(70);
       margin-top: rem(-100);
     }
     @include mq(s) {
       padding: rem(40);
+    }
+    .title-j_m{
+      margin-top: 0;
     }
   }
   &.order-change {
@@ -88,20 +94,12 @@
     }
     > .column__txt {
       margin-left: 0;
-      padding: rem(60) rem(70) rem(60) rem(130);
-      @include mq(m) {
-        padding: rem(60) rem(70);
-      }
-      @include mq(s) {
-        padding: rem(40);
-      }
     }
   }
   .mask {
     background-color: $color-gray-02;
     padding-top: 67%;
     object-fit: contain;
-    margin-bottom:  rem(10);
     position: relative;
     overflow: hidden;
     >img {

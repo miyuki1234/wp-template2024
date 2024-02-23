@@ -6,16 +6,16 @@
         <div class="column__inner">
 
           <div class="footer-logo">
-            <a href="">
-              <img src="<?php bloginfo('template_url'); ?>/images/logo_white.svg" alt="LIGHTER">
+            <a href="<?php echo esc_url( home_url() ); ?>">
+              <img src="<?php bloginfo('template_url'); ?>/images/logo_lighter-02.svg" alt="LIGHTER">
             </a>
           </div><!-- footer-logo -->
           <div class="footer-info">
-            <p>〒000-0000<br>
-              東京都千代田区〇〇-〇〇-〇〇◯<br>
-              TEL/00-0000-0000</p>
+            <p class="text-j_s">〒000-0000<br>
+              東京都千代田区◯◯-◯◯-◯◯◯<br>
+              TEL/00-0000-0000</p><!-- text-j_s -->
           </div><!-- footer-info -->
-
+          
         </div><!-- .column__inner -->
         <div class="column__inner">
 
@@ -35,7 +35,7 @@
         ) ); ?>
       <?php endif; ?>
 
-      <p class="copyrights text_theme_s ta-center">© LIGHTER inc.</p><!-- .copyrights -->
+      <p class="copyrights text-e_2s ta-center">© LIGHTER inc.</p><!-- .copyrights -->
 
     </div><!-- .footer-area__inner -->
   </footer><!-- .footer-area -->

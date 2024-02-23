@@ -40,15 +40,16 @@
     >div{
       flex: 1;
     }
-    .title_theme_m{
-      text-align: left;
-      margin-bottom: rem(50);
+    .title-e_5l{
       @include mq(m) {
         text-align: center;
         &::before,
         &::after{
           right: 0;
         }
+      }
+      span{
+        display: block;
       }
     }
     .btn-area{
