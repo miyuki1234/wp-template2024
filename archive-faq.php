@@ -10,9 +10,9 @@
       <div class="page-top-view__inner">
 
         <div class="title__outer">
-          <h2 class="title_theme_l show slide-bottom">
+          <h2 class="title-j_l show slide-bottom">
             よくあるご質問
-          </h2><!-- .title_theme_l-ja -->
+          </h2><!-- .title-j_l-ja -->
         </div><!-- .title__outer -->
 
 
@@ -58,7 +58,7 @@
     ?>
 
     <!-- ターム名 start -->
-    <h3 class="title_theme_m bd-left"><?php echo $term->name ?></h3>
+    <h3 class="title-j_m bd-left"><?php echo $term->name ?></h3>
     <!-- ターム名 end -->
     <div class="contents-box">
       <?php if ($the_query->have_posts()): ?>

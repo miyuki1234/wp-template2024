@@ -46,77 +46,65 @@
 
   </section><!-- .section-01 -->
 
-  <!-- ーーープロフィールーーー -->
-  <section class="page-section-02 page-section section-black">
+<!-- ーーー代表あいさつーーー -->
+<section class="page-section-02 page-section section-black">
 
-    <div class="page-section-02__inner page-section__inner last-section__inner">
+  <div class="page-section-02__inner page-section__inner last-section__inner">
 
-      <div class="title__outer">
-        <h3 class="title-j_2s title_subpage ta-center">
-        PROFILE
-        </h2><!-- .title-j_l-ja -->
-      </div><!-- .title__outer -->
+    <h3 class="title-j_3l ta-center title_twotone">代表あいさつ</h3><!-- .title-j_3l -->
 
+    <div class="column2 r-30-60 ceo-boxes">
+      <div class="column2__1">
+        <div class="mask">
+        <img src="<?php bloginfo('template_url'); ?>/images/img_about-us_ceo-01.webp" alt="">
+        </div>
+      </div><!-- .column2__1 -->
+      <div class="column2__2">
+        <div class="ceo-txt">
+          <p>皆様、弊社ホームページをご覧いただきありがとうございます。<br>
+            私たちの会社は、人材コンサルティング、アセスメント、教育・研修を通じて、企業とその従業員が共に成長する環境を創造することを目指しています。<br><br>
+            私がこの業界に足を踏み入れたのは、人材が企業の最も貴重な資源であるという信念からです。<br>
+            私たちの専門知識と経験を活用して、各企業の固有のニーズに応え、その潜在能力を最大限に引き出す手助けをすることが私たちの使命です。<br><br>
+            ビジネスの世界は常に変化していますが、人材の価値は不変です。<br>
+            この信念を持って、私たちは企業と従業員の双方が成功し、充実した未来を築くためのパートナーとして日々邁進しています。</p>
+        </div><!-- ceo-txt -->
+      </div><!-- .column2__2 -->
+    </div><!-- .column2 -->
 
-      <div class="column2 r-48-48">
+  </div><!-- .section-02__inner -->
+
+  <!-- ーーー会社概要ーーー -->
+  <section class="page-section-03 page-section section-black">
+
+    <div class="page-section-03__inner page-section__inner last-section__inner">
+
+      <h3 class="title-j_3l ta-center title_twotone">会社概要</h3><!-- .title-j_3l -->
+
+      <div class="column2 r-30-60 order-change company-boxes">
         <div class="column2__1">
-
-          <div class="column2 profile-box no-break">
-            <div class="column2__1">
-              <img src="<?php bloginfo('template_url'); ?>/images/img_about_profile.jpg" alt="たけ">
-            </div><!-- .column2__1 -->
-            <div class="column2__2">
-              <div class="profile-info">
-                <h4 class="title-j_m">たけ</p><!-- .title-j_m -->
-                <ul>
-                  <li>生年：1988年</li>
-                  <li>性別：男</li>
-                </ul>
-              </div><!-- .profile-info -->
-            </div><!-- .column2__2 -->
-          </div><!-- .column2 -->
-
-          <p class="text-j_s">
-            現在は勤務先の職場の都合上、匿名・顔非公表で活動しております。<br>
-            現在限られた状況ではありますが、１人でも多くの方のためにインソールを通してお役に立ち、将来独立を目指して頑張っております。<br>
-            その際は、実名と顔を出す予定ですので、それまで温かい目で見守っていただければ幸いです。<br><br>
-            なお、お問い合わせいただいた際のやり取りは実名を、サービス提供時は顔をお出ししますのでご安心ください。
-          </p><!-- .text-j_s -->
-
-          <div class="link-inline">
-            <a href="https://insoletoitami.com/jikosyoukai/">プロフィール詳細</a>
+          <div class="mask">
+            <img src="<?php bloginfo('template_url'); ?>/images/img_about-us_company-01.webp" alt="">
           </div>
-
         </div><!-- .column2__1 -->
-
         <div class="column2__2">
-
-          <div class="contents-box line-turquoise">
-            <h4 class="title-j_m ">
-              経歴
-            </h4><!-- .title-j_m -->
-            <p class="text-j_s">
-              理学療法士として10年以上総合病院に勤務。整形外科、脳神経外科、内科、外科、回復期病棟、クリニックを経験。<br>
-              日本理学療法士協会運動器認定理学療法士。<br><br>
-              痛みで困っている一人でも多くの方にインソールを届けるために埼玉県所沢市で活動開始。<br>
-              股関節・膝関節・足関節・足部・腰部の痛み、歩行の改善が専門。
-            </p><!-- .text-j_s -->
-          </div><!-- .contents-box -->
-
-          <div class="contents-box line-turquoise">
-            <h4 class="title-j_m ">
-              目標
-            </h4><!-- .title-j_m -->
-            <ul>
-              <li>より多くの痛みで困っている方々にインソールを届けること</li>
-              <li>痛みで困っている方々が問題を解決するために役に立つ情報をブログで発信すること</li>
-            </ul>
-          </div><!-- .contents-box -->
-
+          <dl class="company__list">
+            <dt class="text-j_s">会社名</dt>
+            <dd class="text-j_s">株式会社ライター (※架空)</dd>
+            <dt class="text-j_s">設立</dt>
+            <dd class="text-j_s">2022年4月1日</dd>
+            <dt class="text-j_s">住所</dt>
+            <dd class="text-j_s">東京都千代田区〇〇-〇〇-〇〇〇</dd>
+            <dt class="text-j_s">代表者</dt>
+            <dd class="text-j_s">代表取締役　〇〇 〇〇</dd>
+            <dt class="text-j_s">電話番号</dt>
+            <dd class="text-j_s">00-0000-0000</dd>
+            <dt class="text-j_s">事業内容</dt>
+            <dd class="text-j_s">人材コンサルティング事業、人材アセスメント事業、教育・研修サービス事業</dd>
+          </dl><!-- company__list -->
         </div><!-- .column2__2 -->
       </div><!-- .column2 -->
 
-    </div><!-- .section-02__inner -->
+    </div><!-- .section-03__inner -->
 
   </section><!-- .section-02 -->
 

@@ -6,10 +6,7 @@
 //ボタンエリア
 .btn-area {
   text-align: center;
-  margin: rem(60) rem(0);
-  @include mq(s) {
-    padding: 0 rem(20);
-  }
+  margin: rem(50) rem(0);
 }
 
 //ボタン
@@ -17,7 +14,8 @@
   color: $color-white;
   background-color: $color-blue-01;
   display: inline-block;
-  padding: rem(25) rem(100);
+  padding: rem(25) rem(45);
+  width: rem(300);
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
@@ -38,7 +36,6 @@
       font-size: rem(26);
       display: inline-block;
       vertical-align: middle;
-      margin-right: rem(10);
       position: absolute;
       right: rem(20);
       top: calc(50%);

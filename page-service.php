@@ -155,7 +155,7 @@
 
       <h3 class="title-j_3l ta-center title_twotone">ご契約の流れ</h3><!-- .title-j_3l -->
 
-      <ol class="flow-step-list step-vertical">
+      <ol class="flow-step__list step-vertical">
 
         <!-- STEP1 -->
         <li class="flow-step__item">
@@ -207,7 +207,7 @@
           </div>
         </li>
 
-      </ol><!-- .flow-step-list -->
+      </ol><!-- .flow-step__list -->
 
     </div><!-- .section-04__inner -->
 

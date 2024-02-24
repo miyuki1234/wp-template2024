@@ -68,6 +68,11 @@
       }
     }
 
+    // プレイスホルダー
+    ::placeholder {
+      color: #dddddd;
+    }
+
     // 必須
     .must {
       color: $color-white;

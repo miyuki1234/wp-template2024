@@ -10,9 +10,9 @@
     <div class="page-top-view__inner">
 
       <div class="title__outer">
-        <h2 class="title_theme_l show slide-bottom">
+        <h2 class="title-j_l show slide-bottom">
           免責事項
-        </h2><!-- .title_theme_l-ja -->
+        </h2><!-- .title-j_l-ja -->
       </div><!-- .title__outer -->
 
 
@@ -36,8 +36,8 @@
 
 
       <div class="contents-box">
-        <h3 class="title_theme_m">サイト利用上の注意事項</h3><!-- .title_theme_m -->
-        <p class="text_theme_s">当サイトを利用される場合は、ここに記載した条件に準拠いただくものとします。当サイトをご利用いただいた時点で、以下利用条件の全てに同意頂いたものとさせて頂きます。</p><!-- .text_theme_s -->
+        <h3 class="title-j_m">サイト利用上の注意事項</h3><!-- .title-j_m -->
+        <p class="text-j_s">当サイトを利用される場合は、ここに記載した条件に準拠いただくものとします。当サイトをご利用いただいた時点で、以下利用条件の全てに同意頂いたものとさせて頂きます。</p><!-- .text-j_s -->
         <ul class="list-none">
           <li>１．当サイトに掲載されている情報について、できる限り正確な情報を提供するよう努めておりますが、正確性や安全性を保証するものではありません。</li>
           <li>２．情報の正確性について問題がある場合、告知なしに情報を変更・削除することがあります。また、情報が古くなっていることもあります。</li>

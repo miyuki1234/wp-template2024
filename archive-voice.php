@@ -10,9 +10,9 @@
       <div class="page-top-view__inner">
 
         <div class="title__outer">
-          <h2 class="title_theme_l show slide-bottom">
+          <h2 class="title-j_l show slide-bottom">
             お客様の声
-          </h2><!-- .title_theme_l-ja -->
+          </h2><!-- .title-j_l-ja -->
         </div><!-- .title__outer -->
 
 
@@ -68,17 +68,17 @@
 
 
 
-                    <span class="text_theme_2s">
+                    <span class="text-j_2s">
                       <?php the_field('symptoms'); ?>
                     </span>
 
                     <a href="<?php the_permalink() ?>">
-                      <p class="title_theme_s">
+                      <p class="title-j_s">
                         <?php the_title(); ?>
                       </p><!-- .client-name -->
                     </a>
 
-                    <p class="text_theme_2s">
+                    <p class="text-j_2s">
                       <?php
                       if(mb_strlen($post->post_content,'UTF-8')>80){
                       	$content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 80,'UTF-8'));
@@ -98,7 +98,7 @@
           <?php endwhile; ?>
 
         <?php else : ?>
-          <p class="text_theme_s">まだ投稿がありません。</p>
+          <p class="text-j_s">まだ投稿がありません。</p>
         <?php endif; ?>
 
       </div><!-- .list-boxes -->

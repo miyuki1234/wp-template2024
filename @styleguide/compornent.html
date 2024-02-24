@@ -87,21 +87,21 @@
           リスト - compornent/list.scss
         </h2><!-- .title-j_l -->
 
-        <ol class="list-num">
+        <ol class="num__list">
           <li>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</li>
           <li><a href="">テキストが入ります</a></li>
           <li><a href="">テキストが入ります</a></li>
-        </ol><!-- .list-num -->
+        </ol><!-- .num__list -->
 
-        <ol class="list-toc">
+        <ol class="toc__list">
           <li><a href="">テキストが入ります</a></li>
           <li><a href="">テキストが入ります</a></li>
-        </ol><!-- .list-toc -->
+        </ol><!-- .toc__list -->
 
-        <ul class="list-disc">
+        <ul class="disc__list">
           <li>テキストが入ります</li>
           <li><a href="">テキストが入ります</a></li>
-        </ul><!-- .list-disc -->
+        </ul><!-- .disc__list -->
 
         <h2 class="title-j_l">
           ボタン - compornent/btn.scss
@@ -164,11 +164,11 @@
         </div><!-- .contents-box -->
 
         <div class="toc-box">
-          <ol class="list-num list-toc">
+          <ol class="num__list toc__list">
             <li><a href="">テキストが入ります</a></li>
             <li><a href="">テキストが入ります</a></li>
             <li><a href="">テキストが入ります</a></li>
-          </ol><!-- .list-num -->
+          </ol><!-- .num__list -->
         </div><!-- toc-box -->
 
         <div class="bg_box">
@@ -215,19 +215,35 @@
         </h2><!-- .title-j_l -->
 
         <h3 class="title-j_m ">
+          お知らせリストの基本表示
+        </h3>
+
+        <ul class="news-container__list">
+          <li><a href="">
+            <div class="contents-area">
+              <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
+              <span class="post-category">カテゴリー</span><!-- .post-category -->
+            </div>
+            <p class="news-title title-j_s">タイトルが入ります</p>
+          </a></li>
+        </ul><!-- news-container__list -->
+
+        <h3 class="title-j_m ">
           ブログサムネイルリストの基本表示
         </h3>
 
         <div class="box-container">
           <a href="">
-            <div class="mask">
-              <img src="https://placehold.jp/800x600.png" alt="">
+
+            <div class="zoomInRotate">
+              <span class="mask">
+                <img src="https://placehold.jp/800x600.png" alt="">
+              </span>
             </div>
             <div class="contents-area">
-              <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
-              <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-            </div>
-            <p class="news-title title-j_m">タイトルが入ります</p>
+              <time class="news-date text_theme_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>              <span class="post-category">カテゴリー</span><!-- .post-category -->
+              <p class="news-title title-j_m">タイトルが入ります</p>
+            </div><!-- .contents-area -->
           </a>
         </div><!-- .box-container -->
 
@@ -235,35 +251,86 @@
           ブログをリスト形式に並べたもの
         </h3>
 
-        <div class="column col3 sp-col2">
+        <div class="list-boxes">
 
-          <div class="box-container column__inner">
-            <a href="">
-              <div class="mask">
-                <img src="https://placehold.jp/800x600.png" alt="">
-              </div>
-              <div class="contents-area">
-                <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
-                <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-              </div>
-              <p class="news-title title-j_m">タイトルが入ります</p>
-            </a>
-          </div><!-- .box-container -->
+          <div class="list-box">
 
-          <div class="box-container column__inner">
-            <a href="">
-              <div class="mask">
-                <img src="https://placehold.jp/800x600.png" alt="">
-              </div>
-              <div class="contents-area">
-                <time class="news-date text-j_2s" datetime="2022-08-24T01:41:16+09:00">2022.08.24</time>
-                <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-              </div><!-- .contents-area -->
-              <p class="news-title title-j_m">タイトルが入ります</p>
-            </a>
-          </div><!-- .box-container -->
+            <div class="box-container">
+              <a href="">
 
-        </div><!-- .column -->
+                <div class="zoomInRotate">
+                  <span class="mask">
+                    <img src="https://placehold.jp/800x600.png" alt="">
+                  </span>
+                </div>
+                <div class="contents-area">
+                  <time class="news-date text_theme_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>                  <span class="post-category">カテゴリー</span><!-- .post-category -->
+                  <p class="news-title title-j_m">タイトルが入ります</p>
+                </div><!-- .contents-area -->
+              </a>
+            </div><!-- .box-container -->
+
+          </div><!-- .list-box -->
+          
+          <div class="list-box">
+
+            <div class="box-container">
+              <a href="">
+
+                <div class="zoomInRotate">
+                  <span class="mask">
+                    <img src="https://placehold.jp/800x600.png" alt="">
+                  </span>
+                </div>
+                <div class="contents-area">
+                  <time class="news-date text_theme_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>                  <span class="post-category">カテゴリー</span><!-- .post-category -->
+                  <p class="news-title title-j_m">タイトルが入ります</p>
+                </div><!-- .contents-area -->
+              </a>
+            </div><!-- .box-container -->
+
+          </div><!-- .list-box -->
+
+          <div class="list-box">
+
+            <div class="box-container">
+              <a href="">
+
+                <div class="zoomInRotate">
+                  <span class="mask">
+                    <img src="https://placehold.jp/800x600.png" alt="">
+                  </span>
+                </div>
+                <div class="contents-area">
+                  <time class="news-date text_theme_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>                  <span class="post-category">カテゴリー</span><!-- .post-category -->
+                  <p class="news-title title-j_m">タイトルが入ります</p>
+                </div><!-- .contents-area -->
+              </a>
+            </div><!-- .box-container -->
+
+          </div><!-- .list-box -->
+
+          <div class="list-box">
+
+            <div class="box-container">
+              <a href="">
+
+                <div class="zoomInRotate">
+                  <span class="mask">
+                    <img src="https://placehold.jp/800x600.png" alt="">
+                  </span>
+                </div>
+                <div class="contents-area">
+                  <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
+                  <span class="post-category">カテゴリー</span><!-- .post-category -->
+                  <p class="news-title title-j_m">タイトルが入ります</p>
+                </div><!-- .contents-area -->
+              </a>
+            </div><!-- .box-container -->
+
+          </div><!-- .list-box -->
+
+        </div><!-- .list-boxes -->
 
         <h2 class="title-j_l">
           フレックス - compornent/flex.scss
@@ -273,104 +340,65 @@
           カラム
         </h3>
 
-        <ul>
-          <li>2カラム：colmun + col2</li>
-          <li>3カラム：colmun + col3</li>
-          <li>4カラム：colmun + col4</li>
-          <li>5カラム：colmun + col5</li>
-          <li>スマホ1カラム：colmun + sp-col1</li>
-          <li>スマホ2カラム：colmun + sp-col2</li>
-        </ul>
-
-        <br>
-
-        <div class="column col2 sp-col1 order-change">
-          <div class="column__inner">
+        <div class="column2 r-48-48 no-pad order-change">
+          <div class="column2__1">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
+          </div><!-- .column2__1 -->
+          <div class="column2__2">
             <div class="mask">
-              <img src="https://placehold.jp/400x400.png" alt="">
+              <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
+          </div><!-- .column2__2 -->
         </div><!-- .column -->
 
-        <div class="column col3 sp-col1">
-          <div class="column__inner">
+        <div class="column3">
+          <div class="column3__1">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
+          </div><!-- .column3__1 -->
+          <div class="column3__2">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
+          </div><!-- .column3__2 -->
+          <div class="column3__3">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
+          </div><!-- .column3__3 -->
         </div><!-- .column -->
 
-        <div class="column col4 sp-col2">
-          <div class="column__inner">
+        <div class="column4">
+          <div class="column4__1">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
+          </div><!-- .column4__1 -->
+          <div class="column4__2">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
+          </div><!-- .column4__2 -->
+          <div class="column4__3">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
+          </div><!-- .column4__3 -->
+          <div class="column4__4">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
             </div>
-          </div><!-- .column__inner -->
+          </div><!-- .column4__4 -->
         </div><!-- .column -->
 
-        <div class="column col5 sp-col2">
-          <div class="column__inner">
-            <div class="mask">
-              <img src="https://placehold.jp/800x600.png" alt="">
-            </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
-            <div class="mask">
-              <img src="https://placehold.jp/800x600.png" alt="">
-            </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
-            <div class="mask">
-              <img src="https://placehold.jp/800x600.png" alt="">
-            </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
-            <div class="mask">
-              <img src="https://placehold.jp/800x600.png" alt="">
-            </div>
-          </div><!-- .column__inner -->
-          <div class="column__inner">
-            <div class="mask">
-              <img src="https://placehold.jp/800x600.png" alt="">
-            </div>
-          </div><!-- .column__inner -->
-        </div><!-- .column -->
-        
         <h3 class="title-j_m ">
           フロー図
         </h3>
 
-        <ol class="flow-step-list step-vertical">
+        <ol class="flow-step__list step-vertical">
 
           <!-- STEP1 -->
           <li class="flow-step__item">
@@ -406,45 +434,18 @@
             </div>
           </li>
 
-        </ol><!-- .flow-step-list -->
+        </ol><!-- .flow-step__list -->
 
-        <ol class="flow-step-list step-side col3 sp-col3">
+        <h3 class="title-j_m ">
+          私たちについて
+        </h3>
 
-          <!-- STEP1 -->
-          <li class="flow-step__item">
-            <div class="steptitle">
-              <div class="stepcircle"><span>step<span class="stepcircle_num">01</span></span></div>
-            </div>
-            <div class="steptxt">
-              <p class="title-j_m">タイトルタイトルタイトル</p>
-              <p class="text-j_s">
-                ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-            </div>
-          </li>
-          <!-- STEP2 -->
-          <li class="flow-step__item">
-            <div class="steptitle">
-              <div class="stepcircle"><span>step<span class="stepcircle_num">02</span></span></div>
-            </div>
-            <div class="steptxt">
-              <p class="title-j_m">タイトルタイトルタイトル</p>
-              <p class="text-j_s">
-                ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-            </div>
-          </li>
-          <!-- STEP3 -->
-          <li class="flow-step__item">
-            <div class="steptitle">
-              <div class="stepcircle"><span>step<span class="stepcircle_num">03</span></span></div>
-            </div>
-            <div class="steptxt">
-              <p class="title-j_m">タイトルタイトルタイトル</p>
-              <p class="text-j_s">
-                ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-            </div>
-          </li>
-
-        </ol><!-- .flow-step-list -->
+        <dl class="company__list">
+          <dt class="text-j_s">会社名</dt>
+          <dd class="text-j_s">株式会社ライター (※架空)</dd>
+          <dt class="text-j_s">設立</dt>
+          <dd class="text-j_s">2022年4月1日</dd>
+        </dl><!-- company__list -->
 
         <h3 class="title-j_m ">
           サービスページ
@@ -691,6 +692,7 @@
             </form>
           </div>
         </div><!-- .contact-form -->
+        
         <h2 class="title-j_l">
           コンタクトバナー - compornent/contact-banner.scss
         </h2><!-- .title-j_l -->

@@ -36,12 +36,12 @@
         <p class="text-j_s">
         当社のウェブサイトでは、お問い合わせフォームを通じて、以下の個人情報を収集することがあります。
         </p><!-- .text-j_s -->
-        <ul class="list-disc">
+        <ul class="disc__list">
           <li>お名前</li>
           <li>メールアドレス</li>
           <li>電話番号（任意）</li>
           <li>お問い合わせ内容</li>
-        </ul><!-- .list-disc -->
+        </ul><!-- .disc__list -->
         <p class="text-j_s">
         これらの情報は、お問い合わせに対する回答や必要に応じたサービスの提供を目的として使用されます。
         </p><!-- .text-j_s -->

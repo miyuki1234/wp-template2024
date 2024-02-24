@@ -5,8 +5,8 @@
 @use "../setting/font" as *;
 
 //リスト
-//list-num
-ol.list-num {
+//num__list
+ol.num__list {
   margin: rem(10) 0;
   > li {
     text-indent: rem(-25);
@@ -21,8 +21,8 @@ ol.list-num {
   }
 }
 
-//list-toc
-ol.list-toc {
+//toc__list
+ol.toc__list {
   > li {
     text-indent: rem(-25);
     padding: rem(10);
@@ -48,8 +48,8 @@ ol.list-toc {
   }
 }
 
-//list-disc
-.list-disc {
+//disc__list
+.disc__list {
     > li {
       list-style: none;
       text-indent: rem(-20);

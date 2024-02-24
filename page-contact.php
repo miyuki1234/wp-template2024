@@ -24,22 +24,22 @@
     </div><!-- .breadcrumb-area__inner -->
   </div><!-- .breadcrumb-area -->
 
-<!-- ーーーコンテンツーーー -->
-<section class="page-section-01 page-section section-black">
+  <!-- ーーーコンテンツーーー -->
+  <section class="page-section-01 page-section section-black">
 
-  <div class="page-section-01__inner page-section__inner last-section__inner">
+    <div class="page-section-01__inner page-section__inner last-section__inner">
 
-    <h3 class="title-j_3l ta-center title_twotone">お問い合わせフォーム</h3><!-- .title-j_3l -->
+      <h3 class="title-j_3l ta-center title_twotone">お問い合わせフォーム</h3><!-- .title-j_3l -->
 
-    <div class="contact-form">
-      <p class="text-j_s">まずはお気軽にお問い合わせください。3営業日以内に返信させていただきます。<br>
-      営業・宣伝はお断りしております。</p><!-- .text-j_s -->
+      <div class="contact-form">
+        <p class="text-j_s">まずはお気軽にお問い合わせください。3営業日以内に返信させていただきます。<br>
+        営業・宣伝はお断りしております。</p><!-- .text-j_s -->
 
-      <?php echo do_shortcode('[contact-form-7 id="50f722d" title="お問い合わせ"]'); ?>
-    </div><!-- .contact-form -->
+        <?php echo do_shortcode('[contact-form-7 id="50f722d" title="お問い合わせ"]'); ?>
+      </div><!-- .contact-form -->
 
-  </div><!-- .section-01__inner -->
-</section><!-- .section-01 -->
+    </div><!-- .section-01__inner -->
+  </section><!-- .section-01 -->
 
 </main><!-- .main-area-->
 

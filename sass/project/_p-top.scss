@@ -11,77 +11,43 @@
 .top-section {
   width: 100%;
   height: auto;
-  &.section-turquoise-01 {
-    background-color: $color-blue-01;
+  &.section-gray-02 {
+    background-color: $color-gray-02;
   }
-  &.section-turquoise-02 {
-    background-color: $color-blue-02;
+  &.section-blue-03 {
+    background-color: $color-blue-03;
   }
-  &.section-turquoise-03 {
-    background-color: $color-blue-01;
-  }
-  &.round-top-section {
-    position: relative;
-    border-top-left-radius: 50% 10%;
-    border-top-right-radius: 50% 10%;
-    z-index: 0;
-    @include mq(m) {
-      border-top-left-radius: 50% 5%;
-      border-top-right-radius: 50% 5%;
-    }
-    .top-section__inner {
-      padding-top: rem(160) !important;
-    }
-  }
-  &.round-bottom-section {
-    position: relative;
-    border-bottom-left-radius: 50% 10%;
-    border-bottom-right-radius: 50% 10%;
-    z-index: 0;
-    @include mq(m) {
-      border-bottom-left-radius: 50% 5%;
-      border-bottom-right-radius: 50% 5%;
-    }
-    .top-section__inner {
-      padding-bottom: rem(200) !important;
-    }
-  }
-
   .top-section__inner {
     width: $width-base;
     height: auto;
     margin: 0 auto;
-    padding: rem(120) 0 rem(120);
+    padding: rem(90) 0 rem(120);
     @include mq(xl) {
       width: 90%;
     }
     @include mq(s) {
       padding: rem(100) 0 rem(100);
     }
-    &.top-plus-pad {
-      padding-top: rem(40);
-    }
-    &.bottom-plus-pad {
-      padding-bottom: rem(120);
-    }
-    &.section__inner-right-side {
+    &.section__inner-left-side {
       width: calc(($width-base + (100vw - $width-base) / 2)  + rem(30));
-      margin-left: auto;
-      margin-right: 0;
-      border-radius: 150px 0 0 50px;
-      padding-left: rem(30);
-      padding-right: calc((100vw - $width-base) / 2);
+      margin-right: auto;
+      margin-left: 0;
+      padding-right: rem(30);
       @include mq(xl) {
         width: calc((90vw + (100vw - 90vw) / 2)  + rem(30));
-        padding-right: calc((100vw - 90vw) / 2);
+        padding-left: calc((100vw - 90vw) / 2);
       }
       @include mq(s) {
         width: 100%;
         padding: rem(100) 5% rem(100);
       }
     }
-    &.section__inner-turquoise-01 {
-      background-color: $color-blue-01;
+    &.section__inner-up{
+      margin: rem(-40) auto 0;
+      position: relative;
+    }
+    &.section-white{
+      background-color: $color-white;
     }
     &.last-section__inner {
       padding-bottom: rem(100);
@@ -95,238 +61,67 @@
 //トップページ固有
 .home {
   .top-section-01 {
-
     .top-section-01__inner {
-      padding-top: rem(60);
-      padding-bottom: rem(120);
-      .title-j_l {
-        @include mq(s) {
-          font-size: rem(22);
-        }
-      }
-      .text-j_top-section {
-        line-height: 2.4;
-        @include mq(m) {
-          line-height: 2.0;
-        }
-      }
-      .balloons {
-        width: 52.5%;
-        margin: 0 auto;
-        display: flex;
-        row-gap: rem(20);
-        flex-wrap: wrap;
-        @include mq(m) {
-          width: 70%;
-        }
-
-        .balloon{
-          display: inline-block;
-          position: relative;
-          padding: rem(30) rem(20);
-          background-color: $color-blue-02;
-          border-radius: 30px;
-          @include mq(m) {
-            padding: rem(20) rem(15);
-          }
-          &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            border-radius: 50%;
-            background-color: $color-blue-02;
-            width: 30px;
-            height: 30px;
-            @include mq(m) {
-              width: 20px;
-              height: 20px;
-            }
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            border-radius: 50%;
-            background-color: $color-blue-02;
-            width: 15px;
-            height: 15px;
-            @include mq(m) {
-              width: 10px;
-              height: 10px;
-            }
-          }
-
-          &.left {
-            margin-right: auto;
-            &::before {
-              left: -45px;
-              bottom: 15px;
-              @include mq(m) {
-                left: -25px;
-              }
-            }
-            &::after {
-              left: -55px;
-              bottom: 10px;
-              @include mq(m) {
-                left: -40px;
-              }
-            }
-          }
-          &.right {
-            margin-left: auto;
-            &::before {
-              right: -35px;
-              bottom: 15px;
-              @include mq(m) {
-                right: -25px;
-              }
-            }
-            &::after {
-              right: -55px;
-              bottom: 10px;
-              @include mq(m) {
-                right: -40px;
-              }
-            }
-          }
-          // &:nth-of-type(1),
-          // &:nth-of-type(3) {
-          // margin-right: auto;
-          // }
-          // &:nth-of-type(2),
-          // &:nth-of-type(4) {
-          // margin-left: auto;
-          // }
-        }
+      padding: rem(40);
+      border-radius: 10px;
+      width: 80%;
+      .btn-area{
+        text-align: left;
       }
     }
   }
-
   .top-section-02 {
     .top-section-02__inner {
-      .title-j_l {
-        &:after {
-          content: 'CONCEPT';
+      .column2{
+        .column2__1{
+          padding: 0;
+          .mask {
+            padding-top: 92%;
+            border-radius: 0 10px 10px 0;
+          }
         }
       }
-      .images-box {
-        margin-top: rem(30);
+      .top-title{
+        margin: rem(50) 0;
       }
-
+      .btn-area{
+        text-align: left;
+      }
     }
   }
   .top-section-03 {
     .top-section-03__inner {
-      .title-j_l {
-        &:after {
-          content: 'WHAT IS INSOLE?';
-          @include mq(m) {
-            line-height: 1;
-          }
-        }
+      .top-title{
+        margin: rem(50) 0;
       }
-      .title-j_m {
-        color: $color-white;
+      .column2{
+        margin:rem(50) auto;
+      }
+      .btn-area{
+        margin: 0;
       }
     }
   }
   .top-section-04 {
     .top-section-04__inner {
-      .title-j_l {
-        &:after {
-          content: 'FEATURES';
-        }
+      .top-title{
+        margin: rem(50) 0;
       }
-      .title-j_m {
-        color: $color-blue-01;
-      }
-    }
-  }
-  .top-section-05 {
-    .top-section-05__inner {
-      .title-j_l {
-        &:after {
-          content: 'PICK UP BLOG';
+      .list-boxes{
+        margin:rem(50) auto;
+        .list-box {
+          width: calc((100% - rem(25)) / 3);
+          height: auto;
           @include mq(m) {
-            line-height: 1;
+            width: calc((90vw - rem(12)) / 2);
           }
-        }
-      }
-      .box-container {
-        background-color: transparent;
-      }
-    }
-  }
-  .top-section-06 {
-    .top-section-06__inner {
-      .title-j_l {
-        &:after {
-          content: 'VOICE';
-        }
-      }
-      >.text-j_s {
-        @include mq(m) {
-          text-align: left !important;
-        }
-      }
-      .contents-area {
-        .for-pc {
           @include mq(s) {
-            display: none;
-          }
-        }
-        .for-sp {
-          display: none;
-          @include mq(s) {
-            display: block;
+            width: 100%;
           }
         }
       }
-    }
-  }
-  .top-section-07 {
-    .top-section-07__inner {
-      @include mq(s) {
-        padding-top: rem(40);
-      }
-      .title__outer {
-        @include mq(s) {
-          text-align: center;
-        }
-        .title-j_l {
-          &:after {
-            content: 'FAQ';
-          }
-        }
-      }
-      .text-j_s {
-        padding-bottom: rem(40);
-        @include mq(s) {
-          text-align: center;
-        }
-      }
-      .sp-back {
-        @include mq(s) {
-          opacity: 0.08;
-          position: absolute;
-          top: rem(200);
-          z-index: -1;
-        }
-      }
-    }
-  }
-  .top-section-08 {
-    .top-section-08__inner {
-      .title-j_l {
-        &:after {
-          content: 'お問い合わせ';
-        }
-      }
-      .text-j_s {
-        @include mq(m) {
-          // text-align: left !important;
-        }
+      .btn-area{
+        margin: 0;
       }
     }
   }
@@ -344,134 +139,39 @@
     padding-left: calc((100vw - 1200px) / 2 );
     height: 100%;
     position: relative;
+    background: $color-blue-01;
+    padding-bottom: rem(120);
     @include mq(xl) {
       padding-left: 5vw;
     }
-    &:after {
-
+    .title_top-view{
+      position: absolute;
+      top: 50%;
+      left: rem(230);
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
     }
-    .title-top-view {
-      padding-top: rem(235);
-      padding-left: rem(20);
-      @include mq(xl) {
-      padding-top: rem(160);
-      }
-      @include mq(s) {
-        padding-right: rem(10);
-      }
+    .title-e_top-view {
+      color: $color-white;
+      line-height: 1.8;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
+      margin-bottom: rem(40);
     }
-    .text-j_top-view {
-      padding-top: rem(20);
-      padding-left: rem(20);
-      @include mq(s) {
-        padding-right: rem(20);
-      }
+    .title-j_top-view {
+      color: $color-white;
+      line-height: 1.8;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
     }
-    .frame-top-view {
-      width: 100%;
-      height: rem(470);
-      position: relative;
+    .frame-top-view{
+      width: 73%;
+      margin-left: auto;
+      border-radius: 0 0 0 10px;
       overflow: hidden;
-      background: url("../images/bg_topview-none.jpg") center/cover no-repeat;
-      border-radius: 20px 0 0 20px;
-      margin-top: rem(-160);
-      z-index: -1;
-      @include mq(s) {
-        height: rem(260);
-        margin-top: rem(-180);
-      }
-      img {
-        position: absolute;
-        &.topview-part-01 {
-          width: rem(144);
-          left: 20%;
-          bottom: 0;
-          @include mq(xl) {
-            left: 25%;
-          }
-          @include mq(l) {
-            left: 18%;
-            bottom: -10%;
-          }
-          @include mq(s) {
-            width: rem(58);
-            left: 18%;
-            bottom: 0;
-          }
-        }
-        &.topview-part-02 {
-          width: rem(102);
-          left: 32%;
-          bottom: 25%;
-          @include mq(xl) {
-            left: 37%;
-          }
-          @include mq(l) {
-            left: 34%;
-            bottom: 15%;
-          }
-          @include mq(s) {
-            width: rem(41);
-            left: 34%;
-            bottom: 17%;
-          }
-        }
-        &.topview-part-03 {
-          width: rem(98);
-          left: 42%;
-          bottom: 33%;
-          @include mq(xl) {
-            left: 47%;
-          }
-          @include mq(l) {
-            left: 46%;
-            bottom: 23%;
-          }
-          @include mq(s) {
-            width: rem(39);
-            left: 46%;
-            bottom: 22%;
-          }
-        }
-        &.topview-part-04 {
-          width: rem(92);
-          left: 52%;
-          bottom: 39%;
-          @include mq(xl) {
-            left: 58%;
-          }
-          @include mq(l) {
-            left: 60%;
-            bottom: 29%;
-          }
-          @include mq(s) {
-            width: rem(37);
-            left: 60%;
-            bottom: 26%;
-          }
-        }
-        &.topview-part-05 {
-          width: rem(86);
-          left: 62%;
-          bottom: 43%;
-          @include mq(xl) {
-            left: 69%;
-          }
-          @include mq(l) {
-            left: 75%;
-            bottom: 33%;
-          }
-          @include mq(s) {
-            width: rem(34);
-            left: 75%;
-            bottom: 30%;
-          }
-        }
+      img{
+        width: 100%;
+        height: auto;
       }
     }
   }
-}
-.delete {
-  position: absolute;
-  left: -200vw;
 }
