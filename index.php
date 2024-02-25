@@ -8,7 +8,7 @@
 
       <div class="title_top-view">
         <p class="title-e_5l title-e_top-view">Ignite Your Business</p><!-- .top-message -->
-        <p class="title-j_2l title-j_top-view">信頼と実績に基づく 積極的なビジネスサポート</p><!-- .top-message -->
+        <p class="title-j_2l title-j_top-view">信頼と実績に基づく <br class="sp-only">積極的なビジネスサポート</p><!-- .top-message -->
       </div><!-- top-view_title -->
 
       <div class="frame-top-view">
@@ -23,12 +23,12 @@
     <div class="top-section-01__inner top-section__inner section__inner-up section-white">
 
       <div class="column2 r-30-60 no-pad">
-        <div class="column2__1 section-white">
+        <div class="column2__1">
           <h2 class="title-e_3l title_twotone">
             NEWS
             <span class="text-j_2s">新着情報</span>
           </h2><!-- .title-j_3l -->
-          <div class="btn-area">
+          <div class="btn-area pc-block">
             <a href="<?php echo home_url('/news'); ?>" class="btn btn-arrow">一覧をみる</a>
           </div><!-- .btn-area -->
         </div><!-- .column2__1 -->
@@ -60,6 +60,10 @@
         </div><!-- .column2__2 -->
       </div><!-- column -->
 
+      <div class="btn-area sp-block">
+        <a href="<?php echo home_url('/news'); ?>" class="btn btn-arrow">一覧をみる</a>
+      </div><!-- .btn-area -->
+
     </div>
   </section><!-- .top-section-01 -->
 
@@ -83,7 +87,6 @@
           <p class="text-j_s">
             私たちは、豊富な実績と信頼による質の高いコンサルティングで、お客様のビジネス展開を積極的にサポートします。専門知識と戦略的な視点を兼ね備えたチームが、あなたの企業成長を実現するための力強い一歩を提供します。未来への道を切り拓く、そんな冒険に私たちは共に歩みます。
           </p><!-- .text-j_s -->
-
           <div class="btn-area">
             <a href="<?php echo home_url('/about-us'); ?>" class="btn btn-arrow">詳しくみる</a>
           </div><!-- .btn-area -->
@@ -142,7 +145,7 @@
 
   <!-- ーーーブログーー -->
   <section class="top-section-04 top-section section-black section-blue-03">
-    <div class="top-section-04__inner top-section__inner show slide-bottom">
+    <div class="top-section-04__inner top-section__inner last-section__inner show slide-bottom">
     
       <h2 class="title-e_5l title_twotone ta-center top-title">
         BLOG
@@ -172,7 +175,7 @@
                 </span>
               </div>
               <div class="contents-area">
-                <time class="news-date text_theme_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                <time class="news-date title-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
                 <span class="post-category">
                 <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
                 </span><!-- .post-category -->

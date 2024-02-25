@@ -53,21 +53,21 @@
 
     <h3 class="title-j_3l ta-center title_twotone">代表あいさつ</h3><!-- .title-j_3l -->
 
-    <div class="column2 r-30-60 ceo-boxes">
+    <div class="column2 r-30-60 about-us-boxes">
       <div class="column2__1">
         <div class="mask">
         <img src="<?php bloginfo('template_url'); ?>/images/img_about-us_ceo-01.webp" alt="">
         </div>
       </div><!-- .column2__1 -->
       <div class="column2__2">
-        <div class="ceo-txt">
+        <div class="about-us-txt">
           <p>皆様、弊社ホームページをご覧いただきありがとうございます。<br>
             私たちの会社は、人材コンサルティング、アセスメント、教育・研修を通じて、企業とその従業員が共に成長する環境を創造することを目指しています。<br><br>
             私がこの業界に足を踏み入れたのは、人材が企業の最も貴重な資源であるという信念からです。<br>
             私たちの専門知識と経験を活用して、各企業の固有のニーズに応え、その潜在能力を最大限に引き出す手助けをすることが私たちの使命です。<br><br>
             ビジネスの世界は常に変化していますが、人材の価値は不変です。<br>
             この信念を持って、私たちは企業と従業員の双方が成功し、充実した未来を築くためのパートナーとして日々邁進しています。</p>
-        </div><!-- ceo-txt -->
+        </div><!-- about-us-txt -->
       </div><!-- .column2__2 -->
     </div><!-- .column2 -->
 
@@ -80,7 +80,7 @@
 
       <h3 class="title-j_3l ta-center title_twotone">会社概要</h3><!-- .title-j_3l -->
 
-      <div class="column2 r-30-60 order-change company-boxes">
+      <div class="column2 r-30-60 order-change about-us-boxes">
         <div class="column2__1">
           <div class="mask">
             <img src="<?php bloginfo('template_url'); ?>/images/img_about-us_company-01.webp" alt="">

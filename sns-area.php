@@ -6,7 +6,7 @@
 
 <!-- ▼コンテンツ中のsnsシェアボタン -->
 <div class="sns-btn-flex">
-  <p class="text_theme_s ta-center">＼よかったらシェアしてください／</p><!-- .text_theme_s -->
+  <p class="text-j_s ta-center">＼よかったらシェアしてください／</p><!-- .text-j_s -->
   <ul class="sns-list">
     <li><a class="flowbtn2 fl_tw1" href="//twitter.com/intent/tweet?url=<?php echo $url_encode ?>&text=<?php echo $title_encode ?>&tw_p=tweetbutton" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
 

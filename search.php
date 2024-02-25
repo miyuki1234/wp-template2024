@@ -10,9 +10,9 @@
         <div class="page-top-view__inner">
 
           <div class="title__outer">
-            <h2 class="title_theme_l font-en ta-center show slide-bottom">
+            <h2 class="title-j_l show slide-bottom">
               ブログ
-            </h2><!-- .title_theme_l-ja -->
+            </h2><!-- .title-j_l-ja -->
           </div><!-- .title__outer -->
 
 
@@ -45,10 +45,10 @@
         <div class="page-section-01__inner page-section__inner">
 
           <div class="search-results-box">
-            <h3 class="text_theme_m">
+            <h3 class="text-j_m">
               <?php the_search_query(); ?>
-              <span class="text_theme_2s">~ 検索ワード ~</span>
-            </h3><!-- .text_theme_2s -->
+              <span class="text-j_2s">~ 検索ワード ~</span>
+            </h3><!-- .text-j_2s -->
           </div><!-- .search-results-box -->
 
 
@@ -82,13 +82,13 @@
 
                     <div class="contents-area">
 
-                      <time class="news-date text_theme_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                      <time class="news-date text-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
 
-                      <span class="post-categories_no-link text_theme_3s">
+                      <span class="post-categories_no-link text-j_3s">
                         <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
                       </span><!-- .post-category_no-link -->
 
-                      <p class="news-title text_theme_2s">
+                      <p class="news-title text-j_2s">
                         <?php echo get_the_title($post->ID); ?>
                       </p>
 
@@ -103,7 +103,7 @@
               <?php endwhile; ?>
 
             <?php else : ?>
-              <p class="text_theme_2s">まだ投稿がありません。</p>
+              <p class="text-j_2s">まだ投稿がありません。</p>
             <?php endif; ?>
 
           </div><!-- .list-boxes -->

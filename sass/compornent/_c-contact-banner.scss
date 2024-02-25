@@ -10,7 +10,7 @@
   padding: rem(90) 0 rem(120);
   position: relative;
   @include mq(m) {
-    padding: rem(60) 0 rem(30);
+    padding: rem(90) 0;
   }
   &:after {
     content:'';
@@ -54,7 +54,7 @@
     }
     .btn-area{
       text-align: right;
-      margin: 0;
+      margin-bottom: 0;
       @include mq(m) {
         text-align: center;
       }

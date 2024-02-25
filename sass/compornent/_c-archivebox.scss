@@ -50,7 +50,6 @@
           display: block;
           width: 100%;
           margin: auto;
-          border-radius: 10px;
           object-fit: cover;
           transform: scale(1);
           transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
@@ -107,26 +106,21 @@
     }
     .box-container {
       .zoomInRotate {
-        >a {
-
-          .mask {
-            border-radius: 10px 10px 0 0;
-            img {
-              width: 100%;
-              height: rem(209);
-              border-radius: 10px 10px 0 0;
-              @include mq(xl) {
-                height: calc(((90vw - rem(300) - rem(40) - rem(25)) / 2) * 0.525);
-              }
-              @include mq(l) {
-                height: calc(((90vw - rem(25)) / 2) * 0.525);
-              }
-              @include mq(m) {
-                height: calc(((90vw - rem(12)) / 2) * 0.525);
-              }
-              @include mq(s) {
-                height: calc(90vw * 0.525);
-              }
+        .mask {
+          img {
+            width: 100%;
+            height: rem(273);
+            @include mq(xl) {
+              height: calc(((90vw - rem(300) - rem(40) - rem(25)) / 2) * 0.66);
+            }
+            @include mq(l) {
+              height: calc(((90vw - rem(25)) / 2) * 0.66);
+            }
+            @include mq(m) {
+              height: calc(((90vw - rem(12)) / 2) * 0.66);
+            }
+            @include mq(s) {
+              height: calc(90vw * 0.66);
             }
           }
         }

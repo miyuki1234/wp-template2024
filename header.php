@@ -27,7 +27,7 @@
 
       <h1 class="header-logo-area">
         <a href="<?php echo esc_url( home_url() ); ?>">
-        <img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="LIGHTER">
+        <img src="<?php bloginfo('template_url'); ?>/images/logo_lighter-01.svg" alt="LIGHTER">
         </a>
       </h1><!-- .header-logo-area -->
 

@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="contents-area">
-                          <time class="news-date text_theme_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                          <time class="news-date title-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
                           <span class="post-category">
                           <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
                           </span><!-- .post-category -->

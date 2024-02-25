@@ -144,7 +144,6 @@
           position: relative;
           width: rem(30);
           height: rem(22);
-          border-radius: 5px;
           cursor: pointer;
           span {
             display: inline-block;
@@ -152,12 +151,12 @@
             /*アニメーションの設定*/
             position: absolute;
             height: rem(3);
-            border-radius: 1px;
+            border-radius: 30px;
             background: $color-blue-01;
             width: 100%;
             z-index: 15;
             @include mq(m) {
-              height: rem(4);
+              height: rem(3);
             }
             &:nth-of-type(1) {
               top: 0;
@@ -176,7 +175,7 @@
             span {
               background-color: $color-white;
               @include mq(m) {
-                height: rem(5);
+                height: rem(3);
               }
               &:nth-of-type(1) {
                 top: rem(-12);
@@ -248,6 +247,7 @@
                 color: $color-white;
                 font-weight: 700;
                 text-align: center;
+                text-decoration: none;
                 padding: rem(20);
                 border-bottom: 1px solid $color-white;
               }

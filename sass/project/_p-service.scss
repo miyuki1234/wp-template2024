@@ -1,112 +1,30 @@
-// @charset 'UTF-8';
-// @use "../foundation/base" as *;
-// @use "../setting/color" as *;
-// @use "../setting/font" as *;
-// @use "../setting/section" as *;
-// @use "../mixin/breakpoint" as *;
-// @use "../mixin/animation" as *;
-// //▼▼▼▼プロフィール▼▼▼▼
-// .service {
-//   .page-top-view {
-//     .page-top-view__inner {
-//       .title__outer {
-//         .title-j_l {
-//         }
-//       }
-//     }
-//   }
-//   .page-section-01 {
-//     .page-section-01__inner {
-//       position: relative;
-//       padding-bottom: rem(10) !important;
-//       .title__outer {
-//         .title-j_2s {
-//           &.title_subpage {
-//             &:after {
-//               content: 'サービス案内';
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   .service-menu-area {
-//     width: 100%;
-//     height: auto;
-//     background-color: $color-blue-02;
-//     .service-menu-area__inner {
-//       width: $width-base;
-//       margin: 0 auto;
-//       padding: rem(40) 0;
-//       @include mq(xl) {
-//         width: 90%;
-//       }
-//       @include mq(s) {
-//         width: 82%;
-//       }
-//     }
-//   }
-//   .page-section-02 {
-//     .page-section-02__inner {
-//       .title__outer {
-//         .title-j_2s {
-//           &.title_subpage {
-//             &:after {
-//               content: 'インソール';
-//             }
-//           }
-//         }
-//       }
-//       >.column2 {
-//         .column2__1 {
-//         }
-//         .column2__2 {
-//           .title-j_m {
-//             color: $color-blue-01;
-//           }
-//         }
-//       }
-//     }
-//   }
-//   .page-section-03 {
-//     .page-section-03__inner {
-//       .title__outer {
-//         .title-j_2s {
-//           &.title_subpage {
-//             &:after {
-//               content: 'ご依頼の流れ';
-//             }
-//           }
-//         }
-//       }
-//       .flow-step-vertical__list {
-//         .flow-step-vertical__item {
-//           .steptxt {
-//             .btn-area {
-//               text-align: left;
-//               .btn {
-//                 text-align: center;
-//                 @include mq(s) {
-//                   width: 100%;
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   .page-section-04 {
-//     .page-section-04__inner {
-//       .title__outer {
-//         .title-j_2s {
-//           &.title_subpage {
-//             &:after {
-//               content: 'メニュー';
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../setting/font" as *;
+@use "../setting/section" as *;
+@use "../mixin/breakpoint" as *;
+@use "../mixin/animation" as *;
+//▼▼▼▼プロフィール▼▼▼▼
+.service {
+  .page-top-view {
+    .page-top-view__inner {
+    }
+  }
+  .page-section-01 {
+    .page-section-01__inner {
+    }
+  }
+  .page-section-02 {
+    .page-section-02__inner {
+    }
+  }
+  .page-section-03 {
+    .page-section-03__inner {
+    }
+  }
+  .page-section-04 {
+    .page-section-04__inner {
+    }
+  }
+}

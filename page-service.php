@@ -103,11 +103,6 @@
     <div class="page-section-03__inner page-section__inner section__inner-left-side" id="service02">
 
       <div class="column-box">
-        <div class="column__pht">
-          <div class="mask">
-            <img src="<?php bloginfo('template_url'); ?>/images/img_service_service-01.webp" alt="">
-          </div>
-        </div><!-- .column__pht -->
         <div class="column__txt">
           <p class="title-j_3l title_twotone">人事コンサルティング</p>
           <p class="text-j_s">弊社は、市場の変化に敏感な総合的な分析に基づき、業界をリードする「人材マネジメント戦略」を提供しています。<br>
@@ -116,6 +111,11 @@
           このプロセスを通じて、業務効率と生産性の大幅な向上を実現し、企業の競争力を高めます。<br><br>
           弊社独自のデータ駆動型アプローチと先進的な人事ツールの活用により、企業の持続可能な成長を実現するための強力なサポートを提供します。</p>
         </div><!-- .column__txt -->
+        <div class="column__pht">
+          <div class="mask">
+            <img src="<?php bloginfo('template_url'); ?>/images/img_service_service-01.webp" alt="">
+          </div>
+        </div><!-- .column__pht -->
       </div><!-- .column-box -->
 
     </div><!-- .section-03__inner -->
@@ -128,11 +128,6 @@
     <div class="page-section-04__inner page-section__inner section__inner-right-side" id="service03">
 
       <div class="column-box order-change">
-        <div class="column__pht">
-          <div class="mask">
-          <img src="<?php bloginfo('template_url'); ?>/images/img_service_service-02.webp" alt="">
-          </div>
-        </div><!-- .column__pht -->
         <div class="column__txt">
           <p class="title-j_3l title_twotone">教育・研修サービス</p>
           <p class="text-j_s">
@@ -142,6 +137,11 @@
           また、チームビルディングやリーダーシップ育成にも重点を置き、組織の連携強化と効率的な業務遂行を目指します。これにより、従業員は自己成長を遂げると同時に、企業全体の競争力向上に貢献することが可能になります。<br><br>
           当社の教育プログラムは、持続可能な企業成長の基盤を築くための重要なステップです。</p>
         </div><!-- .column__txt -->
+        <div class="column__pht">
+          <div class="mask">
+          <img src="<?php bloginfo('template_url'); ?>/images/img_service_service-02.webp" alt="">
+          </div>
+        </div><!-- .column__pht -->
       </div><!-- .column-box -->
 
     </div><!-- .section-04__inner -->

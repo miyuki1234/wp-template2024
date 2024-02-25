@@ -20,10 +20,16 @@
 .text-j_5l {
   font-family: $font-family;
   font-size: rem(48);
+  @include mq(m) {
+    font-size: rem(33);
+  }
 }
 .text-j_4l {
   font-family: $font-family;
   font-size: rem(39);
+  @include mq(m) {
+    font-size: rem(27);
+  }
 }
 .text-j_3l {
   font-family: $font-family;
@@ -56,10 +62,16 @@
 .text-e_5l {
   font-family: $font-en;
   font-size: rem(56);
+  @include mq(m) {
+    font-size: rem(33);
+  }
 }
 .text-e_4l {
   font-family: $font-en;
   font-size: rem(54);
+  @include mq(m) {
+    font-size: rem(27);
+  }
 }
 .text-e_3l {
   font-family: $font-en;
@@ -119,12 +131,18 @@ strong {
   font-size: rem(48);
   font-weight: 700;
   margin-bottom: rem(20);
+  @include mq(m) {
+    font-size: rem(33);
+  }
 }
 .title-j_4l {
   font-family: $font-family;
   font-size: rem(39);
   font-weight: 700;
   margin-bottom: rem(20);
+  @include mq(m) {
+    font-size: rem(27);
+  }
 }
 .title-j_3l {
   font-family: $font-family;
@@ -173,12 +191,18 @@ strong {
   font-size: rem(72);
   font-weight: 500;
   margin-bottom: rem(20);
+  @include mq(m) {
+    font-size: rem(33);
+  }
 }
 .title-e_4l {
   font-family: $font-en;
   font-size: rem(54);
   font-weight: 500;
   margin-bottom: rem(20);
+  @include mq(m) {
+    font-size: rem(36);
+  }
 }
 .title-e_3l {
   font-family: $font-en;

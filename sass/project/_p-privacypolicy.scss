@@ -6,6 +6,10 @@
 @use "../mixin/animation" as *;
 //▼▼▼▼プライバシーポリシー▼▼▼▼
 .privacypolicy {
+  .page-top-view {
+    .page-top-view__inner {
+    }
+  }
   .page-section-01 {
     .page-section-01__inner {
       margin-bottom: rem(100);
