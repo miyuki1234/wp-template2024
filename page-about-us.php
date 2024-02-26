@@ -25,7 +25,7 @@
   </div><!-- .breadcrumb-area -->
 
   <!-- ーーーメッセージーーー -->
-  <section class="page-section-01 page-section section-black last-section">
+  <section class="page-section-01 page-section section-black">
 
     <div class="page-section-01__inner page-section__inner">
       
@@ -49,7 +49,7 @@
 <!-- ーーー代表あいさつーーー -->
 <section class="page-section-02 page-section section-black">
 
-  <div class="page-section-02__inner page-section__inner last-section__inner">
+  <div class="page-section-02__inner page-section__inner">
 
     <h3 class="title-j_3l ta-center title_twotone">代表あいさつ</h3><!-- .title-j_3l -->
 

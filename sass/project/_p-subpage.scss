@@ -32,7 +32,7 @@
     margin: 0 auto;
     @include mq(xl) {
       width: 90%;
-      padding: rem(70) 0;
+      padding: rem(50) 0;
     }
   }
   &.bg-normal {
@@ -41,10 +41,26 @@
   &.bg-about-us {
     background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
   }
+  &.bg-service {
+    background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
+  }
+  &.bg-news {
+    background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
+  }
+  &.bg-blog {
+    background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
+  }
+  &.bg-contact {
+    background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
+  }
+  &.bg-privacypolicy {
+    background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
+  }
   .title__outer{
     color: $color-white;
     span{
       display: block;
+      margin-bottom: 0;
     }
   }
 }
@@ -58,14 +74,13 @@
   .page-section__inner {
     width: $width-base;
     height: auto;
-    margin: rem(50) auto rem(150);
+    padding: rem(20) 0 rem(100);
+    margin: 0 auto;
     @include mq(xl) {
       width: 90%;
     }
-    &.last-section__inner {
-      @include mq(s) {
-        padding-bottom: rem(40);
-      }
+    @include mq(m) {
+      padding: 0 0 rem(30);
     }
     &.section__inner-left-side {
       width: calc(($width-base + (100vw - $width-base) / 2)  + rem(30));
@@ -94,7 +109,7 @@
   }
   &.last-section {
     .page-section__inner {
-      padding-bottom: rem(120);
+      padding: rem(30) auto rem(150);
       @include mq(xl) {
         padding-bottom: rem(100);
       }

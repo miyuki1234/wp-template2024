@@ -40,8 +40,14 @@
         width: calc((90vw + (100vw - 90vw) / 2)  + rem(30));
         padding-left: calc((100vw - 90vw) / 2);
       }
+      @include mq(l) {
+        width: 100%;
+        margin:0;
+        padding: rem(20) 5% rem(90);
+      }
       @include mq(m) {
         width: 100%;
+        margin:0;
         padding: rem(20) 5% rem(90);
       }
     }
@@ -73,6 +79,9 @@
         width: 100%;
         padding: rem(40) 5% rem(90);
         margin: 0 auto;
+      }
+      .title_twotone{
+        margin-top: 0;
       }
       .btn-area{
         text-align: left;
@@ -131,9 +140,6 @@
           }
         }
       }
-      .top-title{
-        margin: rem(50) 0;
-      }
       .btn-area{
         text-align: left;
         margin-bottom: 0;
@@ -142,9 +148,6 @@
   }
   .top-section-03 {
     .top-section-03__inner {
-      .top-title{
-        margin: rem(50) 0;
-      }
       .column2{
         margin:rem(50) auto;
       }
@@ -155,9 +158,6 @@
   }
   .top-section-04 {
     .top-section-04__inner {
-      .top-title{
-        margin: rem(50) 0;
-      }
       .list-boxes{
         margin:rem(50) auto;
         .list-box {

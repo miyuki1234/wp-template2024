@@ -38,17 +38,17 @@
 
   </section><!-- .section-01 -->
 
-  <ul class="service-menu__list">
-    <li class="service-menu__item">
+  <ul class="service-menu__list column4 r-22-22-22-22">
+    <li class="service-menu__item column4__1">
       <a href="#service01">選ばれる理由</a>
     </li><!-- .service-menu__item -->
-    <li class="service-menu__item">
+    <li class="service-menu__item column4__2">
       <a href="#service02">人事コンサルティング</a>
     </li><!-- .service-menu__item -->
-    <li class="service-menu__item">
+    <li class="service-menu__item column4__3">
       <a href="#service03">教育・研修サービス</a>
     </li><!-- .service-menu__item -->
-    <li class="service-menu__item">
+    <li class="service-menu__item column4__4">
       <a href="#service04">ご契約の流れ</a>
     </li><!-- .service-menu__item -->
   </ul><!-- .service-menu__list -->
@@ -62,8 +62,8 @@
 
       <p class="text-j_s ta-center">弊社が選ばれる理由は大きく３つあります。</p>
 
-      <ul class="service-reason__list">
-          <li class="service-reason__item">
+      <ul class="service-reason__list column3 r-31-31-31">
+          <li class="service-reason__item column3__1">
             <div class="service-reason__pht">
               <img src="<?php bloginfo('template_url'); ?>/images/icon_service_reason-01.svg" alt="専門性とカスタマイズ">
             </div>
@@ -73,7 +73,7 @@
                 クライアントの特定のニーズに合わせてカスタマイズされたソリューションを提供することで、各企業の固有の課題を解決し、目標達成を実現します。</p>
             </div>
           </li><!-- .service-reason__item -->
-          <li class="service-reason__item">
+          <li class="service-reason__item column3__2">
             <div class="service-reason__pht">
               <img src="<?php bloginfo('template_url'); ?>/images/icon_service_reason-02.svg" alt="全面的なサポート体制">
             </div>
@@ -82,7 +82,7 @@
               <p class="text-j_s">人材アセスメントから教育・研修に至るまで、徹底したサポート体制を整えています。私たちは、クライアントの人材開発のあらゆる段階において、専門的な支援を提供し、組織の成長を促進します。</p>
             </div>
           </li><!-- .service-reason__item -->
-          <li class="service-reason__item">
+          <li class="service-reason__item column3__3">
             <div class="service-reason__pht">
               <img src="<?php bloginfo('template_url'); ?>/images/icon_service_reason-03.svg" alt="実績と信頼">
             </div>

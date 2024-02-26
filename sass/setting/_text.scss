@@ -244,7 +244,7 @@ strong {
 // タイトル装飾
 .title_twotone{
   padding-top: rem(10);
-  margin-bottom: rem(50);
+  margin: rem(50) 0;
   position: relative;
   &::before,
   &::after{

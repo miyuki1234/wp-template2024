@@ -40,7 +40,8 @@
     >div{
       flex: 1;
     }
-    .title-e_5l{
+    .title_twotone{
+      margin-top: 0;
       @include mq(m) {
         text-align: center;
         &::before,
