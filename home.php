@@ -47,15 +47,13 @@
                     <div class="box-container">
 
                       <a href="<?php the_permalink() ?>">
-                        <div class="zoomInRotate">
-                          <span class="mask">
-                            <?php
-                            if ( has_post_thumbnail() ) {
-                              the_post_thumbnail('large');
-                            }else{ ?>
-                              <img src="<?php bloginfo('template_url'); ?>/images/post/img_no-image-01.jpg">
-                            <?php } ?>
-                          </span>
+                        <div class="mask">
+                          <?php
+                          if ( has_post_thumbnail() ) {
+                            the_post_thumbnail('large');
+                          }else{ ?>
+                            <img src="<?php bloginfo('template_url'); ?>/images/img_no-image-01.jpg">
+                          <?php } ?>
                         </div>
 
                         <div class="contents-area">
@@ -80,13 +78,13 @@
 
             <div class="pagination-area">
               <?php
-              $args = array(
-              'mid_size' => 1,
-              'prev_text' => '&lt;',
-              'next_text' => '&gt;',
-              'screen_reader_text' => ' ',
-              );
-              the_posts_pagination($args);
+                $args = array(
+                'mid_size' => 1,
+                'prev_text' => '&lt;',
+                'next_text' => '&gt;',
+                'screen_reader_text' => ' ',
+                );
+                the_posts_pagination($args);
               ?>
             </div><!-- .pagination-area -->
 

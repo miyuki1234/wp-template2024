@@ -3,7 +3,7 @@
 
     <section class="sidebar-section">
       <div class="sidebar-section__inner">
-        <h3 class="text-j_s title">ブログ内検索</h3><!-- .text-j_2s -->
+        <h3 class="title-j_s title">ブログ内検索</h3><!-- .text-j_2s -->
         <div class="search-form__wrapper">
           <form action="<?php bloginfo('url'); ?>" method="get" class="search-form">
             <input type="submit" value="">
@@ -15,7 +15,7 @@
 
     <section class="sidebar-section">
       <div class="sidebar-section__inner">
-        <h3 class="text-j_s title">カテゴリー</h3><!-- .text-j_2s -->
+        <h3 class="title-j_s title">カテゴリー</h3><!-- .text-j_2s -->
         <ul class="category__list">
           <li><a href="<?php echo home_url('/blog'); ?>">すべて</a></li>
             <?php
@@ -30,7 +30,7 @@
 
     <section class="sidebar-section">
       <div class="sidebar-section__inner">
-        <h3 class="text-j_s title">人気の記事</h3><!-- .text-j_2s -->
+        <h3 class="title-j_s title">人気の記事</h3><!-- .text-j_2s -->
 
         <ul class="article__list">
 
@@ -42,7 +42,7 @@
             'meta_key' => 'post_views_count',
             'orderby' => 'meta_value_num',
             'order' => 'DESC',
-            'posts_per_page' => 3 // ← 5件取得
+            'posts_per_page' => 3 // ← 3件取得
           );
 
           // WP_Queryによるループ
@@ -56,15 +56,15 @@
               <li>
                 <a href="<?php the_permalink(); ?>">
 
-                  <span class="mask">
+                  <div class="mask">
                     <?php
                     if ( has_post_thumbnail() ) {
                       the_post_thumbnail('large');
                     }else{ ?>
-                      <img src="<?php bloginfo('template_url'); ?>/images/post/img_no-image-01.jpg">
+                      <img src="<?php bloginfo('template_url'); ?>/images/img_no-image-01.jpg">
                     <?php } ?>
-                  </span>
-                  <p class="text-j_2s">
+                  </div>
+                  <p class="title-j_2s">
                     <?php the_title(); ?>
                   </p>
                 </a>

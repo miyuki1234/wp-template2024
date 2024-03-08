@@ -1,14 +1,5 @@
 <?php get_header(); ?>
 
-<script>
-jQuery(function($){
-  $('.toc_toggle a').on('click', function(e) {
-    e.preventDefault();
-    $(this).parents('.toc-container').slideUp();
-  });
-});
-</script>
-
 <main class="main-area">
 
   <!-- ーーートップビューーーー -->
@@ -38,7 +29,6 @@ jQuery(function($){
   <div class="postpage-box">
     <div class="postpage-box__inner">
 
-      <!-- ーーー1.ブログーーー -->
       <div class="mainbar">
 
         <!-- ーーー1.ブログーーー -->
@@ -69,9 +59,7 @@ jQuery(function($){
                   <?php
                   if ( has_post_thumbnail() ) {
                     the_post_thumbnail('');
-                  }else{ ?>
-                    <img src="<?php bloginfo('template_url'); ?>/images/post/img_no-image-01.jpg">
-                  <?php } ?>
+                  } ?>
 
                   <div class="article-contents-area">
                     <?php the_content(); ?>
@@ -88,8 +76,8 @@ jQuery(function($){
               <a href="<?php echo home_url('/blog'); ?>" class="btn btn-arrow">一覧にもどる</a>
             </div><!-- .btn-area -->
 
-          </div><!-- .section-01 -->
-        </section><!-- .section-01 -->
+          </div><!-- .page-section-01__inner -->
+        </section><!-- .page-section-01 -->
 
       </div><!-- .mainbar -->
 

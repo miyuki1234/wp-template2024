@@ -1,157 +1,112 @@
 <?php get_header(); ?>
 
+<main class="main-area">
 
-    <main class="main-area">
+  <!-- ーーートップビューーーー -->
+  <div class="page-top-view bg-blog">
+    <div class="page-top-view__inner">
 
+      <div class="title__outer">
+        <h2 class="title-e_4l show slide-bottom">
+        BLOG<span class="title-j_s">ブログ</span>
+        </h2><!-- .title-e_4l -->
+      </div><!-- .title__outer -->
 
+    </div><!-- .page-top-view__inner -->
+  </div><!-- .page-top-view -->
 
-      <!-- ーーートップビューーーー -->
-      <div class="page-top-view bg-blog">
-        <div class="page-top-view__inner">
+  <!-- ーーーパンくずリストーーー -->
+  <div class="breadcrumb-area">
+    <div class="breadcrumb-area__inner">
+      <div id="breadcrumb">
+        <?php custom_breadcrumb(); ?>
+      </div><!-- #breadcrumb -->
+    </div><!-- .breadcrumb-area__inner -->
+  </div><!-- .breadcrumb-area -->
 
-          <div class="title__outer">
-            <h2 class="title-j_l show slide-bottom">
-              ブログ
-            </h2><!-- .title-j_l-ja -->
-          </div><!-- .title__outer -->
+  <!-- ーーーコンテンツーーー -->
+  <!-- ーーーブログ用２カラムーーー -->
+  <div class="postpage-box">
+    <div class="postpage-box__inner">
 
-
-          <!-- ーーーパンくずリストーーー -->
-          <div class="breadcrumb-area">
-            <div class="breadcrumb-area__inner">
-
-              <div id="breadcrumb">
-                <?php custom_breadcrumb(); ?>
-              </div><!-- #breadcrumb -->
-            </div><!-- .breadcrumb-area__inner -->
-
-          </div><!-- .breadcrumb-area -->
-
-
-        </div><!-- .page-top-view__inner -->
-
-      </div><!-- .page-top-view -->
-
-
-
-    <!-- ーーーコンテンツーーー -->
-    <!-- ーーーブログ用２カラムーーー -->
-    <div class="postpage-box">
-      <div class="postpage-box__inner">
-
-
-
-      <!-- ーーー1.お知らせーーー -->
-
+      <!-- ーーー1.ブログーーー -->
       <div class="mainbar">
 
-      <section class="page-section-01 page-section section-black last-section">
-        <div class="page-section-01__inner page-section__inner">
+        <section class="page-section-01 page-section last-section">
+          <div class="page-section-01__inner page-section__inner">
 
-        <div class="search-results-box">
-          <h3 class="text-j_m">
-            <?php single_cat_title(); ?>
-            <span class="text-j_2s">~ カテゴリー ~</span>
-          </h3><!-- .text-j_2s -->
-        </div><!-- .search-results-box -->
+            <div class="search-results-box">
+              <h3 class="title-j_l title_line">
+                <?php single_cat_title(); ?>
+                <span class="text-e_s">-CATEGORY-</span>
+              </h3><!-- .text-e_s -->
+            </div><!-- .search-results-box -->
 
+            <div class="list-boxes">
 
+              <?php if (have_posts() ): ?>
 
-          <div class="list-boxes">
+                <?php while (have_posts() ): ?>
+                  <?php the_post(); ?>
 
-            <?php if (have_posts() ): ?>
+                  <div class="list-box">
 
-              <?php while (have_posts() ): ?>
-                <?php the_post(); ?>
+                    <div class="box-container">
 
-
-
-                <div class="list-box">
-
-
-                  <div class="box-container">
-
-                    <div class="zoomInRotate">
                       <a href="<?php the_permalink() ?>">
-                        <span class="mask">
+                        <div class="mask">
                           <?php
                           if ( has_post_thumbnail() ) {
                             the_post_thumbnail('large');
                           }else{ ?>
-                            <img src="<?php bloginfo('template_url'); ?>/images/img_no-image.jpg">
+                            <img src="<?php bloginfo('template_url'); ?>/images/img_no-image-01.jpg">
                           <?php } ?>
-                        </span>
+                        </div>
+
+                        <div class="contents-area">
+                          <time class="news-date title-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                          <span class="post-category">
+                          <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                          </span><!-- .post-category -->
+                          <p class="news-title title-j_m"><?php echo get_the_title($post->ID); ?></p>
+                        </div><!-- .contents-area -->
                       </a>
-                    </div>
+                    </div><!-- .box-container -->
 
-                    <div class="contents-area">
+                  </div><!-- .list-box -->
 
-                      <time class="news-date text-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                <?php endwhile; ?>
 
-                      <span class="post-categories_no-link text-j_3s">
-                        <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                      </span><!-- .post-category_no-link -->
+              <?php else : ?>
+                <p class="text-j_2s">まだ投稿がありません。</p>
+              <?php endif; ?>
 
-                      <p class="news-title text-j_2s">
-                        <?php echo get_the_title($post->ID); ?>
-                      </p>
+            </div><!-- .list-boxes -->
 
+            <div class="pagination-area">
+              <?php
+              $args = array(
+              'mid_size' => 1,
+              'prev_text' => '&lt;',
+              'next_text' => '&gt;',
+              'screen_reader_text' => ' ',
+              );
+              the_posts_pagination($args);
+              ?>
+            </div><!-- .pagination-area -->
 
-                    </div><!-- .contents-area -->
-                  </div><!-- .box-container -->
-
-
-                </div><!-- .list-box -->
-
-
-              <?php endwhile; ?>
-
-            <?php else : ?>
-              <p class="text-j_2s">まだ投稿がありません。</p>
-            <?php endif; ?>
-
-          </div><!-- .list-boxes -->
-
-
-
-          <div class="pagination-area">
-            <?php
-            $args = array(
-            'mid_size' => 1,
-            'prev_text' => '&lt;',
-            'next_text' => '&gt;',
-            'screen_reader_text' => ' ',
-            );
-            the_posts_pagination($args);
-            ?>
-          </div><!-- .pagination-area -->
-
-
-
-        </div><!-- .page-section-01__inner -->
-      </section><!-- .page-section-01 -->
-
+          </div><!-- .page-section-01__inner -->
+        </section><!-- .page-section-01 -->
 
       </div><!-- .mainbar -->
 
-
-
-
       <?php get_template_part('sidebar'); ?>
 
-
-
-  </div><!-- .postpage-box__inner -->
-
+    </div><!-- .postpage-box__inner -->
 </div><!-- .postpage-box -->
 
-      <?php get_template_part('contact-area'); ?>
+<?php get_template_part('contact-banner'); ?>
 
-      <?php get_template_part('contact-banner'); ?>
+</main><!-- .main-area-->
 
-
-
-    </main><!-- .main-area-->
-
-
-      <?php get_footer(); ?>
+<?php get_footer(); ?>
