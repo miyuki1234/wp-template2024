@@ -74,9 +74,9 @@
   </div><!-- .section-02__inner -->
 
   <!-- ーーー会社概要ーーー -->
-  <section class="page-section-03 page-section section-black">
+  <section class="page-section-03 page-section section-black last-section">
 
-    <div class="page-section-03__inner page-section__inner last-section__inner">
+    <div class="page-section-03__inner page-section__inner">
 
       <h3 class="title-j_3l ta-center title_twotone">会社概要</h3><!-- .title-j_3l -->
 

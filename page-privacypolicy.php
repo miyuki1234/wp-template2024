@@ -27,9 +27,16 @@
   <!-- ーーーコンテンツーーー -->
   <section class="page-section-01 page-section section-black">
 
-    <div class="page-section-01__inner page-section__inner last-section__inner">
+    <div class="page-section-01__inner page-section__inner">
 
       <h3 class="title-j_3l ta-center title_twotone">個人情報の取扱いについて</h3><!-- .title-j_3l -->
+
+      <div class="contents-box">
+        <h4 class="title-j_m title_line">プライバシーポリシー</h4><!-- .title-j_m -->
+        <p class="text-j_s">
+        当社、[株式会社LIGHTER ※架空]（以下、「当社」と言います）は、人事コンサルティングサービスを提供するにあたり、ウェブサイト訪問者およびサービス利用者のプライバシーを尊重し、個人情報の保護に努めます。
+        </p><!-- .text-j_s -->
+      </div><!-- .contents-box -->
 
       <div class="contents-box">
         <h4 class="title-j_m title_line">１. 収集する情報とその目的</h4><!-- .title-j_m -->
@@ -55,7 +62,7 @@
 
       <div class="contents-box">
         <h3 class="title-j_m title_line">３. reCAPTCHAの使用</h3><!-- .title-j_m -->
-        <p class="text-j_s">当セキュリティ強化およびスパム対策のため、当社のウェブサイトはGoogleのreCAPTCHAサービスを利用しています。このプロセスでは、ユーザーの行動が分析されますが、これもまた個人を特定するものではありません。</p><!-- .text-j_s -->
+        <p class="text-j_s">セキュリティ強化およびスパム対策のため、当社のウェブサイトはGoogleのreCAPTCHAサービスを利用しています。このプロセスでは、ユーザーの行動が分析されますが、これもまた個人を特定するものではありません。</p><!-- .text-j_s -->
       </div><!-- .contents-box -->
 
       <div class="contents-box">
@@ -65,6 +72,11 @@
 
       <div class="contents-box">
         <h3 class="title-j_m title_line">５．プライバシーポリシーの変更</h3><!-- .title-j_m -->
+        <p class="text-j_s">当社は、必要に応じてこのプライバシーポリシーを更新する権利を留保します。変更がある場合は、ウェブサイト上で通知します。</p><!-- .text-j_s -->
+      </div><!-- .contents-box -->
+
+      <div class="contents-box">
+        <h3 class="title-j_m title_line">お問い合わせ</h3><!-- .title-j_m -->
         <p class="text-j_s">当社のプライバシーポリシーに関してご質問がある場合は、<a href="<?php echo home_url('/contact'); ?>">お問い合わせページ</a>ご連絡ください。</p><!-- .text-j_s -->
       </div><!-- .contents-box -->
 

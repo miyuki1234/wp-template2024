@@ -25,14 +25,14 @@
   </div><!-- .breadcrumb-area -->
 
   <!-- ーーーコンテンツーーー -->
-  <section class="page-section-01 page-section section-black">
+  <section class="page-section-01 page-section section-black last-section">
 
-    <div class="page-section-01__inner page-section__inner last-section__inner">
+    <div class="page-section-01__inner page-section__inner">
 
       <h3 class="title-j_3l ta-center title_twotone">お問い合わせフォーム</h3><!-- .title-j_3l -->
 
       <div class="contact-form">
-        <p class="text-j_s">まずはお気軽にお問い合わせください。3営業日以内に返信させていただきます。<br>
+        <p class="text-j_s ta-center">まずはお気軽にお問い合わせください。3営業日以内に返信させていただきます。<br>
         営業・宣伝はお断りしております。</p><!-- .text-j_s -->
 
         <?php echo do_shortcode('[contact-form-7 id="50f722d" title="お問い合わせ"]'); ?>
