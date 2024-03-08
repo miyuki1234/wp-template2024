@@ -7,34 +7,3 @@
 @use "project/project-all" as *;
 @use "compornent/compornent-all" as *;
 @use "javascript/javascript-all" as *;
-
-
-
-
-
-
-
-
-
-
-//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-//■■■■■■■■■■■■■■■■■■オリジナル■■■■■■■■■■■■■■■■■■■
-//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-//★★★★★変数★★★★★
-// $tb: 1159px;
-// $btb: 768px;
-// $sp: 767px;
-// @mixin tb {
-//   @media (max-width: ($tb)) {
-//     @content;
-//   }
-// }
-
-//↑http,httpsに注意
-
-
-// body {
-//   font-size: 1.6em;
-//   font-size: 1.6em;
-//   min-width: 1080px;
-// }

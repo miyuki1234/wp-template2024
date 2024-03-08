@@ -7,20 +7,25 @@
 
 // ■■■■■■ヘッダー■■■■■■■
 .header-area {
-  background: $color-white;
   width: 100%;
   position: fixed;
   z-index: 3;
   .header-area__inner {
+    background: $color-white;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include mq(l) {
+      padding: rem(15) rem(18);
+      position: relative;
+      z-index: 10;
+    }
+    // ▼▼ヘッダーロゴ
     .header-logo-area {
       display: flex;
       align-items: center;
       margin: 0 rem(40);
       @include mq(l) {
-        padding: rem(15) rem(18);
         margin: 0;
       }
       a {
@@ -36,28 +41,17 @@
     }
     // ▼▼ヘッダーナビゲーションエリア
     .header-nav-area {
-      padding: 0;
       display: flex;
-      justify-content: right;
+      justify-content: flex-end;
       width: 100%;
+      position: relative;
+      padding: 0;
 
       //PC用ナビ
       .header-nav {
         @include mq(l) {
           display: none;
         }
-        @include mq(m) {
-          padding: 0;
-        }
-        &.panelactive {
-          top: rem(70);
-          transition: all 0.6s;
-
-          @include mq(m) {
-            overflow-y: scroll;
-          }
-        }
-
         .header-nav__list {
           display: flex;
           height: 100%;
@@ -71,30 +65,19 @@
               margin: 0 auto;
               padding: rem(10) rem(20);
               color: $color-blue-01;
+              text-decoration: none;
               font-weight: 700;
               display: flex;
               align-items: center;
               justify-content: center;
               height: 100%;
-              @include mq(l) {
-                padding-top: rem(25);
-                padding-left: rem(130);
-              }
-              @include mq(m) {
-                width: 80%;
-                font-size: rem(30);
-                padding-top: rem(15);
-                padding-left: 40%;
-              }
             }
             &:not(:last-child) {
               a {
                 position: relative;
-                text-decoration: none;
-                transition: all 0.8s ease-out;
-                border-bottom: 2px solid $color-white;
+                transition:0.8s;
+                border-bottom: 2px solid transparent;
                 &:hover {
-                  opacity: 1;
                   border-color: $color-blue-02;
                 }
               }
@@ -107,7 +90,7 @@
                 text-decoration: none;
                 border-radius: 0;
                 padding: rem(10) rem(40);
-                transition: all 0.8s ease-out;
+                transition:0.8s;
                 &:before{
                   content: "\f0e0";
                   font-family: fontawesome;
@@ -133,12 +116,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: rem(10) rem(18);
-          &:hover {
-            span {
-              background-color: $color-blue-01;
-            }
-          }
+          padding: 0;
         }
         .openbtn1 {
           position: relative;
@@ -147,25 +125,19 @@
           cursor: pointer;
           span {
             display: inline-block;
-            transition: all 0.4s;
+            transition: 0.8s;
             /*アニメーションの設定*/
             position: absolute;
             height: rem(3);
-            border-radius: 30px;
+            border-radius: 20px;
             background: $color-blue-01;
             width: 100%;
             z-index: 15;
-            @include mq(m) {
-              height: rem(3);
-            }
             &:nth-of-type(1) {
               top: 0;
             }
             &:nth-of-type(2) {
-              top: calc(50% - rem(1.5));
-              @include mq(m) {
-                top: calc(50% - rem(2));
-              }
+              top: calc(50% - rem(2));
             }
             &:nth-of-type(3) {
               bottom: 0;
@@ -173,13 +145,9 @@
           }
           &.active {
             span {
-              background-color: $color-white;
-              @include mq(m) {
-                height: rem(3);
-              }
               &:nth-of-type(1) {
                 top: rem(-12);
-                transform: translateY(rem(22.5)) rotate(-45deg);
+                transform: translateY(rem(20)) rotate(-45deg);
                 width: 100%;
                 @include mq(m) {
                   top: rem(-9);
@@ -191,10 +159,9 @@
                 opacity: 0;
                 /*真ん中の線は透過*/
               }
-
               &:nth-of-type(3) {
                 top: rem(-12);
-                transform: translateY(rem(22.5)) rotate(45deg);
+                transform: translateY(rem(20)) rotate(45deg);
                 width: 100%;
                 @include mq(m) {
                   top: rem(-9);
@@ -203,55 +170,45 @@
                 }
               }
             }
-            &:hover {
-              span {
-                background-color: $color-white;
-              }
-            }
           }
         }
       }
-      //スマホ用ナビ
-      .sp-menu__wrapper {
-        display: none;
-        position: fixed;
-        z-index: 3;
-        /*ナビのスタート位置と形状*/
-        background-color: $color-blue-01;
-        top: 0;
-        right: -120vw;
-        width: fit-content;
-        height: 100vh;
-        transition: all 0.6s;
-        z-index: 10;
-        padding: rem(80) rem(50) rem(50);
-        @include mq(l) {
-          display: block;
-        }
-        @include mq(m) {
-          width: 100%;
-        }
-        &.panelactive {
-          transition: all 0.6s;
-          right: 0;
-          @include mq(m) {
-            overflow-y: scroll;
-          }
-        }
-        .header-sp-nav {
-          width: 100%;
-          .header-sp-nav__list {
-            li {
-              a {
-                display: block;
-                color: $color-white;
-                font-weight: 700;
-                text-align: center;
-                text-decoration: none;
-                padding: rem(20);
-                border-bottom: 1px solid $color-white;
-              }
-            }
+    } 
+  }
+  //スマホ用ナビ
+  .sp-menu__wrapper {
+    width: 100%;
+    display: none;
+    position: fixed;
+    opacity: 0;
+    z-index: 3;
+    /*ナビのスタート位置と形状*/
+    background-color: $color-blue-01;
+    top: 0;
+    height: 100vh;
+    transition:0.8s;
+    padding: rem(80) rem(50) rem(50);
+    @include mq(m) {
+      width: 100%;
+    }
+    &.panelactive {
+      display: block;
+      transition:0.8s;
+      opacity: 1;
+    }
+    .header-sp-nav {
+      width: 100%;
+      .header-sp-nav__list {
+        li {
+          a {
+            display: block;
+            color: $color-white;
+            font-size: rem(16);
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            padding: rem(20);
+            border-bottom: 1px solid $color-white;
           }
         }
       }

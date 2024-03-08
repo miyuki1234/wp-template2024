@@ -11,11 +11,12 @@
   }
   //▼▼▼▼▼共通▼▼▼▼▼
   .article-contents-area {
+    margin-top: rem(30);
     img {
       border-radius: 10px;
     }
     h2 {
-      margin-bottom: rem(20);
+      margin-bottom: rem(35);
       margin-top: rem(50);
       font-size: rem(23);
       @include mq(m) {
@@ -27,7 +28,7 @@
       margin-bottom: rem(15);
     }
     p {
-      padding: 0 0 rem(20) 0 !important;
+      padding: 0 0 rem(25) 0 !important;
       @include mq(m) {
         font-size: rem(14);
       }
@@ -60,10 +61,21 @@
         gap: 0 !important;
       }
     }
-    #toc_container {
-      margin-top: rem(40);
-      border-radius: 5px;
+    .has-marker-red-color{
+      color: $color-red-01;
     }
+    .has-marker-orange-color{
+      color: $color-orange-01;
+    }
+    .has-marker-blue-color{
+      color: $color-blue-01;
+    }
+    
+  }
+
+  // ボタンエリア
+  .btn-area{
+    margin: rem(80) 0 0;
   }
 
   //▼▼▼▼▼ブログ▼▼▼▼▼
@@ -76,9 +88,7 @@
       .mainbar {
         .page-section {
           background-color: $color-white;
-          border-radius: 10px;
           .page-section__inner {
-
             .article-area {
               .modified-day,
               .published-day {
@@ -91,9 +101,9 @@
               }
 
               .post-categories {
-                display: inline-block;
-                margin-right: rem(5);
+                display: flex;
                 li {
+                  margin-right: rem(5);
                   a {
                     color: $color-white;
                     background-color: $color-blue-01;
@@ -151,7 +161,7 @@
       }
     }
   }
-  // ▼▼▼▼▼お知らせ▼▼▼▼▼
+  // ▼▼▼▼▼新着情報▼▼▼▼▼
   &.single-news {
     .page-top-view {
       .page-top-view__inner {
@@ -159,50 +169,73 @@
     }
     .page-section {
       .page-section__inner {
+        padding: 0;
         .article-area {
-
-          .faq-type {
-            display: inline-block;
-            padding: 0 rem(6);
-            color: $color-turquoise-01;
-            border: solid 1px $color-turquoise-01;
-            border-radius: 4px;
-            margin: rem(10) auto;
+          .modified-day,
+          .published-day {
+            color: $color-darkgray;
+            font-weight: 700;
+            margin-right: rem(5);
+            i {
+              margin-right: rem(2);
+            }
           }
 
-          >.title_theme_m {
-            border-bottom: 1px solid $color-darkgray;
-            padding-bottom: rem(10);
+          .post-categories {
+            display: flex;
+            li {
+              margin-right: rem(5);
+              a {
+                color: $color-white;
+                background-color: $color-blue-01;
+                text-decoration: none;
+                display: inline-block;
+                padding: rem(2) rem(8);
+                border-radius: 5px;
+                font-size: rem(11);
+                font-weight: 700;
+              }
+            }
+          }
+          // 記事タイトル
+          >h3 {
+            padding: 0;
+            margin: 0;
           }
 
-
+          // アイキャッチ画像
           >img {
             display: block;
             width: 100%;
             height: auto;
             border-radius: 10px;
-            margin: rem(20) 0 rem(60);
+            margin: rem(30) 0 rem(70);
             @include mq(m) {
               margin: rem(15) 0 rem(30);
             }
           }
           .article-contents-area {
-            padding-top: rem(30);
-
-            &:before {
-              display: block;
-              content: "A";
-              font-size: rem(36);
-              font-family: $font-en;
-              font-weight: 900;
-              color: $color-red-01;
-              line-height: rem(60);
-              border-bottom: solid 1px $color-white;
+            >h2 {
+              &.wp-block-heading {
+                margin-top: rem(40);
+                background-color: $color-blue-01;
+                color: $color-white;
+                padding: rem(10) rem(20);
+                border-radius: 5px;
+                position: relative;
+              }
+            }
+            >h3 {
+              &.wp-block-heading {
+                margin-top: rem(30);
+                background-color: $color-gray-02;
+                border-left: 6px solid $color-blue-01;
+                color: $color-black-main;
+                padding: rem(10) rem(20);
+                position: relative;
+              }
             }
           }
-        }
-        .btn-area {
-          padding-top: rem(60);
         }
       }
     }

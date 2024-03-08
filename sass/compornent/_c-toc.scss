@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+@use "../foundation/base" as *;
+@use "../setting/color" as *;
+@use "../mixin/breakpoint" as *;
+
+
+// 目次{
+#toc_container{
+  width: fit-content;
+  border: 1px solid $color-blue-02;
+  border-radius: 10px;
+  padding: rem(30);
+  margin: rem(50) 0;
+  @include mq(s) {
+    display: block;
+  }
+  > p{
+    color: $color-blue-02;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 0 !important;
+  }
+  //toc_list
+  .toc_list {
+    padding-bottom: 0;
+    margin-top: rem(20);
+    > li {
+      text-indent: rem(-25);
+      padding: rem(10);
+      padding-left: rem(30);
+      margin: 0;
+      list-style-type: none;
+      counter-increment: cnt_toc;
+      &::before {
+        content: counter(cnt_toc)".";
+        color: $color-blue-02;
+        margin-right: rem(10);
+      }
+      &:last-child{
+          margin-bottom: 0;
+      }
+      a{
+        color: $color-blue-02;
+        font-size: rem(16);
+        font-weight: 400;
+        text-decoration: none;
+        padding: rem(10);
+        &:hover,
+        &:visited{
+          color: #0159B5;
+        }
+      }
+      ul{
+        margin-top: rem(10);
+        padding-bottom: 0;
+        > li{
+          text-indent: rem(-25);
+          padding: rem(10);
+          padding-left: rem(30);
+          margin: 0;
+          list-style-type: none;
+          &::before {
+            content: "-";
+            color: $color-blue-02;
+            margin-right: rem(10);
+          }
+        }
+      }
+    }
+  }
+}

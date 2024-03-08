@@ -108,8 +108,8 @@
     }
   }
   .btn_contact7 {
-    padding-top: 40px;
-    margin: 0 auto rem(20) !important;
+    padding-top: rem(50);
+    margin: 0 auto !important;
     width: 100%;
     text-align: center;
     input {
@@ -126,7 +126,7 @@
       font-size: rem(16);
       font-weight: 700;
       position: relative;
-      transition: all 0.8s ease-out;
+      transition:0.8s;
       @include mq(s) {
         width: 100%;
       }

@@ -38,10 +38,10 @@
         }
         &:last-child{
           flex: 1;
-          margin-right: calc(50% - 50vw + 8px);
+          margin-right: calc(50% - 50vw);
           margin-left: auto;
           @include mq(m) {
-            margin: 0 auto;
+            width: 105%;
           }
         }
         .footer-logo{
@@ -100,7 +100,7 @@
             color: $color-white;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.8s ease-out;
+            transition:0.8s;
             &:hover{
               border-color: $color-white;
             }

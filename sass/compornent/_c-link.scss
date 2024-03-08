@@ -6,7 +6,7 @@ a {
   color: $link-color;
   font-weight: 700;
   text-decoration: underline;
-  transition: all 0.8s ease-out;
+  transition:0.8s;
   &:hover {
     cursor: pointer;
     opacity: 0.85;

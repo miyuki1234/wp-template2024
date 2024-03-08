@@ -20,6 +20,7 @@
 .text-j_5l {
   font-family: $font-family;
   font-size: rem(48);
+  font-weight: 400;
   @include mq(m) {
     font-size: rem(33);
   }
@@ -27,6 +28,7 @@
 .text-j_4l {
   font-family: $font-family;
   font-size: rem(39);
+  font-weight: 400;
   @include mq(m) {
     font-size: rem(27);
   }
@@ -34,30 +36,37 @@
 .text-j_3l {
   font-family: $font-family;
   font-size: rem(33);
+  font-weight: 400;
 }
 .text-j_2l {
   font-family: $font-family;
   font-size: rem(27);
+  font-weight: 400;
 }
 .text-j_l {
   font-family: $font-family;
   font-size: rem(23);
+  font-weight: 400;
 }
 .text-j_m {
   font-family: $font-family;
   font-size: rem(19);
+  font-weight: 400;
 }
 .text-j_s {
   font-family: $font-family;
   font-size: rem(16);
+  font-weight: 400;
 }
 .text-j_2s {
   font-family: $font-family;
   font-size: rem(13);
+  font-weight: 400;
 }
 .text-j_3s {
   font-family: $font-family;
   font-size: rem(11);
+  font-weight: 400;
 }
 .text-e_5l {
   font-family: $font-en;
@@ -76,30 +85,37 @@
 .text-e_3l {
   font-family: $font-en;
   font-size: rem(33);
+  font-weight: 400;
 }
 .text-e_2l {
   font-family: $font-en;
   font-size: rem(27);
+  font-weight: 400;
 }
 .text-e_l {
   font-family: $font-en;
   font-size: rem(23);
+  font-weight: 400;
 }
 .text-e_m {
   font-family: $font-en;
   font-size: rem(19);
+  font-weight: 400;
 }
 .text-e_s {
   font-family: $font-en;
   font-size: rem(16);
+  font-weight: 400;
 }
 .text-e_2s {
   font-family: $font-en;
   font-size: rem(13);
+  font-weight: 400;
 }
 .text-e_3s {
   font-family: $font-en;
   font-size: rem(11);
+  font-weight: 400;
 }
 strong {
   font-weight: 700;
@@ -276,6 +292,10 @@ strong {
 .title_line{
   padding: rem(10);
   border-bottom: 1px solid $color-blue-02;
+  span{
+    color: $color-darkgray;
+    margin-left: rem(20);
+  }
 }
 .title__outer {
   position: relative;

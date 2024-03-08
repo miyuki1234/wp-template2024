@@ -13,18 +13,31 @@
   }
   .page-section-01 {
     .page-section-01__inner {
+      .service-menu__list{
+        margin-top: rem(50);
+      }
     }
   }
   .page-section-02 {
     .page-section-02__inner {
+      padding-top: rem(20);
+      .service-reason__list{
+        margin-top: rem(50);
+      }
     }
   }
   .page-section-03 {
     .page-section-03__inner {
+      width: 100%;
     }
   }
   .page-section-04 {
     .page-section-04__inner {
+      width: 100%;
+    }
+  }
+  .page-section-05 {
+    .page-section-05__inner {
     }
   }
 }

@@ -2,6 +2,7 @@
 @use "../foundation/base" as *;
 @use "../mixin/breakpoint" as *;
 $width-base: rem(1200);
+$width-small: rem(860);
 $tpad-topsection: rem(60);
 $bpad-topsection: rem(80);
 $tpad-subsection: rem(60);

@@ -9,11 +9,11 @@
 // ▼追従型のsnsシェアボタン
 .sns-btn-absolute {
   position: fixed;
-  left: calc((100vw - $width-base) / 2 - 60px);
+  left: calc((100vw - $width-base) / 2 - rem(80));
   top: rem(440);
   z-index: 6;
   @include mq(xl) {
-      left: 1%;
+      left: 0;
   }
   @include mq(l) {
       display: none;
@@ -28,7 +28,7 @@
     font-size: rem(24);
     color:#fff!important;
     text-decoration:none;
-    transition:.5s;
+    transition:0.8s;
     i {
         position:absolute;
         top: 50%;
@@ -98,7 +98,7 @@
       font-size: rem(24);
       font-weight: 500;
       position:relative;
-      transition: .6s;
+      transition:0.8s;
       display: inline-block;
       @include mq(s) {
         font-size: rem(20);

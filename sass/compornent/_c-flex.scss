@@ -18,20 +18,28 @@
   @include mq(m) {
     display: block;
   }
-  &.pad-30 {
-    padding: rem(30);
-    @include mq(xl) {
-      padding: rem(20);
+  .mask {
+    display: block;
+    aspect-ratio: 3 / 2;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition:0.8s;
+        object-fit: cover;
     }
   }
 }
+
 // ▼▼▼２カラム▼▼▼
 .column2 {
-  &.tb-break {
-    @include mq(l) {
-      display: block;
-    }
-  }
   &.r-48-48 {
     justify-content: center;
     column-gap: rem(50);
@@ -51,12 +59,12 @@
       }
     }
   }
-  &.r-30-30 {
+  &.r-40-40 {
     justify-content: center;
     column-gap: rem(60);
     >.column2__1,
     >.column2__2 {
-      width: 30%;
+      width: 40%;
       height: auto;
       padding: rem(20);
       @include mq(xl) {
@@ -70,23 +78,6 @@
           margin-top: rem(50);
         }
       }
-    }
-  }
-  &.r-25-60 {
-    >.column2__1 {
-      width: 25%;
-      @include mq(m) {
-        width: 100%;
-      }
-    }
-    >.column2__2 {
-      width: 60%;
-      @include mq(m) {
-        width: 100%;
-      }
-    }
-    &:not(:first-of-type) {
-      margin-top: rem(40);
     }
   }
   &.r-30-60 {
@@ -106,21 +97,18 @@
       margin-top: rem(40);
     }
   }
-  &.r-60-25 {
+  &.r-40-50 {
     >.column2__1 {
-      width: 60%;
+      width: 40%;
       @include mq(m) {
         width: 100%;
       }
     }
     >.column2__2 {
-      width: 25%;
-      img {
-        width: 100%;
-        height: auto;
-      }
+      width: 50%;
       @include mq(m) {
         width: 100%;
+        margin-top: rem(70);
       }
     }
   }
@@ -146,13 +134,7 @@
     >.column2__1,
     >.column2__2 {
       .mask {
-        img {
-          width: 100%;
-          height: rem(480);
-          @include mq(m) {
-            height: calc(90vw * 0.66);
-          }
-        }
+        aspect-ratio: 3 / 4;
       }
       .about-us-txt{
         line-height: 2.4;
@@ -168,23 +150,12 @@
       width: 48%;
       display: flex;
       flex-direction: column;
-      @include mq(l) {
-        width: 42%;
-      }
-      @include mq(s) {
+      @include mq(m) {
         width: 100%;
         margin: 0 auto;
       }
       .mask {
-        border-radius: 10px;
         margin-bottom: rem(20);
-        img {
-          width: 100%;
-          height: rem(372);
-          @include mq(m) {
-            height: calc(90vw * 0.66);
-          }
-        }
       }
     }
     >.column2__1 {
@@ -192,34 +163,7 @@
     }
     >.column2__2 {
       @include mq(s) {
-        margin-top: rem(40);
-      }
-    }
-  }
-
-  .mask {
-    display: block;
-    line-height: 0;/*行の高さを0にする*/
-    border-radius: 10px;
-    overflow: hidden;/*拡大してはみ出る要素を隠す*/
-    img {
-      display: block;
-      width: 100%;
-      margin: auto;
-      object-fit: cover;
-      transform: scale(1);
-      transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
-      &:before {
-        content: '';
-        display: block;
-        padding-top: 100%;
-      }
-      &:hover {
-        // transform:scale(1.2,1.2);
-        // transition:1s all;
-      }
-      @include mq(xl) {
-        width: 100%;
+        margin-top: rem(70);
       }
     }
   }
@@ -233,15 +177,11 @@
       width: 31%;
       height: auto;
       padding: rem(20);
-      @include mq(xl) {
-        width: 32%;
-      }
       @include mq(l) {
-        padding: rem(20) rem(15);
+        padding: rem(10);
       }
       @include mq(m) {
         width: 100%;
-        padding: rem(20);
       }
       &:not(:first-of-type) {
         @include mq(m) {
@@ -399,17 +339,27 @@
 .service-menu__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   max-width: rem(1000);
-  margin: rem(50) auto;
+  margin: 0 auto;
   @include mq(xl) {
     width: 90%;
+  }
+  @include mq(m) {
+    display: flex;
   }
   @include mq(s) {
     column-gap: normal;
     justify-content: space-between;
   }
   .service-menu__item {
+    width: 24%;
+    @include mq(l) {
+      width: 48%;
+      margin-bottom: rem(20);
+    }
+    @include mq(s) {
+      width: 100%;
+    }
     a {
       font-size: rem(16);
       font-weight: 700;
@@ -421,7 +371,7 @@
       padding: rem(25) rem(40) rem(25) rem(30);
       border: 1px solid $color-blue-01;
       border-radius: 10px;
-      transition: all 0.8s ease-out;
+      transition:0.8s;
       @include mq(xl) {
         font-size: rem(15);
         padding: rem(25) rem(35) rem(25) rem(15);
@@ -458,35 +408,27 @@
 }
 
 .service-reason__list {
-  margin: rem(50) auto;
   .service-reason__item {
     .service-reason__pht {
       display: block;
-      line-height: 0;/*行の高さを0にする*/
-      border-radius: 10px;
-      overflow: hidden;/*拡大してはみ出る要素を隠す*/
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      position: relative;
+      margin: 0 rem(50);
+      @include mq(m) {
+        max-width: 200px;
+        margin: 0 auto;
+      }
       img {
-        display: block;
-        width: 100%;
-        max-width: rem(170);
-        height: rem(120);
-        margin: rem(30) auto;
-        object-fit: cover;
-        transform: scale(1);
-        transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
-        &:before {
-          content: '';
-          display: block;
-          padding-top: 100%;
-        }
-        &:hover {
-          // transform:scale(1.2,1.2);
-          // transition:1s all;
-        }
-        @include mq(m) {
-          max-width: auto;
-          height: calc(90vw * 0.75);
-        }
+					width: 80%;
+					height: 80%;
+					max-width: none;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) scale(1);
+          transition:0.8s;
+					object-fit: cover;
       }
     }
     .service-reason__txt{

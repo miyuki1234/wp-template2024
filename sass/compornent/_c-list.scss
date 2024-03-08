@@ -5,49 +5,6 @@
 @use "../setting/font" as *;
 
 //リスト
-//num__list
-ol.num__list {
-  margin: rem(10) 0;
-  > li {
-    text-indent: rem(-25);
-    padding-left: rem(25);
-    list-style-type: none;
-    counter-increment: cnt;
-    margin-bottom: rem(10);
-    &::before {
-      content: counter(cnt)".";
-      margin-right: rem(10);
-    }
-  }
-}
-
-//toc__list
-ol.toc__list {
-  > li {
-    text-indent: rem(-25);
-    padding: rem(10);
-    padding-left: rem(30);
-    list-style-type: none;
-    counter-increment: cnt_tox;
-    margin-bottom: rem(10);
-    &::before {
-      content: counter(cnt_tox)".";
-      color: $color-blue-02;
-      margin-right: rem(10);
-    }
-    &:last-child{
-      margin-bottom: 0;
-    }
-    a{
-      text-decoration: none;
-      &:hover,
-      &:visited{
-        color: #0159B5;
-      }
-    }
-  }
-}
-
 //disc__list
 .disc__list {
     > li {

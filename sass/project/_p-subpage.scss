@@ -13,7 +13,7 @@
   padding: 0;
   position: relative;
   padding-top: rem(80);
-  @include mq(xl) {
+  @include mq(l) {
     padding-top: rem(60);
   }
   &:before{
@@ -33,6 +33,9 @@
     @include mq(xl) {
       width: 90%;
       padding: rem(50) 0;
+    }
+    h2{
+      margin-bottom: 0;
     }
   }
   &.bg-normal {
@@ -56,6 +59,9 @@
   &.bg-privacypolicy {
     background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
   }
+  &.bg-notfound {
+    background: url("../images/img_about-us_title-bg-01.webp") top center/cover no-repeat;
+  }
   .title__outer{
     color: $color-white;
     span{
@@ -68,19 +74,28 @@
 .page-section {
   width: 100%;
   height: auto;
-  &.section-darkgray {
-    background-color: $color-blue-01;
-  }
   .page-section__inner {
     width: $width-base;
     height: auto;
-    padding: rem(20) 0 rem(100);
+    padding: rem(30) 0 rem(100);
     margin: 0 auto;
     @include mq(xl) {
       width: 90%;
     }
     @include mq(m) {
-      padding: 0 0 rem(30);
+      padding: rem(40) 0;
+    }
+    &.section_inner-small{
+      width: $width-small;
+      height: auto;
+      padding: rem(30) 0 rem(100);
+      margin: 0 auto;
+      @include mq(xl) {
+        width: 90%;
+      }
+      @include mq(m) {
+        padding: rem(40) 0;
+      }
     }
     &.section__inner-left-side {
       width: calc(($width-base + (100vw - $width-base) / 2)  + rem(30));
@@ -107,11 +122,19 @@
       }
     }
   }
+  &.page-section-01 {
+    .page-section__inner {
+      padding-top: rem(20);
+      @include mq(m) {
+        padding-top: rem(40);
+      }
+    }
+  }
   &.last-section {
     .page-section__inner {
-      padding: rem(30) auto rem(150);
-      @include mq(xl) {
-        padding-bottom: rem(100);
+      padding-bottom: rem(150);
+      @include mq(m) {
+        padding-bottom: rem(90);
       }
     }
   }

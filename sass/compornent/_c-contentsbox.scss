@@ -13,18 +13,6 @@
     }
 }
 
-// toc-box
-.toc-box{
-  width: fit-content;
-  border: 1px solid $color-blue-02;
-  border-radius: 10px;
-  padding: rem(30);
-  margin: rem(50) 0;
-  @include mq(s) {
-    display: block;
-  }
-}
-
 //bg_box
 .bg_box{
   width: fit-content;
@@ -42,53 +30,61 @@
   position: relative;
   padding-top: rem(60);
   @include mq(l) {
-    padding-top: rem(150);
+    padding-top: rem(180);
   }
-  @include mq(m) {
-    padding-top: rem(0);
-  }
-  > .column__txt {
-    width: 70%;
-    background: rgba($color: $color-gray-03, $alpha: 0.7);
-    border-radius: 10px;
-    padding: rem(70);
-    margin-left: auto;
-    position: relative;
-    z-index: 2;
-    @include mq(m) {
-      width: 90%;
-      margin-top: rem(-100);
-    }
-    @include mq(s) {
-      padding: rem(40);
-    }
-    .title-j_m{
-      margin-top: 0;
-    }
+  @include mq(s) {
+    padding-top: 0;
   }
   > .column__pht {
-    width: 50%;
-    max-width: 600px;
+    width: 45%;
     overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
     @include mq(l) {
-      width: 100%;
+      width: 60%;
     }
     @include mq(m) {
       width: 80%;
       position: relative;
     }
+    @include mq(s) {
+      width: 90%;
+    }
     .mask{
       border-radius: 0 10px 10px 0;
     }
   }
-  &.order-change {
-    > .column__txt {
-      margin-left: 0;
+  > .column__txt {
+    width: 60%;
+    background: rgba($color: $color-gray-03, $alpha: 0.7);
+    border-radius: 10px 0 0 10px;
+    padding: rem(70) rem(120) rem(70) rem(70);
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+    @include mq(xl) {
+      padding: rem(70);
     }
+    @include mq(l) {
+      width: 80%;
+    }
+    @include mq(m) {
+      margin-top: rem(-100);
+    }
+    @include mq(s) {
+      width: 90%;
+      padding: rem(30);
+    }
+    .title_twotone{
+      margin-top: 0;
+      @include mq(m) {
+        font-size: rem(26);
+      }
+    }
+  }
+  &.order-change {
     >.column__pht {
       left: auto;
       right: 0;
@@ -99,27 +95,33 @@
         margin-left: auto;
       }
     }
+    > .column__txt {
+      padding: rem(70) rem(70) rem(70) rem(120);
+      margin-left: 0;
+      border-radius: 0 10px 10px 0;
+      @include mq(xl) {
+        padding: rem(70);
+      }
+      @include mq(s) {
+        padding: rem(30);
+      }
+    }
   }
   .mask {
     display: block;
-    line-height: 0;/*行の高さを0にする*/
-    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    position: relative;
     img {
-      display: block;
-      width: 100%;
-      margin: auto;
-      object-fit: cover;
-      transform: scale(1);
-      transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
-      &:before {
-        content: '';
-        display: block;
-        padding-top: 100%;
-      }
-      &:hover {
-        // transform:scale(1.2,1.2);
-        // transition:1s all;
-      }
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition:0.8s;
+        object-fit: cover;
     }
   }
 }
