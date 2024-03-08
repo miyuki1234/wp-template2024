@@ -41,31 +41,39 @@
         </ul><!-- category-box__list -->
       </div><!-- category-box -->
 
+      <div class="search-results-box">
+        <h3 class="title-j_l title_line">
+          <?php single_cat_title(); ?>
+          <span class="text-e_s">-CATEGORY-</span>
+        </h3><!-- .text-e_s -->
+      </div><!-- .search-results-box -->
+
       <div class="contents-box">
 
-          <ul class="news-container__list">
+        <ul class="news-container__list">
 
-            <?php
-              if(have_posts()) : 
+          <?php
+            if(have_posts()) : 
                 while(have_posts()) : the_post();
                 $this_terms = get_the_terms($post->ID,'news_category');
-            ?>
-                <!-- 記事表示 start -->
-                <li><a href="<?php echo get_permalink() ?>">
-                  <div class="contents-area">
-                    <time class="news-date text-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
-                    <span class="post-category news"><?php echo $this_terms[0]->name ?></span><!-- .post-category -->
-                  </div>
-                  <p class="news-title text-j_s"><?php the_title() ?></p>
-                </a></li>
-                <!-- 記事表示 end -->
+          ?>
 
-              <?php endwhile; ?>
-              <?php else : ?>
-              <p class="text-j_s">まだ投稿がありません。</p>
-            <?php endif; ?>
+            <!-- 記事表示 start -->
+            <li><a href="<?php echo get_permalink() ?>">
+              <div class="contents-area">
+                <time class="news-date text-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                <span class="post-category news"><?php echo $this_terms[0]->name ?></span><!-- .post-category -->
+              </div>
+              <p class="news-title text-j_s"><?php the_title() ?></p>
+            </a></li>
+            <!-- 記事表示 end -->
 
-          </ul><!-- news-container__list -->
+          <?php endwhile; ?>
+          <?php else : ?>
+            <p class="text-j_s">まだ投稿がありません。</p>
+          <?php endif; ?>
+
+        </ul><!-- news-container__list -->
 
       </div><!-- .contents-box -->
 
