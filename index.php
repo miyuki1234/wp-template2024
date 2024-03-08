@@ -12,15 +12,35 @@
       </div><!-- top-view_title -->
 
       <div class="frame-top-view">
-        <img src="<?php bloginfo('template_url'); ?>/images/img_to_topview-01.webp" alt="">
+
+          <div class="top-slider swiper">
+
+              <div class="swiper-wrapper">
+
+                  <div class="swiper-slide mask">
+                    <img src="<?php bloginfo('template_url'); ?>/images/img_to_topview-01.webp" alt="">
+                  </div><!-- swiper-slide -->
+
+                  <div class="swiper-slide mask">
+                    <img src="<?php bloginfo('template_url'); ?>/images/img_to_topview-02.webp" alt="">
+                  </div><!-- swiper-slide -->
+
+                  <div class="swiper-slide mask">
+                    <img src="<?php bloginfo('template_url'); ?>/images/img_to_topview-03.webp" alt="">
+                  </div><!-- swiper-slide -->
+
+              </div><!-- swiper-wrapper -->
+
+          </div><!-- swiper -->
+
       </div><!-- frame-top-view -->
 
     </div><!-- .top-view__inner -->
   </div><!-- .top-view -->
 
-  <!-- ーーーお知らせーーー -->
+  <!-- ーーー新着情報ーーー -->
   <section class="top-section top-section-01 section-gray-02">
-    <div class="top-section-01__inner top-section__inner section__inner-up section-white">
+    <div class="top-section-01__inner top-section__inner section__inner-up section-white show">
 
       <div class="column2 r-30-60 no-pad">
         <div class="column2__1">
@@ -33,30 +53,36 @@
           </div><!-- .btn-area -->
         </div><!-- .column2__1 -->
         <div class="column2__2">
-         
-          <ul class="news-container__list">
-            <li><a href="">
+        <ul class="news-container__list">
+
+          <?php
+            $args = array(
+              'post_type' => 'news',
+              'posts_per_page' => 3,
+            );
+            $the_query = new WP_Query($args);
+            
+            if($the_query->have_posts()) : 
+              while($the_query->have_posts()) : $the_query->the_post();
+              $this_terms = get_the_terms($post->ID,'news_category');
+          ?>
+            <!-- 記事表示 start -->
+            <li><a href="<?php echo get_permalink() ?>">
               <div class="contents-area">
-                <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
-                <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
+                <time class="news-date text-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                <span class="post-category news"><?php echo $this_terms[0]->name ?></span><!-- .post-category -->
               </div>
-              <p class="news-title title-j_s">タイトルが入ります</p>
+              <p class="news-title text-j_s"><?php the_title() ?></p>
             </a></li>
-            <li><a href="">
-              <div class="contents-area">
-                <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
-                <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-              </div>
-              <p class="news-title title-j_s">タイトルが入ります</p>
-            </a></li>
-            <li><a href="">
-              <div class="contents-area">
-                <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
-                <span class="post-category">カテゴリー</span><!-- .post-category_no-link -->
-              </div>
-              <p class="news-title title-j_s">タイトルが入ります</p>
-            </a></li>
+            <!-- 記事表示 end -->
+
+            <?php endwhile; ?>
+          <?php else : ?>
+          <p class="text-j_s">まだ投稿がありません。</p>
+          <?php endif; ?>
+
           </ul><!-- news-container__list -->
+
         </div><!-- .column2__2 -->
       </div><!-- column -->
 
@@ -70,15 +96,10 @@
 
   <!-- ーーー私たちについてーーー -->
   <section class="top-section-02 top-section section-gray-02">
-    <div class="top-section-02__inner top-section__inner show slide-bottom section__inner-left-side">
+    <div class="top-section-02__inner top-section__inner section__inner-left-side slide-bottom show">
 
-      <div class="column2 r-48-48">
+      <div class="column2 r-40-50 no-pad order-change">
         <div class="column2__1">
-          <div class="mask">
-            <img src="<?php bloginfo('template_url'); ?>/images/img_top_about-us-01.webp" alt="">
-          </div>
-        </div><!-- .column2__1 -->
-        <div class="column2__2">
           <h2 class="title-e_5l title_twotone top-title">
             ABOUT US
             <span class="text-j_2s">私たちについて</span>
@@ -90,6 +111,11 @@
           <div class="btn-area">
             <a href="<?php echo home_url('/about-us'); ?>" class="btn btn-arrow">詳しくみる</a>
           </div><!-- .btn-area -->
+        </div><!-- .column2__1 -->
+        <div class="column2__2">
+          <div class="mask">
+            <img src="<?php bloginfo('template_url'); ?>/images/img_top_about-us-01.webp" alt="">
+          </div>
         </div><!-- .column2__2 -->
       </div><!-- .column -->
 
@@ -99,7 +125,7 @@
 
   <!-- ーーー事業内容ーーー -->
   <section class="top-section-03 top-section">
-    <div class="top-section-03__inner top-section__inner">
+    <div class="top-section-03__inner top-section__inner slide-bottom show">
      
         <h2 class="title-e_5l title_twotone ta-center top-title">
           SERVICE
@@ -107,7 +133,7 @@
         </h2><!-- .title-e_5l -->
 
         <p class="text-j_s ta-center">
-        私たちは、主に３つのジャンルに特化したコンサルティング事業を行なっております。
+        私たちは、主に３つのジャンルに特化した<br class="sp-only">コンサルティング事業を行なっております。
         </p><!-- .text-j_s -->
 
         <div class="column2 no-pad service-boxes">
@@ -144,8 +170,8 @@
 
 
   <!-- ーーーブログーー -->
-  <section class="top-section-04 top-section section-black section-blue-03">
-    <div class="top-section-04__inner top-section__inner last-section__inner show slide-bottom">
+  <section class="top-section-04 top-section section-black section-blue-03 last-section">
+    <div class="top-section-04__inner top-section__inner slide-bottom show">
     
       <h2 class="title-e_5l title_twotone ta-center top-title">
         BLOG
@@ -153,38 +179,36 @@
       </h2><!-- .title-e_5l -->
 
       <p class="text-j_s ta-center">
-      企業様の抱える人事課題にお応えするブログを日々発信しております
+      企業様の抱える人事課題にお応えする<br class="sp-only">ブログを日々発信しております
       </p><!-- .text-j_s -->
 
       <div class="list-boxes">
 
-        <?php $posts = get_posts('numberposts=6'); ?>
+        <?php $posts = get_posts('numberposts=3'); ?>
         <?php foreach($posts as $post): ?>
-        <div class="list-box">
+          <div class="list-box">
 
-          <div class="box-container">
-            <a href="<?php the_permalink() ?>">
-              <div class="zoomInRotate">
-                <span class="mask">
+            <div class="box-container">
+              <a href="<?php the_permalink() ?>">
+                <div class="mask">
                   <?php
                   if ( has_post_thumbnail() ) {
                     the_post_thumbnail('large');
                   }else{ ?>
-                    <img src="<?php bloginfo('template_url'); ?>/images/post/img_no-image-01.jpg">
+                    <img src="<?php bloginfo('template_url'); ?>/images/img_no-image-01.jpg">
                   <?php } ?>
-                </span>
-              </div>
-              <div class="contents-area">
-                <time class="news-date title-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
-                <span class="post-category">
-                <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                </span><!-- .post-category -->
-                <p class="news-title title-j_m"><?php echo get_the_title($post->ID); ?></p>
-              </div><!-- .contents-area -->
-            </a>
-          </div><!-- .box-container -->
+                </div>
+                <div class="contents-area">
+                  <time class="news-date title-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                  <span class="post-category">
+                  <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                  </span><!-- .post-category -->
+                  <p class="news-title title-j_m"><?php echo get_the_title($post->ID); ?></p>
+                </div><!-- .contents-area -->
+              </a>
+            </div><!-- .box-container -->
 
-        </div><!-- .list-box -->
+          </div><!-- .list-box -->
         <?php endforeach; ?>
 
       </div><!-- .list-boxes -->

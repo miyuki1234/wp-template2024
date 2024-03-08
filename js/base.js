@@ -13,41 +13,21 @@ $(".header-area").removeClass("nav-opened");
 
 });
 
-   //スライダー部分の記述 -->
-   $(function(){
-		 //blog
-   var slider1 = new Swiper('.slider1', {
-     spaceBetween: 60,
-     slidesPerView: 3,
-     breakpoints: {
-    // 991px以下の場合
-    991: {
-      spaceBetween: 22,
-      slidesPerView: 3,
-    },
-    767: {
-      spaceBetween: 22,
-      slidesPerView: 2,
-    }
-  },
-  });
-		 //voice
-   var slider2 = new Swiper('.slider2', {
-     spaceBetween: 60,
-     slidesPerView: 3,
-     breakpoints: {
-    // 991px以下の場合
-		991: {
-      spaceBetween: 22,
-      slidesPerView: 3,
-    },
-    767: {
-      spaceBetween: 22,
-      slidesPerView: 2,
-    }
-  },
-  });
+//スライダー部分の記述 -->
+$(function(){
+	var swiperTop = new Swiper('.top-slider', {
+		loop: true,
+		effect: 'fade',
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 5000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+	});
 });
+
 
 //アコーディオンをクリックした時の動作
 $('.accordion-title').on('click', function() {//タイトル要素をクリックしたら
@@ -73,8 +53,8 @@ $(window).on('load', function(){
 });
 //記事ページで「表示」ボタンを押した際のスクロール防止
 jQuery(function($){
-    $('.toc-hide').on('click', function(e) {
-        e.preventDefault();
-        $(this).parents('.toc-container').slideUp();
-    });
+	$('.toc-hide').on('click', function(e) {
+		e.preventDefault();
+		$(this).parents('.toc-container').slideUp();
+	});
 });
