@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
 
-  <title>スタイルガイド</title>
+  <title>read me｜スタイルガイド</title>
 
 </head>
 
@@ -24,19 +24,18 @@
 
   <main class="main-area">
 
-    <!-- ーーートップビューーーー -->
-    <div class="page-top-view bg-blog">
-      <div class="page-top-view__inner">
+  <!-- ーーートップビューーーー -->
+  <div class="page-top-view">
+    <div class="page-top-view__inner">
 
-        <div class="title__outer">
-          <h2 class="title-e_4l show slide-bottom">
-            read me
-          </h2><!-- .title-e_4l -->
-        </div><!-- .title__outer -->
+      <div class="title__outer">
+        <h2 class="title-e_4l show slide-bottom">
+        read me
+        </h2><!-- .title-e_4l -->
+      </div><!-- .title__outer -->
 
-      </div><!-- .page-top-view__inner -->
-
-    </div><!-- .page-top-view -->
+    </div><!-- .page-top-view__inner -->
+  </div><!-- .page-top-view -->
 
     <!-- ーーーパンくずリストーーー -->
     <div class="breadcrumb-area">
@@ -54,93 +53,121 @@
 
     <!-- ーーー1.settingーーー -->
     <section class="page-section-01 page-section section-black">
-      <div class="page-section-01__inner page-section__inner last-section__inner">
+      <div class="page-section-01__inner page-section__inner">
 
-        <h2 class="title-j_l">
+        <h2 class="title-j_l title_twotone">
           Sassファイル構成
         </h2><!-- .title-j_l -->
 
-        <h3 class="title-j_m">
-          foundation : 基本的なスタイル、リセットCSS
-        </h3><!-- .title-j_l -->
+        <div class="contents-box">
 
-        <ul class="list_circle">
-          <li>_base.scss</li>
-          <li>_reset.scss</li>
-          <li>_grammar.scss : br（.pc-only、.sp-onlyなど）</li>
-        </ul><!-- .list_circle -->
+          <h3 class="title-j_m">
+            foundation : 基本的なスタイル、リセットCSS
+          </h3><!-- .title-j_l -->
 
-        <h3 class="title-j_m">
-          mixin : ブレイクポイント、アニメーションCSS
-        </h3><!-- .title-j_l -->
+          <ul class="list_circle">
+            <li>_base.scss</li>
+            <li>_reset.scss</li>
+            <li>_grammar.scss : br（.pc-only、.sp-onlyなど）</li>
+          </ul><!-- .list_circle -->
+          
+        </div><!-- contents-box -->
 
-        <ul class="list_circle">
-          <li>_breakpoint.scss</li>
-          <li>_animation.scss</li>
-        </ul><!-- .list_circle -->
+        <div class="contents-box">
 
-        <h3 class="title-j_m">
-          <a href="setting.html">setting:変数（色、フォント種類、テキスト）</a>
-        </h3><!-- .title-j_l -->
+          <h3 class="title-j_m">
+            mixin : ブレイクポイント、アニメーションCSS
+          </h3><!-- .title-j_l -->
 
-        <ul class="list_circle">
-          <li>_color.scss</li>
-          <li>_font.scss</li>
-          <li>_text.scss</li>
-          <li>_section.scss</li>
-          <li>_z-index.scss</li>
-        </ul><!-- .list_circle -->
+          <ul class="list_circle">
+            <li>_breakpoint.scss</li>
+            <li>_animation.scss</li>
+          </ul><!-- .list_circle -->
 
-        <h3 class="title-j_m">
-          <a href="compornent.html">compornent:単一パーツ（パンくず、ボタン、フォームなど）</a>
-        </h3><!-- .title-j_l -->
+        </div><!-- contents-box -->
 
-        <ul class="list_circle">
-          <li>_c-breadcrumb.scss</li>
-          <li>_c-link.scss</li>
-          <li>_c-list.scss</li>
-          <li>_c-btn.scss</li>
-          <li>_c-categorybox.scss</li>
-          <li>_c-pagenation.scss</li>
-          <li>_c-contentsbox.scss</li>
-          <li>_c-archivebox.scss</li>
-          <li>_c-flex.scss</li>
-          <li>_c-table.scss</li>
-          <li>_c-snsarea.scss</li>
-          <li>_c-contact-banner.scss</li>
-          <li>_c-contactform.scss</li>
-          <li>_c-recaptcha.scss</li>
-        </ul><!-- .list_circle -->
+        <div class="contents-box">
 
-        <h3 class="title-j_m">
-          <a href="layout.html">layout:ヘッダー、フッター、メインのコンテンツエリア、サイドバー</a>
-        </h3><!-- .title-j_l -->
+          <h3 class="title-j_m">
+            <a href="setting.html">setting:変数（色、フォント種類、テキスト）</a>
+          </h3><!-- .title-j_l -->
 
-        <ul class="list_circle">
-          <li>_l-header.scss</li>
-          <li>_l-footer.scss</li>
-          <li>_l-sidebar.scss</li>
-          <li>_l-blog-banner.scss</li>
-          <li>_l-contact-area.scss</li>
-        </ul><!-- .list_circle -->
+          <ul class="list_circle">
+            <li>_color.scss</li>
+            <li>_font.scss</li>
+            <li>_text.scss</li>
+            <li>_section.scss</li>
+            <li>_z-index.scss</li>
+          </ul><!-- .list_circle -->
 
-        <h3 class="title-j_m">
-          project:ページCSS
-        </h3><!-- .title-j_l -->
+        </div><!-- contents-box -->
 
-        <ul class="list_circle">
-          <li>_p-top.scss</li>
-          <li>_p-about.scss</li>
-        </ul><!-- .list_circle -->
+        <div class="contents-box">
 
-        <h3 class="title-j_m">
-          javascript:Swiperスライダー、アコーディオン
-        </h3><!-- .title-j_l -->
+          <h3 class="title-j_m">
+            <a href="compornent.html">compornent:単一パーツ（パンくず、ボタン、フォームなど）</a>
+          </h3><!-- .title-j_l -->
 
-        <ul class="list_circle">
-          <li>_js-swiper.scss</li>
-          <li>_js-accordion.scss</li>
-        </ul><!-- .list_circle -->
+          <ul class="list_circle">
+            <li>_c-archivebox.scss</li>
+            <li>_c-breadcrumb.scss</li>
+            <li>_c-btn.scss</li>
+            <li>_c-categorybox.scss</li>
+            <li>_c-contact-banner.scss</li>
+            <li>_c-contactform.scss</li>
+            <li>_c-contentsbox.scss</li>
+            <li>_c-flex.scss</li>
+            <li>_c-link.scss</li>
+            <li>_c-list.scss</li>
+            <li>_c-pagenation.scss</li>
+            <li>_c-recaptcha.scss</li>
+            <li>_c-snsarea.scss</li>
+            <li>_c-table.scss</li>
+            <li>_c-toc.scss</li>
+          </ul><!-- .list_circle -->
+
+        </div><!-- contents-box -->
+
+        <div class="contents-box">
+            
+          <h3 class="title-j_m">
+            <a href="layout.html">layout:ヘッダー、フッター、メインのコンテンツエリア、サイドバー</a>
+          </h3><!-- .title-j_l -->
+
+          <ul class="list_circle">
+            <li>_l-header.scss</li>
+            <li>_l-footer.scss</li>
+            <li>_l-sidebar.scss</li>
+          </ul><!-- .list_circle -->
+
+        </div><!-- contents-box -->
+
+        <div class="contents-box">
+
+          <h3 class="title-j_m">
+            project:ページCSS
+          </h3><!-- .title-j_l -->
+
+          <ul class="list_circle">
+            <li>_p-top.scss</li>
+            <li>_p-about-us.scss</li>
+            <li>ページに応じて</li>
+          </ul><!-- .list_circle -->
+
+        </div><!-- contents-box -->
+
+        <div class="contents-box">
+
+          <h3 class="title-j_m">
+            javascript:Swiperスライダー、アコーディオン
+          </h3><!-- .title-j_l -->
+
+          <ul class="list_circle">
+            <li>_js-swiper.scss</li>
+            <li>_js-accordion.scss</li>
+          </ul><!-- .list_circle -->
+
+        </div><!-- contents-box -->
 
       </div><!-- .section-01__inner -->
     </section><!-- .section-01 -->

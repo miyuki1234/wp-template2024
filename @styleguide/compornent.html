@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
 
-  <title>スタイルガイド</title>
+  <title>compornent｜スタイルガイド</title>
 
 </head>
 
@@ -24,8 +24,8 @@
 
   <main class="main-area">
 
-    <!-- ーーートップビューーーー -->
-    <div class="page-top-view bg-blog">
+  <!-- ーーートップビューーーー -->
+    <div class="page-top-view">
       <div class="page-top-view__inner">
 
         <div class="title__outer">
@@ -35,7 +35,6 @@
         </div><!-- .title__outer -->
 
       </div><!-- .page-top-view__inner -->
-
     </div><!-- .page-top-view -->
 
     <!-- ーーーパンくずリストーーー -->
@@ -56,7 +55,7 @@
 
     <!-- ーーー1.compornentーーー -->
     <section class="page-section-01 page-section section-black">
-      <div class="page-section-01__inner page-section__inner last-section__inner">
+      <div class="page-section-01__inner page-section__inner">
 
         <h2 class="title-j_l">
           パンくず - compornent/breadcrumb.scss
@@ -86,17 +85,6 @@
         <h2 class="title-j_l">
           リスト - compornent/list.scss
         </h2><!-- .title-j_l -->
-
-        <ol class="num__list">
-          <li>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</li>
-          <li><a href="">テキストが入ります</a></li>
-          <li><a href="">テキストが入ります</a></li>
-        </ol><!-- .num__list -->
-
-        <ol class="toc__list">
-          <li><a href="">テキストが入ります</a></li>
-          <li><a href="">テキストが入ります</a></li>
-        </ol><!-- .toc__list -->
 
         <ul class="disc__list">
           <li>テキストが入ります</li>
@@ -136,6 +124,30 @@
         </div><!-- category-box -->
 
         <h2 class="title-j_l">
+          目次 - compornent/toc.scss
+        </h2><!-- .title-j_l -->
+
+        ▼▼▼プラグイン「Table of Contents Plus」を使用した時のコード
+        (表示/非表示 の切替はプラグインで動きます)
+
+        <div id="toc_container" class="no_bullets">
+          <p class="toc_title">目次 <span class="toc_toggle"><span class="toc_brackets">[</span><a href="#">非表示</a><span class="toc_brackets">]</span></span></p>
+          <ul class="toc_list">
+            <li><a href="#i"><span class="toc_number toc_depth_1">1</span> 経営におけるマインドセットの重要性</a></li>
+            <li><a href="#i-2"><span class="toc_number toc_depth_1">2</span> 経営者が直面する共通の課題</a>
+              <ul>
+                <li><a href="#i-3"><span class="toc_number toc_depth_2">2.1</span> 競争の激化</a></li>
+                <li><a href="#i-4"><span class="toc_number toc_depth_2">2.2</span> 人材確保の困難</a></li>
+                <li><a href="#i-5"><span class="toc_number toc_depth_2">2.3</span> 資金繰りの問題</a></li>
+              </ul>
+            </li>
+            <li><a href="#i-6"><span class="toc_number toc_depth_1">3</span> 成功へのマインドセット</a></li>
+            <li><a href="#i-7"><span class="toc_number toc_depth_1">4</span> 実践的アプローチ</a></li>
+            <li><a href="#i-8"><span class="toc_number toc_depth_1">5</span> まとめ</a></li>
+          </ul>
+        </div>
+
+        <h2 class="title-j_l">
           ページネーション - compornent/pagenation.scss
         </h2><!-- .title-j_l -->
 
@@ -163,14 +175,6 @@
           </p><!-- .text-j_s -->
         </div><!-- .contents-box -->
 
-        <div class="toc-box">
-          <ol class="num__list toc__list">
-            <li><a href="">テキストが入ります</a></li>
-            <li><a href="">テキストが入ります</a></li>
-            <li><a href="">テキストが入ります</a></li>
-          </ol><!-- .num__list -->
-        </div><!-- toc-box -->
-
         <div class="bg_box">
           <ul class="list-circle">
             <li>テキストが入ります</li>
@@ -184,29 +188,29 @@
         </h3>
        
         <div class="column-box">
-          <div class="column__txt">
-            <p class="title-j_3l title_twotone">タイトルタイトルタイトル</p>
-            <p class="text-j_s">
-              ここに<a href="">テキスト</a>が入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-          </div><!-- .column__txt -->
           <div class="column__pht">
             <div class="mask">
               <img src="https://placehold.jp/600x480.png" alt="">
             </div>
           </div><!-- .column__pht -->
+          <div class="column__txt">
+            <p class="title-j_3l title_twotone">タイトルタイトルタイトル</p>
+            <p class="text-j_s">
+              ここに<a href="">テキスト</a>が入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+          </div><!-- .column__txt -->
         </div><!-- .column-box -->
 
         <div class="column-box order-change">
-          <div class="column__txt">
-            <p class="title-j_3l title_twotone">タイトルタイトルタイトル</p>
-            <p class="text-j_s">
-              ここに<a href="">テキスト</a>が入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-          </div><!-- .column__txt -->
           <div class="column__pht">
             <div class="mask">
               <img src="https://placehold.jp/600x480.png" alt="">
             </div>
           </div><!-- .column__pht -->
+          <div class="column__txt">
+            <p class="title-j_3l title_twotone">タイトルタイトルタイトル</p>
+            <p class="text-j_s">
+              ここに<a href="">テキスト</a>が入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+          </div><!-- .column__txt -->
         </div><!-- .column-box -->
 
 
@@ -224,7 +228,7 @@
               <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
               <span class="post-category">カテゴリー</span><!-- .post-category -->
             </div>
-            <p class="news-title title-j_s">タイトルが入ります</p>
+            <p class="news-title text-j_s">タイトルが入ります</p>
           </a></li>
         </ul><!-- news-container__list -->
 
@@ -235,10 +239,8 @@
         <div class="box-container">
           <a href="">
 
-            <div class="zoomInRotate">
-              <span class="mask">
-                <img src="https://placehold.jp/800x600.png" alt="">
-              </span>
+            <div class="mask">
+              <img src="https://placehold.jp/800x600.png" alt="">
             </div>
             <div class="contents-area">
               <time class="news-date title-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>              <span class="post-category">カテゴリー</span><!-- .post-category -->
@@ -258,10 +260,8 @@
             <div class="box-container">
               <a href="">
 
-                <div class="zoomInRotate">
-                  <span class="mask">
-                    <img src="https://placehold.jp/800x600.png" alt="">
-                  </span>
+                <div class="mask">
+                  <img src="https://placehold.jp/800x600.png" alt="">
                 </div>
                 <div class="contents-area">
                   <time class="news-date title-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>                  <span class="post-category">カテゴリー</span><!-- .post-category -->
@@ -277,10 +277,8 @@
             <div class="box-container">
               <a href="">
 
-                <div class="zoomInRotate">
-                  <span class="mask">
-                    <img src="https://placehold.jp/800x600.png" alt="">
-                  </span>
+                <div class="mask">
+                  <img src="https://placehold.jp/800x600.png" alt="">
                 </div>
                 <div class="contents-area">
                   <time class="news-date title-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>                  <span class="post-category">カテゴリー</span><!-- .post-category -->
@@ -296,10 +294,8 @@
             <div class="box-container">
               <a href="">
 
-                <div class="zoomInRotate">
-                  <span class="mask">
-                    <img src="https://placehold.jp/800x600.png" alt="">
-                  </span>
+                <div class="mask">
+                  <img src="https://placehold.jp/800x600.png" alt="">
                 </div>
                 <div class="contents-area">
                   <time class="news-date title-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>                  <span class="post-category">カテゴリー</span><!-- .post-category -->
@@ -315,10 +311,8 @@
             <div class="box-container">
               <a href="">
 
-                <div class="zoomInRotate">
-                  <span class="mask">
-                    <img src="https://placehold.jp/800x600.png" alt="">
-                  </span>
+                <div class="mask">
+                  <img src="https://placehold.jp/800x600.png" alt="">
                 </div>
                 <div class="contents-area">
                   <time class="news-date text-j_2s" datetime="2023-08-13T18:23:57+09:00">2023.08.13</time>
@@ -353,7 +347,7 @@
           </div><!-- .column2__2 -->
         </div><!-- .column -->
 
-        <div class="column3">
+        <div class="column3 r-31-31-31">
           <div class="column3__1">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
@@ -371,7 +365,7 @@
           </div><!-- .column3__3 -->
         </div><!-- .column -->
 
-        <div class="column4">
+        <div class="column4 r-22-22-22-22">
           <div class="column4__1">
             <div class="mask">
               <img src="https://placehold.jp/800x600.png" alt="">
@@ -451,7 +445,7 @@
           サービスページ
         </h3>
 
-        <ul class="service-menu__list column4 r-22-22-22-22">
+        <ul class="service-menu__list column4">
           <li class="service-menu__item column4__1">
             <a href="#">選ばれる理由</a>
           </li><!-- .service-menu__item -->
