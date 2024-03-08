@@ -34,7 +34,10 @@
       <div class="header-nav-area">
 
         <div class="hamburger-menu">
-          <div class="openbtn1"><span></span><span></span><span></span></div>
+          <div class="openbtn1">
+            <span></span>
+            <span></span>
+            <span></span></div>
         </div><!-- .hamburger-menu -->
 
         <?php if ( has_nav_menu( 'global' ) ) : ?>
@@ -45,21 +48,19 @@
             'container_class' => 'header-nav',
           ) ); ?>
         <?php endif; ?>
-
-        <div class="sp-menu__wrapper">
-
-          <?php if ( has_nav_menu( 'sp_global' ) ) : ?>
-            <?php wp_nav_menu( array(
-              'theme_location' => 'sp_global',
-              'menu_class' => 'header-sp-nav__list',
-              'container' => 'nav',
-              'container_class' => 'header-sp-nav',
-            ) ); ?>
-          <?php endif; ?>
-
-        </div><!-- .sp-menu__wrapper -->
-
       </div><!-- .header-nav-area -->
 
     </div><!-- .header-area__inner -->
+
+    <div class="sp-menu__wrapper">
+      <?php if ( has_nav_menu( 'sp_global' ) ) : ?>
+        <?php wp_nav_menu( array(
+          'theme_location' => 'sp_global',
+          'menu_class' => 'header-sp-nav__list',
+          'container' => 'nav',
+          'container_class' => 'header-sp-nav',
+        ) ); ?>
+      <?php endif; ?>
+    </div><!-- .sp-menu__wrapper -->
+
   </header><!-- .header-area -->
