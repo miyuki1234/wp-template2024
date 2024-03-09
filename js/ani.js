@@ -14,7 +14,7 @@ $(window).on('load scroll', function() {
 //★スムーズスクロール部分の記述 -->
 $(function(){
   $('a[href^="#"]').click(function(){
-    var adjust = 0;
+    var adjust = -80;
     var speed = 400;
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
@@ -23,6 +23,7 @@ $(function(){
     return false;
   });
 });
+
 //モーダルウィンドウ
 $(function () {
   $('.openModal').click(function(){
@@ -34,3 +35,4 @@ $(function () {
     $('.modalArea').fadeOut();
   });
 });
+
