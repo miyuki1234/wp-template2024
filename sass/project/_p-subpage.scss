@@ -7,15 +7,19 @@
 @use "../mixin/animation" as *;
 //■■■下層ページ//
 //▼▼▼▼共通▼▼▼▼
+
+// ヘッダー分の余白
+.main-area{
+  padding-top: rem(80);
+  @include mq(l) {
+    padding-top: rem(60);
+  }
+}
 //トップ見出し
 .page-top-view {
   width: 100%;
   padding: 0;
   position: relative;
-  padding-top: rem(80);
-  @include mq(l) {
-    padding-top: rem(60);
-  }
   &:before{
     content: "";
     width: 100%;
@@ -91,7 +95,7 @@
       padding: rem(30) 0 rem(100);
       margin: 0 auto;
       @include mq(xl) {
-        width: 90%;
+        width: 100%;
       }
       @include mq(m) {
         padding: rem(40) 0;

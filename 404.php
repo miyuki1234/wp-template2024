@@ -2,19 +2,6 @@
 
 <main class="main-area">
 
-  <!-- ーーートップビューーーー -->
-  <div class="page-top-view bg-notfound">
-    <div class="page-top-view__inner">
-
-      <div class="title__outer">
-        <h2 class="title-e_4l show slide-bottom">
-        404<span class="title-j_s">NOT FOUND</span>
-        </h2><!-- .title-e_4l -->
-      </div><!-- .title__outer -->
-
-    </div><!-- .page-top-view__inner -->
-  </div><!-- .page-top-view -->
-
   <!-- ーーーパンくずリストーーー -->
   <div class="breadcrumb-area">
     <div class="breadcrumb-area__inner">
@@ -27,10 +14,22 @@
   <!-- ーーーコンテンツーーー -->
 
   <!-- ーーー1.内容 -->
-  <section class="page-section-01 page-section section-black last-section">
+  <section class="page-section-01 page-section">
     <div class="page-section-01__inner page-section__inner">
 
-      <p class="text-j_s">お探しのページは存在しません。</p><!-- .text-j_s -->
+      <p class="title-j_m title_line">
+      ページが見つかりませんでした
+      </p><!-- .title-j_m -->
+
+      <p class="text-j_s">お探しのページが見つかりませんでした。URLが間違っている、もしくは削除された可能性がございます。<br>
+      お手数ですが、アドレスをご確認の上もう一度お試しいただくか、下記のリンクから該当するページをお探しください。
+      </p><!-- .text-j_s -->
+
+      <div class="btn-area">
+        <a href="<?php echo esc_url( home_url() ); ?>" class="btn btn-arrow">トップページ</a>
+      </div><!-- .btn-area -->
+
+      </div><!-- .btn-area -->
 
     </div><!-- .page-section-01__inner -->
   </section><!-- .page-section-01 -->

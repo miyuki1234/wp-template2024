@@ -178,7 +178,6 @@
     height: 100%;
     position: relative;
     background: $color-blue-01;
-    padding-top: rem(80);
     padding-bottom: rem(120);
     @include mq(l) {
       padding-top: rem(60);
