@@ -116,6 +116,15 @@
               border-radius: 0 0 10px 10px;
               overflow: hidden;
               li {
+                &.cat-item-none{
+                  background: $color-gray-03;
+                  display: block;
+                  position: relative;
+                  padding: rem(15) rem(50) rem(15) rem(20);
+                  color: $color-black-main;
+                  font-weight: 700;
+                  text-decoration: none;
+                }
                 &:not(:first-of-type) {
                   border-top: solid 1px $color-gray-01;
                 }

@@ -184,32 +184,36 @@
 
       <div class="list-boxes">
 
-        <?php $posts = get_posts('numberposts=3'); ?>
-        <?php foreach($posts as $post): ?>
-          <div class="list-box">
+        <?php if($the_query->have_posts()) : ?>
+          <?php $posts = get_posts('numberposts=3'); ?>
+          <?php foreach($posts as $post): ?>
+            <div class="list-box">
 
-            <div class="box-container">
-              <a href="<?php the_permalink() ?>">
-                <div class="mask">
-                  <?php
-                  if ( has_post_thumbnail() ) {
-                    the_post_thumbnail('large');
-                  }else{ ?>
-                    <img src="<?php bloginfo('template_url'); ?>/images/img_no-image-01.jpg">
-                  <?php } ?>
-                </div>
-                <div class="contents-area">
-                  <time class="news-date title-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
-                  <span class="post-category">
-                  <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                  </span><!-- .post-category -->
-                  <p class="news-title title-j_m"><?php echo get_the_title($post->ID); ?></p>
-                </div><!-- .contents-area -->
-              </a>
-            </div><!-- .box-container -->
+              <div class="box-container">
+                <a href="<?php the_permalink() ?>">
+                  <div class="mask">
+                    <?php
+                    if ( has_post_thumbnail() ) {
+                      the_post_thumbnail('large');
+                    }else{ ?>
+                      <img src="<?php bloginfo('template_url'); ?>/images/img_no-image-01.jpg">
+                    <?php } ?>
+                  </div>
+                  <div class="contents-area">
+                    <time class="news-date title-j_2s" datetime="<?php echo the_time( DATE_W3C ); ?>"><?php echo the_time("Y.m.d"); ?></time>
+                    <span class="post-category">
+                    <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </span><!-- .post-category -->
+                    <p class="news-title title-j_m"><?php echo get_the_title($post->ID); ?></p>
+                  </div><!-- .contents-area -->
+                </a>
+              </div><!-- .box-container -->
 
-          </div><!-- .list-box -->
-        <?php endforeach; ?>
+            </div><!-- .list-box -->
+          <?php endforeach; ?>
+        <?php else : ?>
+          <p class="text-j_s">まだ投稿がありません。</p>
+        <?php endif; ?>
 
       </div><!-- .list-boxes -->
 
