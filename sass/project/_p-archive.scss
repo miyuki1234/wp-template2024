@@ -37,14 +37,6 @@
     //カテゴリー「備忘録」をON！
     .category-box {
       .category-box__list {
-        li {
-          &:nth-child(2) {
-            a {
-              color: $color-blue-02;
-              border-bottom: solid 2px $color-blue-02;
-            }
-          }
-        }
       }
     }
   }
@@ -54,19 +46,11 @@
   .page-top-view {
     .page-top-view__inner {
       .title__outer {
-        .title-j_l {
-        }
       }
     }
   }
   .page-section-01 {
     .page-section-01__inner {
-      img {
-        display: block;
-        width: 80%;
-        height: auto;
-        margin: 40px auto 0;
-      }
     }
   }
 }
