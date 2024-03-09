@@ -24,7 +24,7 @@
     </div><!-- .breadcrumb-area__inner -->
   </div><!-- .breadcrumb-area -->
 
-  <!-- ーーーメッセージーーー -->
+  <!-- ーーーミッションーーー -->
   <section class="page-section-01 page-section">
 
     <div class="page-section-01__inner page-section__inner">

@@ -88,6 +88,8 @@
         gap: 0 !important;
       }
     }
+
+    // 装飾追加
     .has-marker-red-color{
       color: $color-red-01;
     }
@@ -171,8 +173,8 @@
     }
     .page-section {
       .page-section__inner {
-        padding: 0;
         .article-area {
+          padding-top: rem(50);
           .modified-day,
           .published-day {
             color: $color-darkgray;
