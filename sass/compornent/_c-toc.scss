@@ -14,55 +14,92 @@
   @include mq(s) {
     display: block;
   }
-  > p{
-    color: $color-blue-02;
+  .toc_title{
     font-weight: 700;
     text-align: center;
-    padding-bottom: 0 !important;
+    padding: rem(10) !important;
   }
   //toc_list
   .toc_list {
     padding-bottom: 0;
-    margin-top: rem(20);
-    > li {
-      text-indent: rem(-25);
-      padding: rem(10);
-      padding-left: rem(30);
-      margin: 0;
+    margin-top: rem(10);
+
+    // 共通
+    ul{
+      padding-bottom: 0;
+    }
+    li{
       list-style-type: none;
-      counter-increment: cnt_toc;
-      &::before {
-        content: counter(cnt_toc)".";
-        color: $color-blue-02;
-        margin-right: rem(10);
-      }
-      &:last-child{
-          margin-bottom: 0;
+      padding-left: rem(20);
+      &:not(:first-child) {
+        margin-top: 0;
       }
       a{
         color: $color-blue-02;
         font-size: rem(16);
         font-weight: 400;
         text-decoration: none;
-        padding: rem(10);
+        display: inline-block;
+        padding: rem(5) rem(10) rem(10);
+        &::before {
+          color: $color-blue-02;
+          display: inline-block;
+          margin-right: rem(10);
+        }
         &:hover,
         &:visited{
           color: #0159B5;
         }
       }
-      ul{
-        margin-top: rem(10);
-        padding-bottom: 0;
-        > li{
-          text-indent: rem(-25);
-          padding: rem(10);
-          padding-left: rem(30);
-          margin: 0;
-          list-style-type: none;
+    }
+
+    // 1階層目
+    > li {
+      counter-increment: cnt_toc01;
+      padding-left: 0;
+      > a{
+        padding: rem(10);
+        &::before {
+          content: counter(cnt_toc01)".";
+        }
+      }
+
+      // 2階層目
+      >ul li{
+        counter-increment: cnt_toc02;
+        a{
           &::before {
-            content: "-";
-            color: $color-blue-02;
-            margin-right: rem(10);
+            content: counter(cnt_toc01)"-"counter(cnt_toc02)".";
+          }
+        }
+
+        // 3階層目
+        > ul li{
+          counter-increment: cnt_toc03;
+          a{
+            &::before {
+              content: counter(cnt_toc01)"-"counter(cnt_toc02)"-"counter(cnt_toc03)".";
+            }
+          }
+
+          // 4階層目
+          > ul li{
+            counter-increment: cnt_toc04;
+            a{
+              &::before {
+              content: counter(cnt_toc01)"-"counter(cnt_toc02)"-"counter(cnt_toc03)"-"counter(cnt_toc04)".";
+              }
+            }
+
+            // 5階層目
+            > ul li{
+              counter-increment: cnt_toc05;
+              a{
+                &::before {
+                  content: counter(cnt_toc01)"-"counter(cnt_toc02)"-"counter(cnt_toc03)"-"counter(cnt_toc04)"-"counter(cnt_toc03_ssss)".";
+                }
+              }
+            }
           }
         }
       }

@@ -16,16 +16,43 @@
       border-radius: 10px;
     }
     h2 {
-      margin-bottom: rem(35);
-      margin-top: rem(50);
       font-size: rem(23);
+      color: $color-white;
+      background-color: $color-blue-01;
+      border-radius: 5px;
+      padding: rem(10) rem(20);
+      margin-top: rem(40);
+      margin-bottom: rem(30);
+      position: relative;
       @include mq(m) {
         font-size: rem(20);
       }
     }
     h3 {
       font-size: rem(19);
-      margin-bottom: rem(15);
+      color: $color-black-main;
+      background-color: $color-gray-02;
+      border-left: 6px solid $color-blue-01;
+      padding: rem(10) rem(20);
+      margin-top: rem(40);
+      margin-bottom: rem(25);
+      position: relative;
+    }
+    h4 {
+      font-size: rem(16);
+      color: $color-blue-01;
+      border-bottom: 4px solid $color-blue-01;
+      padding: rem(10) rem(15);
+      margin-top: rem(30);
+      margin-bottom: rem(25);
+    }
+    h5 {
+      font-size: rem(16);
+      color: $color-blue-01;
+      border-bottom: 2px solid $color-gray-02;
+      padding: rem(10);
+      margin-top: rem(30);
+      margin-bottom: rem(25);
     }
     p {
       padding: 0 0 rem(25) 0 !important;
@@ -71,11 +98,6 @@
       color: $color-blue-01;
     }
     
-  }
-
-  // ボタンエリア
-  .btn-area{
-    margin: rem(80) 0 0;
   }
 
   //▼▼▼▼▼ブログ▼▼▼▼▼
@@ -134,26 +156,6 @@
                 }
               }
               .article-contents-area {
-                >h2 {
-                  &.wp-block-heading {
-                    margin-top: rem(40);
-                    background-color: $color-blue-01;
-                    color: $color-white;
-                    padding: rem(10) rem(20);
-                    border-radius: 5px;
-                    position: relative;
-                  }
-                }
-                >h3 {
-                  &.wp-block-heading {
-                    margin-top: rem(30);
-                    background-color: $color-gray-02;
-                    border-left: 6px solid $color-blue-01;
-                    color: $color-black-main;
-                    padding: rem(10) rem(20);
-                    position: relative;
-                  }
-                }
               }
             }
           }
@@ -215,26 +217,6 @@
             }
           }
           .article-contents-area {
-            >h2 {
-              &.wp-block-heading {
-                margin-top: rem(40);
-                background-color: $color-blue-01;
-                color: $color-white;
-                padding: rem(10) rem(20);
-                border-radius: 5px;
-                position: relative;
-              }
-            }
-            >h3 {
-              &.wp-block-heading {
-                margin-top: rem(30);
-                background-color: $color-gray-02;
-                border-left: 6px solid $color-blue-01;
-                color: $color-black-main;
-                padding: rem(10) rem(20);
-                position: relative;
-              }
-            }
           }
         }
       }
