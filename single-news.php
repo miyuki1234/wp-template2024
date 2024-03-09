@@ -29,7 +29,7 @@
     <div class="postpage-box__inner">
 
       <!-- ーーー1.新着情報ーーー -->
-      <section class="page-section-01 page-section section-black">
+      <section class="page-section-01 page-section">
         <div class="page-section-01__inner page-section__inner section_inner-small">
 
               <?php

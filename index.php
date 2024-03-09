@@ -170,7 +170,7 @@
 
 
   <!-- ーーーブログーー -->
-  <section class="top-section-04 top-section section-black section-blue-03 last-section">
+  <section class="top-section-04 top-section section-blue-03 last-section">
     <div class="top-section-04__inner top-section__inner slide-bottom show">
     
       <h2 class="title-e_5l title_twotone ta-center top-title">

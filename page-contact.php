@@ -25,7 +25,7 @@
   </div><!-- .breadcrumb-area -->
 
   <!-- ーーーコンテンツーーー -->
-  <section class="page-section-01 page-section section-black last-section">
+  <section class="page-section-01 page-section last-section">
 
     <div class="page-section-01__inner page-section__inner">
 

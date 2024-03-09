@@ -25,7 +25,7 @@
   </div><!-- .breadcrumb-area -->
 
   <!-- ーーーサービスーーー -->
-  <section class="page-section-01 page-section section-black">
+  <section class="page-section-01 page-section">
 
     <div class="page-section-01__inner page-section__inner">
 
@@ -54,7 +54,7 @@
   </section><!-- .section-01 -->
 
   <!-- ーーー選ばれる理由ーーー -->
-  <section class="page-section-02 page-section section-black">
+  <section class="page-section-02 page-section">
 
     <div class="page-section-02__inner page-section__inner" id="service01">
 
@@ -98,7 +98,7 @@
   </section><!-- .section-02 -->
 
   <!-- ーーー人事コンサルティングーーー -->
-  <section class="page-section-03 page-section section-black">
+  <section class="page-section-03 page-section">
 
     <div class="page-section-03__inner page-section__inner" id="service02">
 
@@ -123,7 +123,7 @@
   </section><!-- .section-03 -->
 
   <!-- ーーー教育・研修サービスーーー -->
-  <section class="page-section-04 page-section section-black">
+  <section class="page-section-04 page-section">
 
     <div class="page-section-04__inner page-section__inner" id="service03">
 
@@ -149,7 +149,7 @@
   </section><!-- .section-04 -->
 
   <!-- ーーーご契約の流れーーー -->
-  <section class="page-section-05 page-section section-black last-section">
+  <section class="page-section-05 page-section last-section">
 
     <div class="page-section-05__inner page-section__inner" id="service04">
 

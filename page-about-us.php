@@ -25,7 +25,7 @@
   </div><!-- .breadcrumb-area -->
 
   <!-- ーーーメッセージーーー -->
-  <section class="page-section-01 page-section section-black">
+  <section class="page-section-01 page-section">
 
     <div class="page-section-01__inner page-section__inner">
       
@@ -47,7 +47,7 @@
   </section><!-- .section-01 -->
 
 <!-- ーーー代表あいさつーーー -->
-<section class="page-section-02 page-section section-black">
+<section class="page-section-02 page-section">
 
   <div class="page-section-02__inner page-section__inner">
 
@@ -74,7 +74,7 @@
   </div><!-- .section-02__inner -->
 
   <!-- ーーー会社概要ーーー -->
-  <section class="page-section-03 page-section section-black last-section">
+  <section class="page-section-03 page-section last-section">
 
     <div class="page-section-03__inner page-section__inner">
 
