@@ -55,7 +55,6 @@
     }
     .btn-area{
       text-align: right;
-      margin-bottom: 0;
       @include mq(m) {
         text-align: center;
       }

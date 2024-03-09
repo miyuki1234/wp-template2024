@@ -87,7 +87,6 @@
       }
       .btn-area{
         text-align: left;
-        margin-bottom: 0;
         &.pc-block{
           display: block;
           @include mq(m) {
@@ -131,7 +130,6 @@
       }
       .btn-area{
         text-align: left;
-        margin-bottom: 0;
         @include mq(m) {
           text-align: center;
         }
@@ -142,9 +140,6 @@
     .top-section-03__inner {
       .column2{
         margin:rem(50) auto;
-      }
-      .btn-area{
-        margin-bottom: 0;
       }
     }
   }
