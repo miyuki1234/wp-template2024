@@ -1,0 +1,49 @@
+/*------------------------------------------------------------
+  Block Editor
+-------------------------------------------------------------*/
+.editor-styles-wrapper {
+  background: #FFF;
+}
+
+.editor-styles-wrapper  {
+  margin-top: 1.875rem;
+}
+.editor-styles-wrapper  img {
+  border-radius: 10px;
+}
+.editor-styles-wrapper  h2 {
+  font-size: 1.4375rem;
+  color: #fff;
+  background-color: #0159B0;
+  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+.editor-styles-wrapper  h3 {
+  font-size: 1.1875rem;
+  color: #333333;
+  background-color: #EFEFEF;
+  border-left: 6px solid #0159B0;
+  padding: 0.625rem 1.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5625rem;
+  position: relative;
+}
+.editor-styles-wrapper  h4 {
+  font-size: 1rem;
+  color: #0159B0;
+  border-bottom: 4px solid #0159B0;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+.editor-styles-wrapper  h5 {
+  font-size: 1rem;
+  color: #0159B0;
+  border-bottom: 2px solid #EFEFEF;
+  padding: 0.625rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.5625rem;
+}

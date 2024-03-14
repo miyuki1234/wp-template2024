@@ -397,9 +397,7 @@
   }
   remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
-
-
-  // 管理画面のカスタム投稿一覧にカテゴリー(ターム)を表示
+  // 管理画面 カスタム投稿一覧にカテゴリー(ターム)を表示
   function add_custom_column( $defaults ) {
     $defaults['news_category'] = 'カテゴリー'; // 『news_caetgory』はタクソノミースラッグ(複数設定可)
     return $defaults;
@@ -418,7 +416,7 @@
   add_action('manage_news_posts_custom_column', 'add_custom_column_id', 10, 2); // ここの『news』はカスタム投稿タイプスラッグ
 
 
-  //カスタム投稿でのページネーション
+  // カスタム投稿でのページネーション
   function change_posts_per_page($query) {
     if ( is_admin() || ! $query->is_main_query() ) {
       return;
@@ -433,4 +431,9 @@
   add_action( 'pre_get_posts', 'change_posts_per_page' );
 
 
+  // 管理画面の投稿カスタマイズ
+  function add_block_editor_styles() {
+    wp_enqueue_style( 'editor-styles', get_stylesheet_directory_uri() . '/css/editor-styles.css' );
+  }
+  add_action( 'enqueue_block_editor_assets', 'add_block_editor_styles' );
 ?>
