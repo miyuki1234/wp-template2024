@@ -3,7 +3,7 @@
 <main class="main-area">
 
   <!-- ーーートップビューーーー -->
-  <div class="page-top-view bg-privacy">
+  <div class="page-top-view bg-privacypolicy">
     <div class="page-top-view__inner">
 
       <div class="title__outer">
