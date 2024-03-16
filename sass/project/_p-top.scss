@@ -38,12 +38,10 @@
       padding-right: rem(30);
       @include mq(xl) {
         width: calc((90vw + (100vw - 90vw) / 2)  + rem(30));
-        padding-left: calc((100vw - 90vw) / 2);
       }
       @include mq(l) {
         width: 100%;
         margin:0;
-        padding: rem(20) 5% rem(90);
       }
       @include mq(m) {
         width: 100%;
@@ -75,7 +73,8 @@
     .top-section-01__inner {
       padding: rem(40);
       border-radius: 10px;
-      width: 80%;
+      width: 90%;
+      max-width: 1180px;
       @include mq(m) {
         border-radius: 0;
         width: 100%;
@@ -174,9 +173,6 @@
     position: relative;
     background: $color-blue-01;
     padding-bottom: rem(120);
-    @include mq(l) {
-      padding-top: rem(60);
-    }
     @include mq(m) {
       padding-bottom: rem(160);
     }

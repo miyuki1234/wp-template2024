@@ -96,7 +96,17 @@
               counter-increment: cnt_toc05;
               a{
                 &::before {
-                  content: counter(cnt_toc01)"-"counter(cnt_toc02)"-"counter(cnt_toc03)"-"counter(cnt_toc04)"-"counter(cnt_toc03_ssss)".";
+                  content: counter(cnt_toc01)"-"counter(cnt_toc02)"-"counter(cnt_toc03)"-"counter(cnt_toc04)"-"counter(cnt_toc05)".";
+                }
+              }
+            
+              // 6階層目
+              > ul li{
+                counter-increment: cnt_toc06;
+                a{
+                  &::before {
+                    content: counter(cnt_toc01)"-"counter(cnt_toc02)"-"counter(cnt_toc03)"-"counter(cnt_toc04)"-"counter(cnt_toc05)"-"counter(cnt_toc06)".";
+                  }
                 }
               }
             }

@@ -91,10 +91,13 @@
       width: 60%;
       @include mq(m) {
         width: 100%;
+        margin-top: rem(50);
       }
     }
     &:not(:first-of-type) {
-      margin-top: rem(40);
+      @include mq(m) {
+        margin-top: rem(50);
+      }
     }
   }
   &.r-40-50 {
@@ -108,7 +111,7 @@
       width: 50%;
       @include mq(m) {
         width: 100%;
-        margin-top: rem(70);
+        margin-top: rem(50);
       }
     }
   }
@@ -162,8 +165,8 @@
      
     }
     >.column2__2 {
-      @include mq(s) {
-        margin-top: rem(70);
+      @include mq(m) {
+        margin-top: rem(50);
       }
     }
   }
@@ -322,7 +325,8 @@
     padding: rem(30) 0 rem(30) rem(20);
     border-bottom: 1px solid $color-gray-02;
     @include mq(m) {
-      width: rem(100);
+      width: rem(80);
+      padding-left: 0;
     }
   }
   dd{
@@ -330,7 +334,7 @@
     padding: rem(30) rem(20);
     border-bottom: 1px solid $color-gray-02;
     @include mq(m) {
-      width: calc(100% - rem(100));
+      width: calc(100% - rem(80));
     }
   }
 }

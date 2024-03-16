@@ -101,6 +101,9 @@
             font-weight: 700;
             text-decoration: none;
             transition:0.8s;
+            @include mq(m) {
+              border: none;
+            }
             &:hover{
               border-color: $color-white;
             }

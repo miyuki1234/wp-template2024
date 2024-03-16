@@ -207,6 +207,9 @@ strong {
   font-size: rem(72);
   font-weight: 500;
   margin-bottom: rem(20);
+  @include mq(l) {
+    font-size: rem(54);
+  }
   @include mq(m) {
     font-size: rem(33);
   }
