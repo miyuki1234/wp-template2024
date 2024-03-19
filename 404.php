@@ -17,9 +17,9 @@
   <section class="page-section-01 page-section">
     <div class="page-section-01__inner page-section__inner">
 
-      <p class="title-j_m title_line">
+      <h2 class="title-j_m title_line">
       ページが見つかりませんでした
-      </p><!-- .title-j_m -->
+      </h2><!-- .title-j_m -->
 
       <p class="text-j_s">お探しのページが見つかりませんでした。URLが間違っている、もしくは削除された可能性がございます。<br>
       お手数ですが、アドレスをご確認の上もう一度お試しいただくか、下記のリンクから該当するページをお探しください。
