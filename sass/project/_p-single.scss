@@ -89,7 +89,7 @@
       }
     }
 
-    // 装飾追加
+    // 装飾追加（文字色）
     .has-marker-red-color{
       color: $color-red-01;
     }
@@ -98,6 +98,39 @@
     }
     .has-marker-blue-color{
       color: $color-blue-01;
+    }
+    .has-marker-light-blue-color{
+      color: $color-blue-03;
+    }
+
+    // 装飾追加（背景色）
+    .has-marker-red-background-color{
+      background-color: $color-red-01;
+      width: fit-content;
+      border-radius: 10px;
+      padding: rem(30) rem(50) rem(30) rem(30) !important;
+      margin-bottom: rem(25);
+    }
+    .has-marker-orange-background-color{
+      background-color: $color-orange-01;
+      width: fit-content;
+      border-radius: 10px;
+      padding: rem(30) rem(50) rem(30) rem(30) !important;
+      margin-bottom: rem(25);
+    }
+    .has-marker-blue-background-color{
+      background-color: $color-blue-01;
+      width: fit-content;
+      border-radius: 10px;
+      padding: rem(30) rem(50) rem(30) rem(30) !important;
+      margin-bottom: rem(25);
+    }
+    .has-marker-light-blue-background-color{
+      background-color: $color-blue-03;
+      width: fit-content;
+      border-radius: 10px;
+      padding: rem(30) rem(50) rem(30) rem(30) !important;
+      margin-bottom: rem(25);
     }
     
   }

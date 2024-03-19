@@ -297,23 +297,57 @@
   }
 
   // ブログエディタでのカラー追加
-  add_theme_support('editor-color-palette', [
-    [
-      'name'  => 'マーカーレッド',
-      'slug'  => 'marker-red',
-      'color' => '#FE4647',
-    ],
-    [
-      'name'  => 'マーカーオレンジ',
-      'slug'  => 'marker-orange',
-      'color' => '#FE9123',
-    ],
-    [
-      'name'  => 'マーカーブルー',
-      'slug'  => 'marker-blue',
-      'color' => '#0159B0',
-    ],
-  ]);
+  // add_theme_support('editor-color-palette', [
+  //   [
+  //     'name'  => 'マーカーレッド',
+  //     'slug'  => 'marker-red',
+  //     'color' => '#FE4647',
+  //   ],
+  //   [
+  //     'name'  => 'マーカーオレンジ',
+  //     'slug'  => 'marker-orange',
+  //     'color' => '#FE9123',
+  //   ],
+  //   [
+  //     'name'  => 'マーカーブルー',
+  //     'slug'  => 'marker-blue',
+  //     'color' => '#0159B0',
+  //   ],
+  //   [
+  //     'name'  => 'マーカーライトブルー',
+  //     'slug'  => 'marker-light-blue',
+  //     'color' => '#E5F2FE',
+  //   ],
+  // ]);
+
+  function my_wp_theme_json_data_theme( $theme_json ){
+    $new_data['version'] = 2;
+    // カラーパレット カスタマイズ 既存パレットに追加（単色）
+    $new_data['settings']['color']['palette'] = array(
+      array(
+        'name'  => 'マーカーレッド',
+        'slug'  => 'marker-red',
+        'color' => '#FE4647',
+      ),
+      array(
+        'name'  => 'マーカーオレンジ',
+        'slug'  => 'marker-orange',
+        'color' => '#FE9123',
+      ),
+      array(
+        'name'  => 'マーカーブルー',
+        'slug'  => 'marker-blue',
+        'color' => '#0159B0',
+      ),
+      array(
+        'name'  => 'マーカーライトブルー',
+        'slug'  => 'marker-light-blue',
+        'color' => '#E5F2FE',
+      ),
+    );
+    return $theme_json->update_with( $new_data );
+}
+add_filter( 'wp_theme_json_data_theme', 'my_wp_theme_json_data_theme' );
 
 
   /*  -----------------------------------------

@@ -13,18 +13,6 @@
     }
 }
 
-//bg_box
-.bg_box{
-  width: fit-content;
-  background-color: $color-blue-03;
-  border-radius: 10px;
-  padding: rem(30) rem(50) rem(30) rem(30);
-  margin-bottom: rem(25);
-  @include mq(s) {
-    display: block;
-  }
-}
-
 //column-box
 .column-box{
   position: relative;

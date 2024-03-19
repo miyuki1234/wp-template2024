@@ -1,17 +1,16 @@
 /*------------------------------------------------------------
   Block Editor
 -------------------------------------------------------------*/
+
 .editor-styles-wrapper {
   background: #FFF;
+  max-width: 840px;
+  margin: 0 auto;
 }
-
-.editor-styles-wrapper  {
-  margin-top: 1.875rem;
-}
-.editor-styles-wrapper  img {
+.editor-styles-wrapper img {
   border-radius: 10px;
 }
-.editor-styles-wrapper  h2 {
+.editor-styles-wrapper h2 {
   font-size: 1.4375rem;
   color: #fff;
   background-color: #0159B0;
@@ -20,8 +19,9 @@
   margin-top: 2.5rem;
   margin-bottom: 1.875rem;
   position: relative;
+  box-sizing: border-box;
 }
-.editor-styles-wrapper  h3 {
+.editor-styles-wrapper h3 {
   font-size: 1.1875rem;
   color: #333333;
   background-color: #EFEFEF;
@@ -30,20 +30,32 @@
   margin-top: 2.5rem;
   margin-bottom: 1.5625rem;
   position: relative;
+  box-sizing: border-box;
 }
-.editor-styles-wrapper  h4 {
+.editor-styles-wrapper h4 {
   font-size: 1rem;
   color: #0159B0;
   border-bottom: 4px solid #0159B0;
   padding: 0.625rem 0.9375rem;
   margin-top: 1.875rem;
   margin-bottom: 1.5625rem;
+  box-sizing: border-box;
 }
-.editor-styles-wrapper  h5 {
+.editor-styles-wrapper h5 {
   font-size: 1rem;
   color: #0159B0;
   border-bottom: 2px solid #EFEFEF;
   padding: 0.625rem;
   margin-top: 1.875rem;
   margin-bottom: 1.5625rem;
+  box-sizing: border-box;
+}
+
+.editor-styles-wrapper .has-marker-red-background-color,
+.editor-styles-wrapper .has-marker-orange-background-color,
+.editor-styles-wrapper .has-marker-blue-background-color,
+.editor-styles-wrapper .has-marker-light-blue-background-color{
+  width: fit-content;
+  border-radius: 10px;
+  margin-left: 0;
 }
